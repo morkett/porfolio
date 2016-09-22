@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>David Corkett Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="David Corkett Portfolio">
+    <meta name="keywords" content="david, corkett, porfolio, projects, beating heart, down to earth">
+    <meta http-equiv="author" content="David Corkett">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  
+    <link rel="stylesheet" href="fonts/font-awesome-4.5.0/css/font-awesome.min.css">
+    <link href="css/test2.css" type="text/css" rel="stylesheet" >
+
+  
+   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"> </script>
+  
+  <script src="https://use.typekit.net/mzu2yvf.js"></script>
+<script>try{Typekit.load({ async: true });}catch(e){}</script>
+<script>
+  $(document).ready(function () {
+    
+$('.ani-click').click(function(event){
+    event.preventDefault();
+    $('.projects--ani').addClass('js--main--ani-start');
+    setTimeout(function() {
+  window.location.href = "/index-2.html#down_to_earth"
+}, 500);
+  });
+    
+$('.link-to-site').click(function(event){
+    event.preventDefault();
+    $('.projects--ani').addClass('js--main--ani-start');
+    setTimeout(function() {
+  window.location.href = "/down-to-earth_the-team.html"
+}, 500);
+  });
+
+$('.to-website').click(function(event){
+    event.preventDefault();
+    $('.projects--ani').addClass('js--main--ani-start');
+    setTimeout(function() {
+  window.location.href = "/down-to-earth_the-team.html"
+}, 500);
+  });
+    
+       $('.button').click(function(){
+    $(this).toggleClass('btn-move');
+    $('.btn-container').toggleClass('btn-container-in');
+    $('.ham').toggleClass('ani');
+    });
+  
+  $('.mobile-scroll, .btn-container').click(function(){
+    setTimeout(function() {
+    $('.btn-container').removeClass('btn-container-in');
+    $('.button').removeClass('btn-move');  
+    $('.ham').removeClass('ani')
+}, 0);
+    
+  });
+    
+  $('.nav-port-home').click(function(event){
+    event.preventDefault();
+    $('.ani-in').addClass('start-ani');
+    setTimeout(function() {
+  window.location.href = "/index.html#home"
+}, 500);
+  });
+    
+  $('.nav-port-projects').click(function(event){
+    event.preventDefault();
+    $('.ani-in').addClass('start-ani');
+    setTimeout(function() {
+  window.location.href = "/index.html#projects"
+}, 500);
+  });
+    
+  $('.nav-port-about').click(function(event){
+    event.preventDefault();
+    $('.ani-in').addClass('start-ani');
+    setTimeout(function() {
+  window.location.href = "/index.html#about"
+}, 500);
+  });
+  
+  });
+
+</script>
+
+  
+</head>
+
+<body>
+  
+ <div class='button btn-por'>
+    <span class="ham "></span>
+    <span class='ham '></span>
+     <span class='ham '></span>
+  </div>
+  <div class='btn-container'>
+    
+    <nav class='nav-main nav-mobile'>
+          <ul>
+            <li><a href='index.html#home' class='scroll mobile-scroll'>HOME</a></li>
+            <li id='line'>&#8226;</li>
+            <li><a href='index.html#projects' class='scroll mobile-scroll'>PROJECTS</a></li>
+            <li id='line'>&#8226;</li>
+            <li><a href='index.html#about' class='scroll mobile-scroll'>ABOUT</a></li>
+          </ul>
+        </nav>
+    
+  </div>
+    
+ <div class='main--ani'></div>
+<div class='projects--ani'></div>
+  <div class="wrap wrap-port">
+    
+    <section class='sideBar'>
+      <div class='pro-left pro-left-port'>
+        <div class="back-container ani-click">
+          <div class='arrow'></div>
+        </div>
+          <h2>Down to EARTH</h2>
+          <h3 class="h3-port">responsive &#8226; website </h3>
+          <p><!--the down to earth website was designed to brief in adobe photoshop to reflect the cafes atmosphere. <br><br>this site was hand coded to create a responsive website that is enhanced with the implementation of css animations and behviours via <span>j</span>Query.-->
+          Designed to brief in Adobe Photoshop, this website reflects the cafes atmosphere and ethos. This website was hand-coded to create a responsive interface, enhanced with the inclusion of CSS animations and creating behaviours through <span>j</span>Query.
+        </p>
+            
+          <a class="to-website">
+            <div class="link-to-site-container">
+              <div class='codrops link-to-site'></div>
+              <span class='link-to-site' >To down to earth website</span>
+            </div>
+          </a>
+        </div>
+    </section>
+    <section class='main'>
+      <a class='port-page-desktop link-to-site'><div class='desktop'></div></a>
+      
+    </section>
+    
+     
+    
+      
+  </div>
+</body>
+  
+</html>

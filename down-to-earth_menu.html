@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Down To Earth - Menu</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="Down To Earth Restaurant">
+  <meta name="keywords" content="down, to, earth, restaurant, organic, food, yoga, lifestyle, healthy, cafe">
+  <meta http-equiv="author" content="Mork Designs">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+<link rel="stylesheet" href="fonts/font-awesome-4.5.0/css/font-awesome.min.css">
+  <link href="css/styles-dte.css" type="text/css" rel="stylesheet">
+
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">
+  </script>
+
+  <script src="https://use.typekit.net/ivl5bkw.js"></script>
+  <script>
+    try {
+      Typekit.load({
+        async: true
+      });
+    } catch (e) {}
+  </script>
+
+  <script>
+    $(window).load(function () {
+      $("body").removeClass("preload");
+    }); //removes class to animation/transitions can begin
+  </script>
+
+  <script>
+    $(document).ready(function () {
+     $('.hamburgerContainer').click(function(){
+         $('.navPhone').addClass('navIN');
+    });
+     
+      $('.closeContainer').click(function(){
+         $('.navPhone').removeClass('navIN');
+    });
+     
+       $('.hamburgerContainer').click(function(){
+         $('.wrap').addClass('mainOUT');
+         $('.hamburgerContainer').addClass('mainOUT');
+    });
+     
+      $('.closeContainer').click(function(){
+         $('.wrap').removeClass('mainOUT');
+        $('.hamburgerContainer').removeClass('mainOUT');
+    });
+
+
+
+
+
+
+      $('.breakfast').click(function(){
+       $(this).addClass('menu-active');
+        $('.lunch, .juice, .tea').removeClass('menu-active');
+      });
+      
+      $('.lunch').click(function(){
+       $(this).addClass('menu-active');
+        $('.breakfast, .juice, .tea').removeClass('menu-active');
+      });
+      
+        $('.juice').click(function(){
+       $(this).addClass('menu-active');
+        $('.breakfast, .lunch, .tea').removeClass('menu-active');
+      });
+      
+      $('.tea').click(function(){
+       $(this).addClass('menu-active');
+        $('.breakfast, .lunch, .juice').removeClass('menu-active');
+      });
+      
+      
+      
+      $('.scroll-top').click(function (event) {
+        event.preventDefault();
+        
+        var href = $(this).attr('href');
+        var target = $(href);
+        var position = target.position().top
+    console.log('scroll to ' + position);
+        
+        $('.scroll').animate({
+          scrollTop: position
+        }, 700)
+      });
+
+         $('.scroll-top-phone').click(function (event) {
+        event.preventDefault();
+        
+        var href = $(this).attr('href');
+        var target = $(href);
+        var position = target.position().top
+    console.log('scroll to ' + position);
+        
+        $('.wrap-menu').animate({
+          scrollTop: position
+        }, 700)
+      }); 
+
+
+    });
+  </script>
+
+
+</head>
+
+<body>
+    <div class="navPhoneBlur"></div>
+  <div class='navPhone'>
+<div class='logo'></div>
+ <div class="navPhone-border"></div>
+
+    <ul>
+      <div class="closeContainer"><span class='navClose'></span></div>
+      <li class='wider'> <a href="#">HOME</a></li>
+      <li class='wider'> <a href="down-to-earth_about.html">ABOUT</a></li>
+      <li><a href="down-to-earth_the-team.html">THE TEAM</a></li>
+      <li class='wider active'><a href='#'>MENU</a></li>
+      <!--<li id='resSize'> <a href="#">RESERVATION</a></li>-->
+      <li><a href="down-to-earth_contact.html">CONTACT</a></li>
+      <li class='wider'><a href="down-to-earth_blog.html">BLOG</a></li>
+    </ul>
+
+  </div>
+  
+  <div class='social-icons-one'>
+         <a href="https://www.facebook.com/downtoearthhighstreetkensington/" target="_blank"><span class=' fa fa-facebook fa-1x navOp'></span></a>
+         <a href="https://twitter.com/DownToEarthW8" target="_blank"><span class=' fa fa-twitter fa-1x '></span></a>
+         <a href="https://plus.google.com/102080728433944558337/posts" target="_blank"><span class=' fa fa-google-plus fa-1x '></span></a>
+    <a href="https://instagram.com/downtoearthw8/" target="_blank"><span class=' fa fa-instagram fa-1x '></span></a>
+      </div>
+  
+  <div class='hamburgerContainer'>
+      <span class="hamburger"></span>
+      <span class="menuHam">menu</span>
+    </div>
+  
+  <div class="wrap wrap-menu">
+
+    
+    <div class='header menu-header'>
+      <h1>MENU</h1>
+    </div>
+    <div class='sectionCont sectionMenu'>
+      
+
+<div class='phone-menu-nav'>
+        <ul>
+          <li><a href="#breakfast-phone" class="breakfast phone-menu-nav-active scroll-top-phone">BREAKFAST</a></li>
+          <li class="no-border"><a href='#lunch-phone' class="lunch scroll-top-phone ">Lunch &amp; Dinner</a></li>
+          <li><a href='#juices-phone' class = 'scroll-top-phone'>JUICES</a></li>
+          <li class="no-border"><a href='#tea-phone' class="scroll-top-phone">Tea &amp; Coffee</a></li>
+        </ul>
+      </div>
+
+
+      <div class='bio menu-bio'>
+        
+       
+        <a name='breakfast-phone' id='breakfast-phone' class='anchor-phone'></a>
+        
+        <br><br>
+        
+          <h2 class="menuH2" id='menuH2one'> BREAKFAST </h2>
+          
+            
+
+            
+              <h3 class='menuH3'>LIGHT</h3>
+
+
+              <h4 class='menuH4'>RAW APPLE AND VANILLA PORRIDGE <span>GF-V-N </span></h4>
+              <p class='menuP'>Crunchy nuts and coconut enriched with sweet superfoods, topped with fresh fruit and served with nutritious cold hemp ‘milk’ or milk of choice</p>
+              <span class='price'>£5</span>
+
+              <h4 class='menuH4'>FRESH SESONAL FRUIT SALAD <span>GF-VO </span></h4>
+              <p class='menuP'>Juicy ripe fruits drizzled with organic maple syrup, coconut shreds and bee pollen</p>
+              <span class='price'>£5</span>
+
+              <h3 class='menuH3'>ENERGETIC</h3>
+
+
+              <h4 class='menuH4'>HOME MADE GRANOLA <span>GF-V </span></h4>
+              <p class='menuP'>Slowly roasted oats, coconut chips, nuts and seeds lightly drizzled with dark agave syrup, mixed with thinly chopped raisins and apricots and a sprinkle of seasonal spices</p>
+              <span class='price'>£6</span>
+
+              <h4 class='menuH4'>RAW CHOCOLATE HAZELNUT AND BANANA CREPE <span>GF-V-N </span></h4>
+              <p class='menuP'>Banana and flax pancake smothered in raw ‘Nutella’ spread, fresh fruits and maple syrup</p>
+              <span class='price'>£6</span>
+
+              <h3 class='menuH3'> OPEN SANDWICH <br>&amp;<br> ENGLISH BREAKFAST</h3>
+
+
+              <h4 class='menuH4'>AVOCADO UNTOAST / AVOCADO TOAST <span>GFO-V </span></h4>
+              <p class='menuP'>Smashed avocado on buckwheat raw crackers or toasted sourdough, with a zinging lemon dressing, cherry tomatoes and activated pumpkin seeds</p>
+              <span class='price'>£7</span>
+
+              <h4 class='menuH4'>SOURDOUGH SCRAMBLE <span>GFO</span></h4>
+              <p class='menuP'> Organic free range eggs scrambled with chives, turmeric and black pepper, served on toasted sourdough bread</p>
+              <span class='price'>£6</span>
+
+              <h4 class='menuH4'>DOWN TO EARTH ENGLISH BREAKFAST<span>GFO-VO  </span></h4>
+              <p class='menuP'>Tamari and garlic marinated mushrooms, roasted cherry tomatoes, scrambled eggs with chives, homemade Mexican style baked beans, seasonal greens and toasted sourdough served with butter or ketchup to order</p>
+              <span class='price'>£12</span>
+
+              <h3 class='menuH3'>SMALL BITES</h3>
+
+              <h4 class='menuH4'>MUFFIN<span>V </span></h4>
+              <p class='menuP'> Individual cup-shaped quick bread made with spelt flour, oatmeal and blueberries</p>
+              <span class='price'>£3</span>
+ 
+              <h4 class='menuH4'>TOAST/RAW CRACKERS<span>GFO-VO  </span></h4>
+              <p class='menuP'>Ask server for choice of bread, crackers and accompaniments</p>
+              <span class='price'>£3</span>
+
+              <h4 class='menuH4'>TOAST/RAW CRACKERS <span>V </span></h4>
+              <p class='menuP'>Ask server for choice of fruits</p>
+              <span class='price'>£1.50</span>
+
+              <p class='menuKey'>* GF = GLUTEN FREE | V = VEGAN | O = Optional | N = Contains Nuts *</p>
+            
+         
+            
+
+            <br><br> 
+                <a name='lunch-phone' id='lunch-phone' class='anchor'></a>
+          <h2 class="menuH2"> LUNCH &amp; DINNER </h2>
+          
+          <h3 class='menuH3'>SALADS</h3>
+
+
+<h4 class='menuH4'>KALE, LEMON AND ALMOND DETOX <span>GF-V-N </span> </h4>
+<p class='menuP'>Shredded kale massaged with fresh lemon and ground almonds, served with cranberries, apple and grapefruit maca dressing</p>
+<span class='price'>£6 / £12</span>
+
+<h4 class='menuH4'>SQUASH AND SAGE BETA BOOST <span>GF-V </span> </h4>
+<p class='menuP'>Seasonal winter squash shavings tossed with cavalo nero greens, rocket, lemon and sage buckwheat crispies and an avocado orange dressing</p>
+<span class='price'>£6 / £12</span>
+
+<h4 class='menuH4'>RED PEPPER AND POMEGRANATE MUHAMMARA SALAD <span>GF-V-N </span> </h4>
+<p class='menuP'>Marinated red pepper strips with juicy tomato bombs, ground walnuts, fresh pomegranate seeds and coriander leaf in an aromatic spiced chilli dressing with pomegranate molasses</p>
+<span class='price'>£6 / £12</span>
+
+<h4 class='menuH4'>CORNISH SEA VEGETABLE MINERAL LIFT<span>GF-V  </span> </h4>
+<p class='menuP'>A hand picked and blended mix of soaked Cornish seaweeds with cucumber, red onion, sesame oil and tamari with a touch of red chilli flakes</p>
+
+<span class='price'>£6 / £12</span>
+
+<h3 class='menuH3'>RAW MAINS</h3>
+
+<h4 class='menuH4'>SPROUTED CHICKPEA FALAFEL TABOULEH <span>GF-V  </span> </h4> 
+<p class='menuP'>            
+Crunchy and soft sprouted chickpea falafel served with raw cauliflower and parsley tabouleh, topped with tahini sauce and za’atar tomato cubes</p>
+<span class='price'>£6 / £12</span>
+
+<h4 class='menuH4'>KIMCHI SUSHI ROLLS <span>GF-V  </span></h4>
+<p class='menuP'> Homemade kimchi rolled in nori seaweed, topped with sprouted alfalfa and served with wasabi paste, umeboshi plum and spiced tamari dip</p>
+<span class='price'>£12</span>
+
+<h4 class='menuH4'>INDONESIAN ALMOND SATAY KEBABS <span>GF-V-N </span></h4>
+<p class='menuP'>Marinated vegetables skewered in a spicy almond and ginger satay sauce served with spiralised sesame cucumber ‘noodles’</p>
+<span class='price'>£6 / £12</span>
+
+<h4 class='menuH4'>ZUCCHINI PASTA PESTO <span>GF-V-N </span></h4>
+<p class='menuP'>Courgette fettuccine ribbons in an aromatic rocket and sunflower seed pesto, sprinkled with almond 'parmesan'
+COOKED MAINS</p>
+<span class='price'>£6 / £12</span>
+
+<h3 class='menuH3'>COOKED MAINS </h3>
+
+<h4 class='menuH4'>BEETROOT BURGER <span>GF-V  </span></h4>
+<p class='menuP'>Served in a homemade gluten-free bun with wholegrain mustard mayo, roasted rainbow carrots, parsnips and salad greens</p>
+<span class='price'>£9</span>
+
+<h4 class='menuH4'>PEARL BARLEY PILAF <span>V-N </span></h4>
+<p class='menuP'>Lemon and dill pearl barley topped with roasted brussels sprouts and caramelised garlic cloves served with a light smoky chestnut puree</p>
+<span class='price'>£9</span>
+
+<h4 class='menuH4'>TORTILLA WRAP <span>V-N </span></h4>
+<p class='menuP'>Seasonal roasted vegetables with green leaves and homemade hummus served with marinated olives</p>
+<span class='price'>£9</span>
+
+<h4 class='menuH4'>SEASONAL RISOTTO <span>GFO-V </span></h4>
+<p class='menuP'>A changing menu of seasonal vegetables in slow cooked arborio rice - please ask your server for details</p>
+<span class='price'>£12</span>
+
+<h4 class='menuH4'>MELANZANE <span>GFO-V </span></h4>
+<p class='menuP'>Layers of oven baked aubergine with a rich tomato and herb sauce, topped with almond ‘parmesan’ and fresh oregano, served with toasted sourdough and green leaves</p>
+<span class='price'>£12</span>
+
+<h3 class='menuH3'>TODAY’s Specials
+</h3>
+<h4 class='menuH4'>SOUP OF THE DAY <span>GFO-VO </span></h4>
+<p class='menuP'>Please ask your server for our daily seasonal soup served warmed or chilled with a choice of bread</p>
+<span class='price'>£7</span>
+
+<h4 class='menuH4'>SPECIAL OF THE DAY</h4>
+<p class='menuP'>Chef's special dish of day, either raw or cooked. Please ask your server for details</p>
+<span class='price'>£12</span>
+
+<h4 class='menuH4'>SUNDAY ROAST (SUNDAY SPECIAL ONLY) <span>GF-V-N </span></h4>
+<p class='menuP'>Three layer nut roast topped with thick tomato sauce, accompanied by roasted rosemary potatoes, cumin carrots and slowly cooked red cabbage apple sauce</p>
+<span class='price'>£12</span>
+
+<h3 class='menuH3'>TO SHARE</h3>
+
+<h4 class='menuH4'>RAW TASTING TAPAS <span>GF-V-N </span></h4>
+<p class='menuP'>A selection of dishes from our raw food menu to try - perfect for the uninitiated, the curious or the undecided!</p>
+<span class='price'>£15</span>
+            
+<h4 class='menuH4'>VEGAN MEZZE <span>GF-V-N </span></h4>
+<p class='menuP'>A generous platter of rice-stuffed vine leaves, marinated olives, sun-dried tomatoes, hummus, guacamole, mixed leaf salad and buckwheat crackers</p>
+<span class='price'>£15</span>
+
+ <h3 class='menuH3'>SIDES</h3>
+
+<h4 class='menuH4'>BREAD/CRACKERS <span>GFO-VO </span></h4>
+<p class='menuP'>Ask server for choice of bread or crackers</p>
+<span class='price'>£3</span>
+
+      <a name='juices-phone' class='anchor'></a>        
+              
+<h4 class='menuH4'>MARINATED OLIVES <span>V </span></h4>
+<p class='menuP'>A choice of green or black olives marinated with Mediterranean herbs and fresh lemon juice.</p>
+<span class='price'>£3</span>
+
+              
+<h4 class='menuH4'>HUMMUS/GUACAMOLE</h4>
+<p class='menuP'>Individual portion of home made classic dips</p>
+<span class='price'>£3</span>
+            
+             <p class='menuKey'>* GF = GLUTEN FREE  | V = VEGAN | O = Optional | N = Contains Nuts *</p>
+          
+          
+            
+
+            
+         <br><br>       
+     <a id='juices-phone'></a>
+          <h2 class="menuH2"> Juices</h2>
+          
+          <h3 class='menuH3'> PURE BLENDS</h3>
+
+
+<h4 class='menuH4'>GREEN PHANATIC</h4>
+<p class='menuP'>kale, cucumber, celery, fennel, lime</p>
+<span class='price'>£5</span>
+
+<h4 class='menuH4'>WONDER JUICE</h4>
+<p class='menuP'>apple, orange, carrot, green tea, lemon</p>
+<span class='price'>£5</span>
+
+<h4 class='menuH4'>SWEET GREEN</h4>
+<p class='menuP'>celery, cucumber, apple, mint</p>
+<span class='price'>£5</span>
+
+<h4 class='menuH4'>THE SUNRISE</h4>
+<p class='menuP'>orange, apple, carrot, ginger</p>
+<span class='price'>£5</span>
+
+<h4 class='menuH4'>THE GARDEN</h4>
+<p class='menuP'>cucumber, tomato, carrot</p>
+<span class='price'>£5</span>
+
+<h4 class='menuH4'>THE CURE</h4>
+<p class='menuP'>beetroot, apple, celery, ginger</p>
+<span class='price'>£5</span>
+
+<h3 class='menuH3'>SUPER SMOOTHIES</h3>
+
+<h4 class='menuH4'>EXOTICA</h4>
+<p class='menuP'>orange, banana, apple, lemon</p>
+<span class='price'>£5</span>
+
+<h4 class='menuH4'>PURITY</h4>
+<p class='menuP'>avocado, apple, cucumber, celery, lime</p>
+<span class='price'>£5</span>
+
+<h4 class='menuH4'>APPLE PIE</h4>
+<p class='menuP'>apple, almond milk, banana, cinnamon, honey</p>
+<span class='price'>£5</span>
+
+<h4 class='menuH4'>KICK IT GREENS</h4>
+<p class='menuP'>spinach, apple, celery, fennel, mint</p>
+<span class='price'>£5</span>
+
+<h4 class='menuH4'>BANANA MILK</h4>
+<p class='menuP'>banana, berries, coconut flakes, milk of choice</p>
+<span class='price'>£5</span>
+
+<h4 class='menuH4'>PEARFECTION</h4>
+<p class='menuP'>coconut water, pear, fennel, cucumber</p>
+<span class='price'>£5</span>
+
+<h3 class='menuH3'>SIMPLE JUICE</h3>
+
+<h4 class='menuH4'>ORANGE</h4>
+<span class='price'>£4</span>
+
+<h4 class='menuH4'>APPLE</h4>
+<span class='price'>£4</span>
+
+<h4 class='menuH4'>PINEAPPLE</h4>
+<span class='price'>£4</span>
+
+<h4 class='menuH4'>CARROT</h4>
+<span class='price'>£4</span>
+
+<h4 class='menuH4'>TOMATO</h4>
+<span class='price'>£4</span>
+
+<h4 class='menuH4'>BEETROOT</h4>
+               <a name='tea-phone' class='anchor'></a>
+<span class='price'>£4</span>
+
+<h3 class='menuH3'>OTHER COLD BEVERAGES</h3>
+
+<h4 class='menuH4'>ELDERFLOWER &amp; FRUIT</h4>
+<span class='price'>£2</span>
+
+<h4 class='menuH4'>LIME &amp; MINT</h4>
+<span class='price'>£2</span>
+
+<h4 class='menuH4'>LEMON &amp; GINGER</h4>
+<span class='price'>£2</span>
+           
+          
+            
+
+           
+           <br><br>     
+          <a id='tea-phone'></a>
+          <h2 class="menuH2"> Tea &amp; Coffee</h2>
+          <h3 class='menuH3'> TEA &amp; INFUSIONS</h3>
+
+
+<h4 class='menuH4'>TEA POT</h4>
+<p class='menuP'>(1x bag or loose leaf) Black, Green, White and Flavoured. Ask the server for full variety</p>
+<span class='price'>£2.50</span>
+
+<h4 class='menuH4'>MATCHA LATTE</h4>
+<span class='price'>£3</span>
+
+<h4 class='menuH4'>MATCHA GREEN</h4>
+<span class='price'>£3</span>
+
+<h4 class='menuH4'>FRESH MINT</h4>
+<span class='price'>£2.50</span>
+
+<h4 class='menuH4'>GINGER, LEMON ZEST &amp; HONEY</h4>
+<span class='price'>£2.50</span>
+
+<h3 class='menuH3'>COFFEE</h3>
+            
+<h4 class='menuH4'>ESPRESSO/MACHIATO</h4>
+<span class='price'>£2</span>
+
+<h4 class='menuH4'>AMERICANO</h4>
+<span class='price'>£2</span>
+
+<h4 class='menuH4'>CAPPUCINO</h4>
+<span class='price'>£2.50</span>
+
+<h4 class='menuH4'>LATTE</h4>
+<span class='price'>£2.50</span>
+
+<h4 class='menuH4'>FLAT WHITE</h4>
+<span class='price'>£2.50</span>
+
+
+
+<h3 class='menuH3'>OTHER HOT BEVERAGES</h3>
+<h4 class='menuH4'>MOCHA</h4>
+<span class='price'>£2.50</span>
+
+<h4 class='menuH4'>HOT CHOCOLATE</h4>
+<span class='price'>£3</span>
+
+<h4 class='menuH4'>CHAI LATTE</h4>
+<span class='price'>£2.50</span>
+
+            
+         
+
+
+       
+
+
+       
+
+        
+
+        
+
+      </div>
+      <!-- bio -->
+    </div>
+    <!--sectionCont-->
+    <div class="main-wrap">
+    <div class="main main-menu">
+      <div class='menu-nav'>
+        <ul>
+          <li><a class="breakfast menu-active scroll-top" href="#breakfast">BREAKFAST</a></li>
+          <li><a class="lunch scroll-top" href="#lunch-anchor">Lunch &amp; Dinner</a></li>
+          <li><a class='juice scroll-top' href="#juices-anchor">JUICES</a></li>
+          <li><a class='tea scroll-top' id="tea" href="#tea-anchor" >Tea &amp; Coffee</a></li>
+        </ul>
+      </div>
+      
+      <div class='inner-main inner-main-menu'>
+      
+        <div class='scroll'>
+		<article class="ac-menu">
+          <a name="breakfast" class='anchor' id='breakfast' ></a>
+        <div class="anchor-first"></div>
+          <h2 class="menuH2"> BREAKFAST </h2>
+         <h3 class='menuH3 menuH3first'>LIGHT</h3>
+
+
+<h4 class='menuH4'>RAW APPLE AND VANILLA PORRIDGE <span>GF-V-N </span></h4>
+<p class='menuP'>Crunchy nuts and coconut enriched with sweet superfoods, topped with fresh fruit and served with nutritious cold hemp ‘milk’ or milk of choice</p>
+<span class='price'>£5</span>
+
+<h4 class='menuH4'>FRESH SESONAL FRUIT SALAD <span>GF-VO </span></h4>
+<p class='menuP'>Juicy ripe fruits drizzled with organic maple syrup, coconut shreds and bee pollen</p>
+<span class='price'>£5</span>
+
+<h3 class='menuH3'>ENERGETIC</h3>
+
+
+<h4 class='menuH4'>HOME MADE GRANOLA <span>GF-V </span></h4>
+<p class='menuP'>Slowly roasted oats, coconut chips, nuts and seeds lightly drizzled with dark agave syrup, mixed with thinly chopped raisins and apricots and a sprinkle of seasonal spices</p>
+<span class='price'>£6</span>
+
+<h4 class='menuH4'>RAW CHOCOLATE HAZELNUT AND BANANA CREPE <span>GF-V-N </span></h4>
+<p class='menuP'>Banana and flax pancake smothered in raw ‘Nutella’ spread, fresh fruits and maple syrup</p>
+<span class='price'>£6</span>
+        
+        <h3 class='menuH3' > OPEN SANDWICH <span class='small'>&amp;</span> ENGLISH BREAKFAST</h3>
+
+
+<h4 class='menuH4'>AVOCADO UNTOAST / AVOCADO TOAST <span>GFO-V </span></h4>
+<p class='menuP'>Smashed avocado on buckwheat raw crackers or toasted sourdough, with a zinging lemon dressing, cherry tomatoes and activated pumpkin seeds</p>
+<span class='price'>£7</span>
+
+<h4 class='menuH4'>SOURDOUGH SCRAMBLE <span>GFO</span></h4>
+<p class='menuP'> Organic free range eggs scrambled with chives, turmeric and black pepper, served on toasted sourdough bread</p>
+<span class='price'>£6</span>
+
+<h4 class='menuH4'>DOWN TO EARTH ENGLISH BREAKFAST<span>GFO-VO  </span></h4>
+<p class='menuP'>Tamari and garlic marinated mushrooms, roasted cherry tomatoes, scrambled eggs with chives, homemade Mexican style baked beans, seasonal greens and toasted sourdough served with butter or ketchup to order</p>
+<span class='price'>£12</span>
+
+<h3 class='menuH3'>SMALL BITES</h3>
+
+<h4 class='menuH4'>MUFFIN<span>V </span></h4>
+<p class='menuP'> Individual cup-shaped quick bread made with spelt flour, oatmeal and blueberries</p>
+<span class='price'>£3</span>
+
+<h4 class='menuH4'>TOAST/RAW CRACKERS<span>GFO-VO  </span></h4>
+<p class='menuP'>Ask server for choice of bread, crackers and accompaniments</p>
+<span class='price'>£3</span>
+
+<h4 class='menuH4'>TOAST/RAW CRACKERS <span>V </span></h4>
+<p class='menuP lunchAnchor'>Ask server for choice of fruits</p>
+<span class='price '>£1.50</span>
+          
+           <p class='menuKey'>* GF = GLUTEN FREE  | V = VEGAN | O = Optional | N = Contains Nuts *</p>
+          <br><br>
+          <a name='lunch-anchor' class='anchor' id='lunch-anchor'></a>
+          
+          <h2 class="menuH2"> LUNCH &amp; DINNER </h2>
+          
+          <h3 class='menuH3'>SALADS</h3>
+
+
+<h4 class='menuH4'>KALE, LEMON AND ALMOND DETOX <span>GF-V-N </span> </h4>
+<p class='menuP'>Shredded kale massaged with fresh lemon and ground almonds, served with cranberries, apple and grapefruit maca dressing</p>
+<span class='price'>£6 / £12</span>
+
+<h4 class='menuH4'>SQUASH AND SAGE BETA BOOST <span>GF-V </span> </h4>
+<p class='menuP'>Seasonal winter squash shavings tossed with cavalo nero greens, rocket, lemon and sage buckwheat crispies and an avocado orange dressing</p>
+<span class='price'>£6 / £12</span>
+
+<h4 class='menuH4'>RED PEPPER AND POMEGRANATE MUHAMMARA SALAD <span>GF-V-N </span> </h4>
+<p class='menuP'>Marinated red pepper strips with juicy tomato bombs, ground walnuts, fresh pomegranate seeds and coriander leaf in an aromatic spiced chilli dressing with pomegranate molasses</p>
+<span class='price'>£6 / £12</span>
+
+<h4 class='menuH4'>CORNISH SEA VEGETABLE MINERAL LIFT<span>GF-V  </span> </h4>
+<p class='menuP'>A hand picked and blended mix of soaked Cornish seaweeds with cucumber, red onion, sesame oil and tamari with a touch of red chilli flakes</p>
+
+<span class='price'>£6 / £12</span>
+
+<h3 class='menuH3'>RAW MAINS</h3>
+
+<h4 class='menuH4'>SPROUTED CHICKPEA FALAFEL TABOULEH <span>GF-V  </span> </h4> 
+<p class='menuP'>            
+Crunchy and soft sprouted chickpea falafel served with raw cauliflower and parsley tabouleh, topped with tahini sauce and za’atar tomato cubes</p>
+<span class='price'>£6 / £12</span>
+
+<h4 class='menuH4'>KIMCHI SUSHI ROLLS <span>GF-V  </span></h4>
+<p class='menuP'> Homemade kimchi rolled in nori seaweed, topped with sprouted alfalfa and served with wasabi paste, umeboshi plum and spiced tamari dip</p>
+<span class='price'>£12</span>
+
+<h4 class='menuH4'>INDONESIAN ALMOND SATAY KEBABS <span>GF-V-N </span></h4>
+<p class='menuP'>Marinated vegetables skewered in a spicy almond and ginger satay sauce served with spiralised sesame cucumber ‘noodles’</p>
+<span class='price'>£6 / £12</span>
+
+<h4 class='menuH4'>ZUCCHINI PASTA PESTO <span>GF-V-N </span></h4>
+<p class='menuP'>Courgette fettuccine ribbons in an aromatic rocket and sunflower seed pesto, sprinkled with almond 'parmesan'
+COOKED MAINS</p>
+<span class='price'>£6 / £12</span>
+
+<h3 class='menuH3'>COOKED MAINS </h3>
+
+<h4 class='menuH4'>BEETROOT BURGER <span>GF-V  </span></h4>
+<p class='menuP'>Served in a homemade gluten-free bun with wholegrain mustard mayo, roasted rainbow carrots, parsnips and salad greens</p>
+<span class='price'>£9</span>
+
+<h4 class='menuH4'>PEARL BARLEY PILAF <span>V-N </span></h4>
+<p class='menuP'>Lemon and dill pearl barley topped with roasted brussels sprouts and caramelised garlic cloves served with a light smoky chestnut puree</p>
+<span class='price'>£9</span>
+
+<h4 class='menuH4'>TORTILLA WRAP <span>V-N </span></h4>
+<p class='menuP'>Seasonal roasted vegetables with green leaves and homemade hummus served with marinated olives</p>
+<span class='price'>£9</span>
+
+<h4 class='menuH4'>SEASONAL RISOTTO <span>GFO-V </span></h4>
+<p class='menuP'>A changing menu of seasonal vegetables in slow cooked arborio rice - please ask your server for details</p>
+<span class='price'>£12</span>
+
+<h4 class='menuH4'>MELANZANE <span>GFO-V </span></h4>
+<p class='menuP'>Layers of oven baked aubergine with a rich tomato and herb sauce, topped with almond ‘parmesan’ and fresh oregano, served with toasted sourdough and green leaves</p>
+<span class='price'>£12</span>
+
+<h3 class='menuH3'>TODAY’s Specials
+</h3>
+<h4 class='menuH4'>SOUP OF THE DAY <span>GFO-VO </span></h4>
+<p class='menuP'>Please ask your server for our daily seasonal soup served warmed or chilled with a choice of bread</p>
+<span class='price'>£7</span>
+
+<h4 class='menuH4'>SPECIAL OF THE DAY</h4>
+<p class='menuP'>Chef's special dish of day, either raw or cooked. Please ask your server for details</p>
+<span class='price'>£12</span>
+
+<h4 class='menuH4'>SUNDAY ROAST (SUNDAY SPECIAL ONLY) <span>GF-V-N </span></h4>
+<p class='menuP'>Three layer nut roast topped with thick tomato sauce, accompanied by roasted rosemary potatoes, cumin carrots and slowly cooked red cabbage apple sauce</p>
+<span class='price'>£12</span>
+
+<h3 class='menuH3'>TO SHARE</h3>
+
+<h4 class='menuH4'>RAW TASTING TAPAS <span>GF-V-N </span></h4>
+<p class='menuP'>A selection of dishes from our raw food menu to try - perfect for the uninitiated, the curious or the undecided!</p>
+<span class='price'>£15</span>
+            
+<h4 class='menuH4'>VEGAN MEZZE <span>GF-V-N </span></h4>
+<p class='menuP'>A generous platter of rice-stuffed vine leaves, marinated olives, sun-dried tomatoes, hummus, guacamole, mixed leaf salad and buckwheat crackers</p>
+<span class='price'>£15</span>
+
+ <h3 class='menuH3'>SIDES</h3>
+
+<h4 class='menuH4'>BREAD/CRACKERS <span>GFO-VO </span></h4>
+<p class='menuP'>Ask server for choice of bread or crackers</p>
+<span class='price'>£3</span>
+
+<h4 class='menuH4'>MARINATED OLIVES <span>V </span></h4>
+<p class='menuP'>A choice of green or black olives marinated with Mediterranean herbs and fresh lemon juice.</p>
+<span class='price'>£3</span>
+
+<h4 class='menuH4'>HUMMUS/GUACAMOLE</h4>
+<p class='menuP'>Individual portion of home made classic dips</p>
+<span class='price'>£3</span>
+            
+             <p class='menuKey'>* GF = GLUTEN FREE  | V = VEGAN | O = Optional | N = Contains Nuts *</p>
+          <br><br>
+            <a name='juices-anchor' class='anchor' id='juices-anchor'></a>
+          <h2 class="menuH2"> Juices</h2>
+          
+          <h3 class='menuH3'> PURE BLENDS</h3>
+
+
+<h4 class='menuH4'>GREEN PHANATIC</h4>
+<p class='menuP'>kale, cucumber, celery, fennel, lime</p>
+<span class='price'>£5</span>
+
+<h4 class='menuH4'>WONDER JUICE</h4>
+<p class='menuP'>apple, orange, carrot, green tea, lemon</p>
+<span class='price'>£5</span>
+
+<h4 class='menuH4'>SWEET GREEN</h4>
+<p class='menuP'>celery, cucumber, apple, mint</p>
+<span class='price'>£5</span>
+
+<h4 class='menuH4'>THE SUNRISE</h4>
+<p class='menuP'>orange, apple, carrot, ginger</p>
+<span class='price'>£5</span>
+
+<h4 class='menuH4'>THE GARDEN</h4>
+<p class='menuP'>cucumber, tomato, carrot</p>
+<span class='price'>£5</span>
+
+<h4 class='menuH4'>THE CURE</h4>
+<p class='menuP'>beetroot, apple, celery, ginger</p>
+<span class='price'>£5</span>
+
+<h3 class='menuH3'>SUPER SMOOTHIES</h3>
+
+<h4 class='menuH4'>EXOTICA</h4>
+<p class='menuP'>orange, banana, apple, lemon</p>
+<span class='price'>£5</span>
+
+<h4 class='menuH4'>PURITY</h4>
+<p class='menuP'>avocado, apple, cucumber, celery, lime</p>
+<span class='price'>£5</span>
+
+<h4 class='menuH4'>APPLE PIE</h4>
+<p class='menuP'>apple, almond milk, banana, cinnamon, honey</p>
+<span class='price'>£5</span>
+
+<h4 class='menuH4'>KICK IT GREENS</h4>
+<p class='menuP'>spinach, apple, celery, fennel, mint</p>
+<span class='price'>£5</span>
+
+<h4 class='menuH4'>BANANA MILK</h4>
+<p class='menuP'>banana, berries, coconut flakes, milk of choice</p>
+<span class='price'>£5</span>
+
+<h4 class='menuH4'>PEARFECTION</h4>
+<p class='menuP'>coconut water, pear, fennel, cucumber</p>
+<span class='price'>£5</span>
+
+<h3 class='menuH3'>SIMPLE JUICE</h3>
+
+<h4 class='menuH4'>ORANGE</h4>
+<span class='price'>£4</span>
+
+<h4 class='menuH4'>APPLE</h4>
+<span class='price'>£4</span>
+
+<h4 class='menuH4'>PINEAPPLE</h4>
+<span class='price'>£4</span>
+
+<h4 class='menuH4'>CARROT</h4>
+<span class='price'>£4</span>
+
+<h4 class='menuH4'>TOMATO</h4>
+<span class='price'>£4</span>
+
+<h4 class='menuH4'>BEETROOT</h4>
+<span class='price'>£4</span>
+
+<h3 class='menuH3'>OTHER COLD BEVERAGES</h3>
+
+<h4 class='menuH4'>ELDERFLOWER &amp; FRUIT</h4>
+<span class='price'>£2</span>
+
+<h4 class='menuH4'>LIME &amp; MINT</h4>
+<span class='price'>£2</span>
+
+<h4 class='menuH4'>LEMON &amp; GINGER</h4>
+<span class='price'>£2</span>
+          
+           <br><br>
+           <a name='tea' class='anchor' id='tea-anchor'></a>
+          <h2 class="menuH2"> Tea &amp; Coffee</h2>
+          <h3 class='menuH3'> TEA &amp; INFUSIONS</h3>
+
+
+<h4 class='menuH4'>TEA POT</h4>
+<p class='menuP'>(1x bag or loose leaf) Black, Green, White and Flavoured. Ask the server for full variety</p>
+<span class='price'>£2.50</span>
+
+<h4 class='menuH4'>MATCHA LATTE</h4>
+<span class='price'>£3</span>
+
+<h4 class='menuH4'>MATCHA GREEN</h4>
+<span class='price'>£3</span>
+
+<h4 class='menuH4'>FRESH MINT</h4>
+<span class='price'>£2.50</span>
+
+<h4 class='menuH4'>GINGER, LEMON ZEST &amp; HONEY</h4>
+<span class='price'>£2.50</span>
+
+<h3 class='menuH3'>COFFEE</h3>
+            
+<h4 class='menuH4'>ESPRESSO/MACHIATO</h4>
+<span class='price'>£2</span>
+
+<h4 class='menuH4'>AMERICANO</h4>
+<span class='price'>£2</span>
+
+<h4 class='menuH4'>CAPPUCINO</h4>
+<span class='price'>£2.50</span>
+
+<h4 class='menuH4'>LATTE</h4>
+<span class='price'>£2.50</span>
+
+<h4 class='menuH4'>FLAT WHITE</h4>
+<span class='price'>£2.50</span>
+
+
+
+<h3 class='menuH3'>OTHER HOT BEVERAGES</h3>
+<h4 class='menuH4'>MOCHA</h4>
+<span class='price'>£2.50</span>
+
+<h4 class='menuH4'>HOT CHOCOLATE</h4>
+<span class='price'>£3</span>
+
+<h4 class='menuH4'>CHAI LATTE</h4>
+<span class='price'>£2.50</span>
+
+         </article>
+	</div>
+        
+       </div>
+      <div class='h1Container'>
+      <h1>MENU</h1></div>
+    </div>
+    <div class="blur-container">
+    <div class="blur blur-menu"></div>
+    </div>
+</div>
+  </div>
+  <!--WRAP-->
+
+
+</body>
+<!---- /BODY ---->
+
+</html>

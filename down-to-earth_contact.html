@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Down To Earth - Contact</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Down To Earth Restaurant">
+    <meta name="keywords" content="down, to, earth, restaurant, organic, food, yoga, lifestyle, healthy, cafe">
+    <meta http-equiv="author" content="Mork Designs">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  
+    
+   
+    <link rel="stylesheet" href="fonts/font-awesome-4.5.0/css/font-awesome.min.css">
+   <link href="css/styles-dte.css" type="text/css" rel="stylesheet" >
+  
+   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"> </script>
+  
+    <script src="https://use.typekit.net/ivl5bkw.js"></script>
+<script>try{Typekit.load({ async: true });}catch(e){}</script>
+  
+  <script>   
+  $(window).load(function() {
+  $("body").removeClass("preload");
+}); //removes class to animation/transitions can begin
+
+</script>
+
+  <script>
+   $(document).ready(function() {
+     
+     //    NAV
+    $('.hamburgerContainer').click(function(){
+         $('.navPhone').addClass('navIN');
+    });
+     
+      $('.closeContainer').click(function(){
+         $('.navPhone').removeClass('navIN');
+    });
+     
+       $('.hamburgerContainer').click(function(){
+         $('.wrap, .headerContact').addClass('mainOUT');
+    });
+     
+      $('.closeContainer').click(function(){
+         $('.wrap, .headerContact').removeClass('mainOUT');
+    });
+     
+        $('.closeContainer').click(function(){
+          $('.social-icons span').removeClass('navOp');
+    });
+     
+     $('.hamburgerContainer').click(function(){
+       $('.social-icons span').css({'color': 'rgba(255,255,255,1)'});
+     });
+     
+  
+     //NAV
+     
+      $('.transportInfo').mouseleave(function(){
+       $(this).removeClass('transportInfo-height');
+        $('#bus, #car, #bike, #train').removeClass('menu-nav-2-active');
+        
+     });
+
+     
+    
+     
+             
+        $('.map-btn, .address-btn').click(function(){
+         $('.menu-nav-2').toggleClass('down');
+          $('.google-container').toggleClass('mapDown');
+          $('.mapmarkerLarge').toggleClass('mapmarkerLarge-active');
+          $('.closeMapContainer').toggleClass('closeMap-up');
+          $('.con-infoLarge').toggleClass('opacity');
+          $('.transportInfo-bus, .transportInfo-car, .transportInfo-bike, .transportInfo-train').removeClass('transportInfo-height');
+          $('#bus, #car, #bike, #train').removeClass('menu-nav-2-active');
+          
+          $('.menu-nav-map').removeClass('menu-nav-map-top');
+       $('.menu-nav-2').removeClass('menu-nav-2-top');
+          
+          
+    });
+     
+     
+     $('.closeMapButton').click(function(){
+       $('.menu-nav-2').removeClass('down');
+          $('.google-container').removeClass('mapDown');
+          $('.mapmarkerLarge').removeClass('mapmarkerLarge-active');
+          $('.closeMapContainer').removeClass('closeMap-up');
+        $('.con-infoLarge').removeClass('opacity');
+       $('.transportInfo-bus, .transportInfo-car, .transportInfo-bike, .transportInfo-train').removeClass('transportInfo-height');
+          $('#bus, #car, #bike, #train').removeClass('menu-nav-2-active');
+         $('.carInfo, .trainInfo, .bikeInfo, .busInfo').css('display', 'none');
+       
+       $('.menu-nav-map').removeClass('menu-nav-map-top');
+       $('.menu-nav-2').removeClass('menu-nav-2-top');
+     });
+     
+     $('.google-container').click(function(){
+      $('.transportInfo-bus, .transportInfo-car, .transportInfo-bike, .transportInfo-train').removeClass('transportInfo-height');
+          $('#bus, #car, #bike, #train').removeClass('menu-nav-2-active'); 
+        $('.carInfo, .trainInfo, .bikeInfo, .busInfo').css('display', 'none');
+     });
+      
+     
+     $('#bus').click(function(){
+       $(this).addClass('menu-nav-2-active');
+       $('#car, #bike, #train').removeClass('menu-nav-2-active');
+       $('.transportInfo-bus').addClass('transportInfo-height');
+        $('.transportInfo-car, .transportInfo-bike, .transportInfo-train').removeClass('transportInfo-height');
+       $('.busInfo').css('display', 'block');
+       $('.carInfo, .trainInfo, .bikeInfo').css('display', 'none');
+
+       $('.menu-nav-map').addClass('menu-nav-map-top');
+       $('.menu-nav-2').addClass('menu-nav-2-top');
+     });
+     
+      $('#car').click(function(){
+       $(this).addClass('menu-nav-2-active');
+       $('#bus, #bike, #train').removeClass('menu-nav-2-active');
+        $('.transportInfo-car').addClass('transportInfo-height');
+        $('.transportInfo-bus, .transportInfo-bike, .transportInfo-train').removeClass('transportInfo-height');
+       
+        $('.carInfo').css('display', 'block');
+        $('.busInfo, .trainInfo, .bikeInfo').css('display', 'none');
+
+        $('.menu-nav-map').addClass('menu-nav-map-top');
+       $('.menu-nav-2').addClass('menu-nav-2-top');
+     });
+     
+      $('#bike').click(function(){
+       $(this).addClass('menu-nav-2-active');
+       $('#car, #bus, #train').removeClass('menu-nav-2-active');
+        $('.transportInfo-bike').addClass('transportInfo-height');
+        $('.transportInfo-bus, .transportInfo-car, .transportInfo-train').removeClass('transportInfo-height');
+        
+         $('.bikeInfo').css('display', 'block');
+       $('.carInfo, .trainInfo, .busInfo').css('display', 'none');
+
+        $('.menu-nav-map').addClass('menu-nav-map-top');
+       $('.menu-nav-2').addClass('menu-nav-2-top');
+     });
+
+ $('#train').click(function(){
+       $(this).addClass('menu-nav-2-active');
+       $('#car, #bike, #bus').removeClass('menu-nav-2-active');
+    $('.transportInfo-train').addClass('transportInfo-height');
+        $('.transportInfo-bus, .transportInfo-bike, .transportInfo-car').removeClass('transportInfo-height');
+   
+   $('.trainInfo').css('display', 'block');
+       $('.carInfo, .busInfo, .bikeInfo').css('display', 'none');
+
+   $('.menu-nav-map').addClass('menu-nav-map-top');
+       $('.menu-nav-2').addClass('menu-nav-2-top');
+     });
+    
+     $('.menu-nav-map').click(function(){
+       $('.carInfo, .busInfo, .bikeInfo, .trainInfo').css('display', 'none');
+     });
+
+
+     //GOOGLE
+     
+  
+     
+     //contact icons
+     
+     $('.mapmarker, .address').click(function(){
+       $('.googleHeader').addClass('mapHeight');
+      // $('.headerContact').addClass('opacity');
+       $('.closeMap').addClass('opacityIn');
+        $('.headerContact').addClass('opacity');
+     });
+     
+     $('.closeMap').click(function(){
+       $('.googleHeader').removeClass('mapHeight');
+       $('.closeMap').removeClass('opacityIn');
+        $('.headerContact').removeClass('opacity');
+     });
+       
+         $('.closeMap').mouseenter(function(){
+        $('.headerContact').addClass('opacity');
+     });
+     
+     
+    });
+  </script>
+
+  
+ <script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjeoN_mtzNfJ_-qKCDO7Q6R14EJqcO06A&amp;sensor=false">
+    </script>
+<script> // desktop
+	function initialise() {
+		var centerLatlng = new google.maps.LatLng(51.500040, -0.196268);
+		var myLatlng = new google.maps.LatLng(51.498931, -0.199866); // Add the coordinates
+		var mapOptions = {
+			zoom: 15, // The initial zoom level when your map loads (0-20)
+			minZoom: 6, // Minimum zoom level allowed (0-20)
+			maxZoom: 17, // Maximum soom level allowed (0-20)
+			zoomControl:true, // Set to true if using zoomControlOptions below, or false to remove all zoom controls.
+			zoomControlOptions: {
+  				style:google.maps.ZoomControlStyle.DEFAULT // Change to SMALL to force just the + and - buttons.
+			},
+			center: centerLatlng, // Centre the Map to our coordinates variable
+			mapTypeId: google.maps.MapTypeId.ROADMAP, // Set the type of Map
+			scrollwheel: true, // Disable Mouse Scroll zooming (Essential for responsive sites!)
+			// All of the below are set to true by default, so simply remove if set to true:
+			panControl:true, // Set to false to disable
+			mapTypeControl:false, // Disable Map/Satellite switch
+			scaleControl:false, // Set to false to hide scale
+			streetViewControl:false, // Set to disable to hide street view
+			overviewMapControl:false, // Set to false to remove overview control
+			rotateControl:true, // Set to false to disable rotate control
+                      styles: [
+  {
+    "stylers": [
+      { "saturation": -100 },
+      { "gamma": 0.5 }
+    ]
+  }
+]
+                
+	  	}
+		var map = new google.maps.Map(document.getElementById('google2'), mapOptions); // Render our map within the empty div
+		
+		var image = new google.maps.MarkerImage("https://www.creare.co.uk/wp-content/uploads/2013/08/marker.png", null, null, null, new google.maps.Size(40,52)); // Create a variable for our marker image.
+			
+		var marker = new google.maps.Marker({ // Set the marker
+			position: myLatlng, // Position marker to coordinates
+			icon:'../images/mapIcon.png', //use our image as the marker
+			map: map, // assign the marker to our map variable
+		});
+		
+		google.maps.event.addListener(marker, 'click', function() { // Add a Click Listener to our marker 
+			window.location='#'; // URL to Link Marker to (i.e Google Places Listing)
+		 	});
+		
+		var infowindow = new google.maps.InfoWindow({ // Create a new InfoWindow
+  			content:"<p>Down To Earth Lifestyle Cafe</p>" // HTML contents of the InfoWindow
+  		});
+		google.maps.event.addListener(marker, 'click', function() { // Add a Click Listener to our marker
+  			infowindow.open(map,marker); // Open our InfoWindow
+  		});
+		
+		google.maps.event.addDomListener(window, 'resize', function() { map.setCenter(myLatlng); }); // Keeps the Pin Central when resizing the browser on responsive sites
+	}
+	google.maps.event.addDomListener(window, 'load', initialise); // Execute our 'initialise' function once the page has loaded. 
+  </script>
+  
+
+<script> // desktop
+	function initialise() {
+		var centerLatlng = new google.maps.LatLng(51.500040, -0.196268);
+		var myLatlng = new google.maps.LatLng(51.498931, -0.199866); // Add the coordinates
+		var mapOptions = {
+			zoom: 15, // The initial zoom level when your map loads (0-20)
+			minZoom: 6, // Minimum zoom level allowed (0-20)
+			maxZoom: 17, // Maximum soom level allowed (0-20)
+			zoomControl:true, // Set to true if using zoomControlOptions below, or false to remove all zoom controls.
+			zoomControlOptions: {
+  				style:google.maps.ZoomControlStyle.DEFAULT // Change to SMALL to force just the + and - buttons.
+			},
+			center: centerLatlng, // Centre the Map to our coordinates variable
+			mapTypeId: google.maps.MapTypeId.ROADMAP, // Set the type of Map
+			scrollwheel: true, // Disable Mouse Scroll zooming (Essential for responsive sites!)
+			// All of the below are set to true by default, so simply remove if set to true:
+			panControl:true, // Set to false to disable
+			mapTypeControl:false, // Disable Map/Satellite switch
+			scaleControl:false, // Set to false to hide scale
+			streetViewControl:false, // Set to disable to hide street view
+			overviewMapControl:false, // Set to false to remove overview control
+			rotateControl:true, // Set to false to disable rotate control
+                      styles: [
+  {
+    "stylers": [
+      { "saturation": -100 },
+      { "gamma": 0.5 }
+    ]
+  }
+]
+                
+	  	}
+		var map = new google.maps.Map(document.getElementById('google'), mapOptions); // Render our map within the empty div
+		
+		var image = new google.maps.MarkerImage("https://www.creare.co.uk/wp-content/uploads/2013/08/marker.png", null, null, null, new google.maps.Size(40,52)); // Create a variable for our marker image.
+			
+		var marker = new google.maps.Marker({ // Set the marker
+			position: myLatlng, // Position marker to coordinates
+			icon:'../images/mapIcon.png', //use our image as the marker
+			map: map, // assign the marker to our map variable
+		});
+		
+		google.maps.event.addListener(marker, 'click', function() { // Add a Click Listener to our marker 
+			window.location='#'; // URL to Link Marker to (i.e Google Places Listing)
+		 	});
+		
+		var infowindow = new google.maps.InfoWindow({ // Create a new InfoWindow
+  			content:"<p>Down To Earth Lifestyle Cafe</p>" // HTML contents of the InfoWindow
+  		});
+		google.maps.event.addListener(marker, 'click', function() { // Add a Click Listener to our marker
+  			infowindow.open(map,marker); // Open our InfoWindow
+  		});
+		
+		google.maps.event.addDomListener(window, 'resize', function() { map.setCenter(myLatlng); }); // Keeps the Pin Central when resizing the browser on responsive sites
+	}
+	google.maps.event.addDomListener(window, 'load', initialise); // Execute our 'initialise' function once the page has loaded. 
+  </script>
+
+  </head>
+  
+<body>
+ <div class="navPhoneBlur navPhoneBlur-contact"></div>
+  <div class='navPhone'>
+    <div class='logo'></div>
+      <div class="navPhone-border"></div>
+        <ul>
+          <div class="closeContainer"><span class='navClose'></span></div>
+          <li class='wider'><a href="#">HOME</a></li>
+         <li class='wider'> <a href="down-to-earth_about.html">ABOUT</a></li>
+          <li><a href="down-to-earth_the-team.html">THE TEAM</a></li>
+         <li class='wider'> <a href='down-to-earth_menu.html'>MENU</a></li>
+ <!-- <li id='resSize'><a href="#">RESERVATION</a></li> -->
+          <li class="active"><a href="#">CONTACT</a></li>
+          <li class='wider'><a href="down-to-earth_blog.html">BLOG</a></li>
+    </ul>
+      
+  </div>
+  <div class='social-icons-one'>
+         <a href="https://www.facebook.com/downtoearthhighstreetkensington/" target="_blank"><span class=' fa fa-facebook fa-1x navOp'></span></a>
+         <a href="https://twitter.com/DownToEarthW8" target="_blank"><span class=' fa fa-twitter fa-1x '></span></a>
+         <a href="https://plus.google.com/102080728433944558337/posts" target="_blank"><span class=' fa fa-google-plus fa-1x '></span></a>
+    <a href="https://instagram.com/downtoearthw8/" target="_blank"><span class=' fa fa-instagram fa-1x '></span></a>
+      </div>
+  
+  <div class="wrap wrap-contact">
+    <div class="closeMap"><span class='navClose navCloseMap'></span></div>
+    <div class='hamburgerContainer'>
+    <span class="hamburger"></span>
+      <span class="menuHam">menu</span>
+    </div>
+    
+    
+    <div class="googleHeader">
+    <div id='google'></div>
+    </div>
+  <div class='headerContact'> 
+        <h1>contact</h1>
+      </div>
+    <section class='sectionCont sectionContact'>
+      <div class='header phan'> </div>
+      
+      
+      
+        <div><p class='con-title'>GENERAL ENQUIRIES</p></div>
+          <div class='con-info'>
+  <span class=' fa fa-phone fa-x icon'></span><a href="tel:02073716987"><span class='numb'>0207 3716 987</span></a> <br><br>
+ <span class=' fa fa-envelope fa-x icon'></span> <a href="mailto:info@downtoearth.co.uk" ><span class='numb'>info@downtoearth.co.uk</span></a>
+            </div>
+        <div><p class='con-title'>CATERING &amp; EVENTS</p> </div>
+          <div class='con-info'><span class=' fa fa-phone fa-x icon'></span><a href="tel:07778755373"><span class='numb'>0777 8755 373</span></a>
+            <br><br>
+         <span class=' fa fa-envelope fa-x icon'></span> <a href="mailto:catering@downtoearth.co.uk"><span class='numb'>catering@downtoearth.co.uk</span></a>
+       </div>
+        
+    <div><p class='con-title'>LIFESTYLE STUDIO </p> </div>
+          <div class='con-info'><span class=' fa fa-phone fa-x icon'></span><a href="tel:02073716987" class="numbA"><span class='numb'>0207 3716 987</span></a>
+            <br><br>
+       <span class=' fa fa-envelope fa-x icon'></span> <a href="mailto:lifestyle@downtoearth.co.uk" class="numb"><span class='numb'>lifestyle@downtoearth.co.uk</span></a>
+            </div>
+  <div><p class='con-title'>CAREERS</p> </div>
+          <div class='con-info'><span class=' fa fa-phone fa-x icon'></span><a href="tel:02073716987" class="numbA"><span class='numb'>0207 3716 987</span></a>
+      <br><br>
+     <span class=' fa fa-envelope fa-x icon'></span> <a href="mailto:hr@downtoearth.co.uk" class="numbA"><span class='numb'>hr@downtoearth.co.uk</span></a>
+            </div>
+  
+      <div><p class='con-title'>ADDRESS</p> </div>
+      
+      <div class='con-info address'>
+        <span class=' fa fa-map-marker fa-2x mapmarker'></span>  
+        <br>
+        240-242 <br> Kensington High St <br> London <br> W8 6ND
+        <br>
+        <br>
+        <span class='border'></span>
+     </div>
+       <div class='social-icons'>
+         <a href="https://www.facebook.com/downtoearthhighstreetkensington/" target="_blank"><span class=' fa fa-facebook fa-2x '></span></a>
+         <a href="https://twitter.com/DownToEarthW8" target="_blank"><span class=' fa fa-twitter fa-2x '></span></a>
+         <a href="https://plus.google.com/102080728433944558337/posts" target="_blank"><span class=' fa fa-google-plus fa-2x '></span></a>
+    <a href="https://instagram.com/downtoearthw8/" target="_blank"><span class=' fa fa-instagram fa-2x '></span></a>
+    
+    
+      </div>
+            
+
+
+	
+
+
+	
+    <!--    <div class='holder'>
+		<input id="ac-3" name="accordion-1" type="radio"  />
+		<label for="ac-3" class=" fa fa-map-marker fa-5x"></label>
+	</div>-->
+	
+</section>
+    
+    <div class="main-wrap">
+      <div class="main main-contact">
+      <div class='menu-nav menu-nav-map'>
+        <ul class="map-btn">
+          <li> <span class=' fa fa-map-marker fa-1x mapmarkerLarge'></span></li>
+        </ul>
+      </div>
+        <div class='menu-nav menu-nav-2 menu-nav-2-contact menu-nav-2-desktop'>
+        <ul>
+          <li><a href="#bus" id='bus'>BUS</a></li>
+          <li><a href='#car' id='car'>CAR</a></li>
+          <li><a href='#bike' id='bike'>BIKE</a></li>
+          <li><a href='#train' id='train'>Train</a></li>
+        </ul>
+      </div>
+        <div class='transportInfo transportInfo-bus'>
+          <p class='busInfo'> <span class='info-title'>Buses</span> <span class="info-text">9, 10, 27, 28, 49, C1, N9, N28</span>
+
+<span class="info-text">X:Kensington High Street / Earls Court Rd - towards Fulham Broadway or Hammersmith</span>
+
+          <span class="info-text">Y: Kensington High Street / Earls Court Rd  - towards Knightsbridge or Notting Hill Gate</span></p>
+        </div>
+        <div class='transportInfo transportInfo-car'>
+           <p class='carInfo'>
+               <span class='info-title'>Street Parking</span> <span class="info-text">1 Edwardes Square, London W8 6HE, UK</span>
+
+<span class='info-title'>Carpark</span> <span class="info-text">Kensington central Library, Phillimore Walk, London W8 7RX</span> </p>
+          
+        </div>
+            <div class='transportInfo transportInfo-bike'>
+           <p class='bikeInfo'>
+               <span class='info-title'>Bicycle Rental Stations</span> <span class="info-text">Holland Park, Phillimore Gardens, Abingdon Villas - Kensington</span>
+            <span class='info-title'>Bicycle</span> <span class="info-text">parking rack is available opposite restaurant</span> </p>
+        </div>
+            <div class='transportInfo transportInfo-train'>
+           <p class='trainInfo'>
+               <span class='info-title'>HIGH STREET KENSINGTON UNDERGROUND STATION</span> <span class="info-text">Turn left from the station and cross to the north side. We are 7 minutes walking distance and opposite the old Odeon Cinema</span> </p>
+        </div>
+        <div class='scroll scroll-contact'>
+      <div class='inner-main inner-main-contact'>
+        <div class='con-infoLarge'>
+        <div class="con-info"><p class='con-title'>GENERAL ENQUIRIES</p></div>
+          <div class='con-info'>
+  <span class=' fa fa-phone fa-x icon'></span><a href="tel:02073716987"><span class='numb'>0207 3716 987</span></a> <br><br>
+ <span class=' fa fa-envelope fa-x icon'></span> <a href="mailto:info@downtoearth.co.uk" ><span class='numb'>info@downtoearth.co.uk</span></a>
+            </div>
+        <div><p class='con-title'>CATERING &amp; EVENTS</p> </div>
+          <div class='con-info'><span class=' fa fa-phone fa-x icon'></span><a href="tel:07778755373"><span class='numb'>0777 8755 373</span></a>
+            <br><br>
+         <span class=' fa fa-envelope fa-x icon'></span> <a href="mailto:catering@downtoearth.co.uk"><span class='numb'>catering@downtoearth.co.uk</span></a>
+       </div>
+        
+    <div><p class='con-title'>LIFESTYLE STUDIO </p> </div>
+          <div class='con-info'><span class=' fa fa-phone fa-x icon'></span><a href="tel:02073716987" class="numbA"><span class='numb'>0207 3716 987</span></a>
+            <br><br>
+       <span class=' fa fa-envelope fa-x icon'></span> <a href="mailto:lifestyle@downtoearth.co.uk" class="numbA"><span class='numb'>lifestyle@downtoearth.co.uk</span></a>
+            </div>
+  <div><p class='con-title'>CAREERS</p> </div>
+          <div class='con-info'><span class=' fa fa-phone fa-x icon'></span><a href="tel:02073716987" class="numbA"><span class='numb'>0207 3716 987</span></a>
+      <br><br>
+     <span class=' fa fa-envelope fa-x icon'></span> <a href="mailto:hr@downtoearth.co.uk" class="numbA"><span class='numb'>hr@downtoearth.co.uk</span></a>
+            </div>
+  
+      <div><p class='con-title'>ADDRESS</p> </div>
+      
+      <div class='con-info address'>
+        <div class='address-btn'></div>
+        <span class=' fa fa-map-marker fa-2x mapmarker'></span>  
+        <br>
+        240-242 <br> Kensington High St <br> London <br> W8 6ND
+        <br>
+        <br>
+       
+        
+     </div>
+
+      </div>
+       
+       
+          </div>
+        <div class="closeMapContainer">
+          <div class='closeMapButton'>
+            <span class='closeMapSpan'></span>
+          </div>
+        </div>
+ <div class='google-container'><div id='google2'></div>  </div>
+            <div class='h1Container h1Container-contact'>
+      <h1>contact</h1></div>
+      </div>
+    </div>
+     
+     <div class="blur-container">
+    <div class="blur blur-contact"></div></div>
+    </div>
+ 
+    </div>
+  
+    </div>
+  <div class='h1Container-btm'>
+           <div class='social-icons'>
+         <a href="https://www.facebook.com/downtoearthhighstreetkensington/" target="_blank"><span class=' fa fa-facebook fa-1x navOp'></span></a>
+         <a href="https://twitter.com/DownToEarthW8" target="_blank"><span class=' fa fa-twitter fa-1x '></span></a>
+         <a href="https://plus.google.com/102080728433944558337/posts" target="_blank"><span class=' fa fa-google-plus fa-1x '></span></a>
+    <a href="https://instagram.com/downtoearthw8/" target="_blank"><span class=' fa fa-instagram fa-1x '></span></a>
+    
+    
+      </div>
+  </div>
+ 
+  </div> <!--WRAP-->
+
+    
+</body> <!---- /BODY ---->
+  
+</html>
+
