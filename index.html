@@ -89,11 +89,35 @@
     setTimeout(function() {
   window.location.href = "/project_beating-heart.html";
 }, 500);
-  });    
+  }); 
+    
+  //mobile nav 
+$('.nav-btn').click(function(){
+  $('.nav-btn span').toggleClass('ani');
+  $('.nav--mobile').toggleClass('js-display-flex');
   });
+
+  
+$('.nav--mobile').click(function(){
+  $('.nav-btn span').toggleClass('ani');
+  $('.nav--mobile').toggleClass('js-display-flex');
+  });
+});
 </script>    
   </head>
   <body>
+    <div class='nav-btn'>
+      <span ></span>
+      <span ></span>
+      <span ></span>
+    </div>
+    <nav class='nav--mobile'>
+      <ul>
+        <li><a href='#home' class='js-scroll-site'>home</a></li>
+        <li><a href='#projects' class='js-scroll-site'>projects</a></li>
+        <li><a href='#about' class='js-scroll-site'>about</a></li>
+      </ul>
+    </nav>
     <a id='home'></a>
     <div class='wrap'>
       <div class='main--ani-in'></div>
