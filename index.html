@@ -17,10 +17,8 @@
 
 <script>
   $(document).ready(function () {
-
-//STICKY
-
-     var $window = $(document),
+  //STICKY
+   var $window = $(document),
        $stickyEl = $('.projects--left'),
        elTop = $stickyEl.offset().top;
 
@@ -44,12 +42,9 @@
         $stickyEl3.toggleClass('js-sticky-right', $window.scrollTop() > elTop3);
 
     });
-
-
-//  $(window).on('resize',function(){location.reload();});
+  //  $(window).on('resize',function(){location.reload();});
   //SCROLL
-
-      $('.js-scroll-projects, .js-scroll-site').click(function (event) {
+  $('.js-scroll-projects, .js-scroll-site').click(function (event) {
         event.preventDefault();
 
         var href = $(this).attr('href');
@@ -72,39 +67,34 @@
         $('body, html').animate({
           scrollTop: position
         }, 700);
-
       });
-
   //ANIMATION
-
-      $('.js-down-click').click(function(){
+    $('.js-down-click').click(function(){
     $('.main--ani-in').addClass('js--main--ani-start');
     setTimeout(function() {
   window.location.href = "/project_down-to-earth.html";
-}, 500);
+  }, 500);
   });
-
-      $('.js-heart-click').click(function(){
+  $('.js-heart-click').click(function(){
     $('.main--ani-in').addClass('js--main--ani-start');
     setTimeout(function() {
   window.location.href = "/project_beating-heart.html";
-}, 500);
+  }, 500);
   });
-
   //mobile nav
-$('.nav-btn').click(function(){
+  $('.nav-btn').click(function(){
   $(this).addClass('js-nav-btn-opacity')
   $('.nav-btn span').toggleClass('ani');
   $('.nav--mobile').toggleClass('js-display-flex');
   });
 
-
-$('.nav--mobile').click(function(){
+  $('.nav--mobile').click(function(){
   $('.nav-btn span').toggleClass('ani');
   $('.nav--mobile').toggleClass('js-display-flex');
   });
-});
+  });
 </script>
+
   </head>
   <body>
     <div class='nav-btn'>
