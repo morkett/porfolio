@@ -23,6 +23,7 @@
         } catch (e) {}
     </script>
 
+  <script>src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"</script>
     <script>
         $(document).ready(function() {
 
@@ -80,171 +81,10 @@
 </head>
 
 <body>
-    <div class="nav-btn">
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
-    <nav class="nav--mobile">
-        <ul>
-            <li><a href="#home" class="js-scroll-site">home</a></li>
-            <li><a href="#projects" class="js-scroll-site">projects</a></li>
-            <li><a href="#about" class="js-scroll-site">about</a></li>
-        </ul>
-    </nav>
-    <a id="home"></a>
-    <div class="wrap">
-        <div class="main--ani-in"></div>
-        <div class="main--ani"></div>
-        <section class="section section--home">
-
-            <div class="h1--home-container">
-                <h1 class="h1--home-name">&#60;David Corkett&#62;</h1>
-                <h1 class="h1--home-title">Front-end Web Developer</h1>
-            </div>
-            <nav class="nav--main nav--main-site nav--home">
-                <ul>
-                    <li><a href="#home" class="js-scroll-site home-link-hover">home</a></li>
-                    <!--            <li>&#8226;</li>-->
-                    <li><a href="#projects" class="js-scroll-site home-link-hover">projects</a></li>
-                    <!--            <li>&#8226;</li>-->
-                    <li><a href="#about" class="js-scroll-site home-link-hover">about</a></li>
-                </ul>
-            </nav>
-        </section>
-        <section class="section section--projects">
-            <a id="projects"></a>
-            <div class="projects--first--container">
-                <article class="left projects--left">
-                    <h2 class="h2--main">projects</h2>
-                    <nav class="nav--main nav--main-projects">
-                        <ul>
-                            <li><a href="#down_to_earth" class="js-scroll-projects">Down to Earth</a></li>
-                            <li>&#8226;</li>
-                            <li><a href="#beating_heart" class="js-scroll-projects">Beating Heart</a></li>
-                        </ul>
-                    </nav>
-                    <nav class="nav--main nav--main-site">
-                        <ul>
-                            <li><a href="#home" class="js-scroll-site">home</a></li>
-                            <li>&#8226;</li>
-                            <li><a href="#projects" class="js-scroll-site">projects</a></li>
-                            <li>&#8226;</li>
-                            <li><a href="#about" class="js-scroll-site">about</a></li>
-                        </ul>
-                    </nav>
-                </article>
-                <article class="right projects--right projects--right--downtoearth">
-                    <a id="down_to_earth"></a>
-                    <a class="main--downtoearth js-down-click cursor"></a> <!-- TODO: Change to srcset -->
-                    <div class="h2--projects js-down-click cursor">
-                        <h2 class="js-down-click cursor">DOWN TO EARTH</h2>
-                        <h3 class="js-down-click cursor">view project</h3>
-                    </div>
-                </article>
-            </div>
-            <article class="right projects--right projects--right--heart">
-                <a id="beating_heart"></a>
-                <a class="main--heart js-heart-click cursor"></a> <!-- TODO: Change to srcset -->
-                <div class="h2--projects  js-heart-click cursor">
-                    <h2 class=" js-heart-click cursor">beating heart</h2>
-                    <h3 class=" js-heart-click cursor">view project</h3>
-                </div>
-            </article>
-        </section>
-        <section class="section section--about">
-            <a id="about"></a>
-            <div class="about--first--container">
-
-                <article class="left about--left">
-                    <h2 class="h2--main">about</h2>
-                    <nav class="nav--main nav--main-projects">
-                        <ul>
-                            <li><a href="#information" class="js-scroll-about">information</a></li>
-                            <li>&#8226;</li>
-                            <li><a href="#skills" class="js-scroll-about">skills</a></li>
-                            <li>&#8226;</li>
-                            <li><a href="#contact" class="js-scroll-about">contact</a></li>
-                            <!--<li>&#8226;</li>-->
-                            <!--<li><a href= '#typewriter' id='typeActive' class='scroll-pro non-active'>Typewriter</a></li>-->
-                        </ul>
-                    </nav>
-                    <nav class="nav--main nav--main-site">
-                        <ul>
-                            <li><a href="#home" class="js-scroll-site">home</a></li>
-                            <li>&#8226;</li>
-                            <li><a href="#projects" class="js-scroll-site">projects</a></li>
-                            <li>&#8226;</li>
-                            <li><a href="#about" class="js-scroll-site">about</a></li>
-                        </ul>
-                    </nav>
-                </article>
-                <!--         <a id='information'></a>-->
-                <article class="right about--right about--right-info">
-                    <a id="information"></a>
-                    <h2 class="h2--about">i am a self-taught <br>front-end web developer <br>from london</h2>
-                    <p class="about--p">
-                        I have experience of creating responsive interactive websites by hand-coding HTML, CSS, and JQuery. I am passionate about design and alongside my technical ability, I can create innovative interfaces which allow ease of usability. I follow many online
-                        blogs and front-end news sites to keep updated with current standards and new developments in an ever-changing field. Teaching myself to code while working full-time has required me to be proactive, a fast learner, and efficient
-                        in my methods of execution.
-
-                    </p>
-
-                </article>
-            </div>
-
-            <a id="skills"></a>
-            <article class="right about--right about--right-skills">
-                <div class="dev-container">
-                    <h3 class="h3--about">development</h3>
-                    <div class="icon--holder-phone">
-                        <!--ADDED BLOCK TO FLEX ICONS INTO ROW -->
-                        <div class="icon-holder">
-                            <div class="icon css-icon"><span>css3</span></div>
-                            <div class="icon html-icon"><span>html</span></div>
-                        </div>
-                        <div class="icon-holder">
-                            <div class="icon js-icon"><span>JS</span></div>
-                            <div class="icon jQuery-icon"><span>jQuery</span></div>
-                        </div>
-                    </div>
-                    <div>
-                        <p>
-                            These languages create the bones of the website, dictate appearance, and manipulate behaviour, bringing the website to life.
-                        </p>
-                    </div>
-                </div>
-                <div class="design-container">
-                    <h3 class="h3--about">Design</h3>
-                    <div class="icon--holder-phone">
-                        <div class="icon ps-icon"><span>Ps</span></div>
-                        <div class="icon il-icon"><span>Ai</span></div>
-                    </div>
-                    <div>
-                        <p>
-                            These tools complement the development of websites by allowing image manipulation, creating website layouts and designing online resources such as SVGs.
-                        </p>
-                    </div>
-                </div>
-            </article>
-
-            <article class="right about--right about--right-contact">
-                <a id="contact"></a>
-
-                <h2 class="h2--about">contact</h2>
-                <ul class="contact--icons">
-                    <li><span class="icon css-icon icon-twitter"></span>
-                        <h4>twitter</h4></li>
-                    <li><span class="icon css-icon icon-pen"></span>
-                        <h4>codePen</h4></li>
-                    <li><span class="icon css-icon icon-gitHub"></span>
-                        <h4>gitHub</h4></li>
-                    <li><span class="icon css-icon icon-mail"></span>
-                        <h4>mail</h4></li>
-                </ul>
-            </article>
-        </section>
-    </div>
+  <section class="sidebar">
+    <h2>projects</h2>
+  </section>
+  
 </body>
 
 </html>

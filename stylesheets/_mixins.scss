@@ -1,0 +1,35 @@
+////////  MIXINS ////////
+
+//////// PSEUDO ////////
+@mixin pseudo($display: block, $pos: absolute, $content: "") {
+  content: $content;
+  display: $display;
+  position: $pos;
+}
+
+//////// FLEXBOX ////////
+
+@mixin flexbox($display: flex, $direction: column, $justify: center, $align: center) {
+  display: $display;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+}
+
+//////// FONTS ////////
+
+@mixin font-properties($letter-spacing, $line-height, $font-size) {
+  font-family: $font-family;
+  font-size: $font-size;
+  letter-spacing: $letter-spacing;
+  line-height: $line-height;
+  text-transform: uppercase;
+}
+
+//////// SIDEBAR-GRADIENT ////////
+@mixin sidebar-gradient {
+  background: $dark-grey;
+  background: -webkit-radial-gradient(center, ellipse cover, #e3e3e3 0%, #bdbdbd 100%);
+  background: -webkit-radial-gradient(center ellipse, #e3e3e3 0%, #bdbdbd 100%);
+  background: radial-gradient(ellipse at center, #e3e3e3 0%, #bdbdbd 100%);
+}
