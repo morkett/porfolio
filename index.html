@@ -9,7 +9,7 @@
     <meta name="description" content="I am a self-taught front-end web developer from london" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0" />
     <!-- FAVICON -->
-    <link type="text/css" rel="stylesheet" href="css/test2.css" />
+    <link type="text/css" rel="stylesheet" href="stylesheets/styles.css" />
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">
     </script>
@@ -25,33 +25,7 @@
 
     <script>
         $(document).ready(function() {
-            //STICKY
-            var $window = $(document),
-                $stickyEl = $('.projects--left'),
-                elTop = $stickyEl.offset().top;
 
-            $window.scroll(function() {
-                $stickyEl.toggleClass('js-sticky', $window.scrollTop() > elTop);
-                $('.projects--right--downtoearth').toggleClass('js-no-sticky', $window.scrollTop() > elTop);
-            });
-
-            var $stickyEl2 = $('.about--left'),
-                elTop2 = $stickyEl2.offset().top;
-
-            $window.scroll(function() {
-                $stickyEl2.toggleClass('js-sticky', $window.scrollTop() > elTop2);
-                $('.about--right-info').toggleClass('js-no-sticky', $window.scrollTop() > elTop2);
-            });
-
-            var $stickyEl3 = $('.projects--right--heart'),
-                elTop3 = $stickyEl3.offset().top;
-
-            $window.scroll(function() {
-                $stickyEl3.toggleClass('js-sticky-right', $window.scrollTop() > elTop3);
-
-            });
-            //  $(window).on('resize',function(){location.reload();});
-            //SCROLL
             $('.js-scroll-projects, .js-scroll-site').click(function(event) {
                 event.preventDefault();
 
