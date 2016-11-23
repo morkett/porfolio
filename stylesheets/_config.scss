@@ -22,16 +22,29 @@ $main-text: 1em;
 
 /// LETTER-SPACING ///
 $sidebar-title-letterspacing: 0.2em;
+$project-title-letterspacing: 0.7em;
+$project-view-letterspacing: 0.5em;
 
 /// LINE-HEIGHT ///
 
-/////////////////////
 ////////COLOURS////////
-/////////////////////
+
 $black: #292929;
 $light-grey: #e3e3e3;
 $dark-grey: #bdbdbd;
 
 ////////LAYOUT - DESKTOP ////////
+
+/// SIDEBAR ///
+$sidebar-height: 100vh;
+$sidebar-width: 30vw;
+
+/// main ///
+$main-height: 100vh;
+$main-width: 70vw;
+
+/// main project ///
+$main-project-height: 100vh;
+$main-project-width: 70vw;
 
 ////////LAYOUT - MOBILE ////////

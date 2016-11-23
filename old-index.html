@@ -23,33 +23,155 @@
         } catch (e) {}
     </script>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
     <script>
         $(document).ready(function() {
-            //STICKY
-            var $window = $(document),
-                $stickyEl = $('.projects--left'),
-                elTop = $stickyEl.offset().top;
+          //Init ScrollMagic
+var controller = new ScrollMagic.Controller();
 
-            $window.scroll(function() {
-                $stickyEl.toggleClass('js-sticky', $window.scrollTop() > elTop);
-                $('.projects--right--downtoearth').toggleClass('js-no-sticky', $window.scrollTop() > elTop);
-            });
+// //pin the intro
+// var pinIntroScene = new ScrollMagic.Scene ({
+// 		triggerElement: '.projects--first--container',
+// 		triggerHook: 0,
+//
+// })
+// .setPin('.projects--left', {pushFollowers: false})
+// .addIndicators()
+// .addTo(controller);
+//
+// var pinIntroScene2 = new ScrollMagic.Scene ({
+// 		triggerElement: '.section--about',
+// 		triggerHook: 0,
+//
+// })
+// .setPin('.about--left', {pushFollowers: false})
+// .addIndicators()
+// .addTo(controller);
 
-            var $stickyEl2 = $('.about--left'),
-                elTop2 = $stickyEl2.offset().top;
 
-            $window.scroll(function() {
-                $stickyEl2.toggleClass('js-sticky', $window.scrollTop() > elTop2);
-                $('.about--right-info').toggleClass('js-no-sticky', $window.scrollTop() > elTop2);
-            });
 
-            var $stickyEl3 = $('.projects--right--heart'),
-                elTop3 = $stickyEl3.offset().top;
+  //Init ScrollMagic
 
-            $window.scroll(function() {
-                $stickyEl3.toggleClass('js-sticky-right', $window.scrollTop() > elTop3);
 
-            });
+//pin the intro
+// var pinIntroScene = new ScrollMagic.Scene ({
+// 		triggerElement: '.projects--first--container',
+// 		triggerHook: 0,
+//
+// })
+// .setPin('.projects--left', {pushFollowers: false})
+// .addIndicators()
+// .addTo(controller);
+//
+// var pinIntroScene2 = new ScrollMagic.Scene ({
+// 		triggerElement: '.section--about',
+// 		triggerHook: 0,
+//
+// })
+// .setPin('.about--left', {pushFollowers: false})
+// .addIndicators()
+// .addTo(controller);
+
+
+var ourScene = new ScrollMagic.Scene({
+triggerElement: '.test-scroll',
+triggerHook:0,
+})
+.setClassToggle('.projects--left', 'js-sticky') // ad class to project01
+.addIndicators({
+name: 'projects--left',
+colorTrigger:'black',
+colorStart: '#75c695',
+colorEnd: 'pink'
+}) //plugin
+.addTo(controller);
+
+// var controller = new ScrollMagic.Controller();
+var ourScene2 = new ScrollMagic.Scene({
+triggerElement: '.test-scroll',
+triggerHook:0
+})
+.setClassToggle('.projects--right--downtoearth', 'js-no-sticky') // ad class to project01
+.addIndicators({
+name: 'd2e no-sticky',
+colorTrigger:'black',
+colorStart: '#75c695',
+colorEnd: 'pink',
+indent:200,
+}) //plugin
+.addTo(controller);
+
+
+var ourScene5 = new ScrollMagic.Scene({
+triggerElement: '.test-scroll2',
+triggerHook:0
+})
+.setClassToggle('.projects--right--heart', 'js-sticky-right') // ad class to project01
+.addIndicators({
+name: 'heart-sticky',
+colorTrigger:'black',
+colorStart: '#75c695',
+colorEnd: 'pink',
+indent:200,
+}) //plugin
+.addTo(controller);
+// TODO: ADD CONTAINER TO HEART + ADD SCROLL FIXED CLASSES
+
+var ourScene3 = new ScrollMagic.Scene({
+triggerElement: '.about--first--container',
+triggerHook:0
+})
+.setClassToggle('.about--left', 'js-sticky') // ad class to project01
+.addIndicators({
+name: 'sticky-about',
+colorTrigger:'red',
+colorStart: '#75c695',
+colorEnd: 'pink',
+indent:300,
+}) //plugin
+.addTo(controller);
+
+var ourScene4 = new ScrollMagic.Scene({
+triggerElement: '.about--first--container',
+triggerHook:0
+})
+.setClassToggle('.about--right-info', 'js-no-sticky') // ad class to project01
+.addIndicators({
+name: 'sticky-about',
+colorTrigger:'red',
+colorStart: '#75c695',
+colorEnd: 'pink',
+indent:300,
+}) //plugin
+.addTo(controller);
+
+
+            // //STICKY
+            // var $window = $(document),
+            //     $stickyEl = $('.projects--left'),
+            //     elTop = $stickyEl.offset().top;
+            //
+            // $window.scroll(function() {
+            //     $stickyEl.toggleClass('js-sticky', $window.scrollTop() > elTop);
+            //     $('.projects--right--downtoearth').toggleClass('js-no-sticky', $window.scrollTop() > elTop);
+            // });
+            //
+            // var $stickyEl2 = $('.about--left'),
+            //     elTop2 = $stickyEl2.offset().top;
+            //
+            // $window.scroll(function() {
+            //     $stickyEl2.toggleClass('js-sticky', $window.scrollTop() > elTop2);
+            //     $('.about--right-info').toggleClass('js-no-sticky', $window.scrollTop() > elTop2);
+            // });
+            //
+            // var $stickyEl3 = $('.projects--right--heart'),
+            //     elTop3 = $stickyEl3.offset().top;
+            //
+            // $window.scroll(function() {
+            //     $stickyEl3.toggleClass('js-sticky-right', $window.scrollTop() > elTop3);
+            //
+            // });
             //  $(window).on('resize',function(){location.reload();});
             //SCROLL
             $('.js-scroll-projects, .js-scroll-site').click(function(event) {
@@ -140,8 +262,8 @@
         </section>
         <section class="section section--projects">
             <a id="projects"></a>
-            <div class="projects--first--container">
-                <article class="left projects--left">
+            <div class="projects--first--container test-scroll">
+                <article class="left projects--left section">
                     <h2 class="h2--main">projects</h2>
                     <nav class="nav--main nav--main-projects">
                         <ul>
@@ -169,6 +291,7 @@
                     </div>
                 </article>
             </div>
+              <div class="projects--first--container test-scroll2">
             <article class="right projects--right projects--right--heart">
                 <a id="beating_heart"></a>
                 <a class="main--heart js-heart-click cursor"></a> <!-- TODO: Change to srcset -->
@@ -177,12 +300,13 @@
                     <h3 class=" js-heart-click cursor">view project</h3>
                 </div>
             </article>
+          </div>
         </section>
         <section class="section section--about">
             <a id="about"></a>
             <div class="about--first--container">
 
-                <article class="left about--left">
+                <article class="left about--left section">
                     <h2 class="h2--main">about</h2>
                     <nav class="nav--main nav--main-projects">
                         <ul>
