@@ -27,3 +27,19 @@
   transform: translateX(-30vw);
   transition: all .2s ease-in 0s;
 }
+
+.js-nav-darken-show {
+  display: block;
+  transform: translateX(0vw);
+  opacity: .5;
+  transition: opacity .5s ease 0s;
+}
+
+.js-nav-click-overflow {
+  overflow-y: hidden;
+}
+
+.js-blur {
+  -webkit-filter: blur(0.2em);
+  filter: blur(0.5em);
+}

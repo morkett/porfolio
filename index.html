@@ -158,16 +158,34 @@
           // FIXME: ii) change from body + create hamburger
           $('.sidebar--home').click(function(){
             $('.nav-desktop').toggleClass("js-nav-hide");
-          });
-          $('.nav-desktop').mouseout(function(){
+            $('.nav-darken').toggleClass("js-nav-darken-show");
+
+            $('body, section').addClass("js-nav-click-overflow");
+            $('.wrap').addClass("js-blur");
+        });
+
+
+          // $('.nav-desktop').mouseout(function(){
+          //   $('.nav-desktop').addClass("js-nav-hide");
+          // });
+
+          //TEMP BEHAVIOUR
+          $('.nav-desktop').click(function(){
             $('.nav-desktop').addClass("js-nav-hide");
+            $('.nav-darken').toggleClass("js-nav-darken-show");
+            $('body, section').removeClass("js-nav-click-overflow");
+            $('.wrap').removeClass("js-blur");
           });
+          //TEMP BEHAVIOUR
+
           $('.js-scroll-site').click(function(){
             $('.nav-desktop').addClass("js-nav-hide");
           });
           $('.nav-desktop').mouseover(function(){
             $('.nav-desktop').removeClass("js-nav-hide");
           });
+
+
 
         //NAV
           $('.js-scroll-site').click(function(event) {
@@ -218,10 +236,34 @@
   <nav class="nav nav-desktop js-nav-hide">
     <ul>
       <li class="nav-primary nav-home"><a href="#home" class="js-scroll-site">home</a></li>
-      <li class="nav-primary nav-projects"><a href="#projects" class="js-scroll-site">projects</a></li>
-      <li class="nav-primary nav-about"><a href="#about" class="js-scroll-site">about</a></li>
+      <li class="nav-primary nav-projects"><a href="#projects" class="js-scroll-site">projects</a>
+      <ul class="mini-nav">
+        <li class="mini-nav-h4">down to earth</li>
+        <li>&#8226;</li>
+        <li class="mini-nav-h4">beating heart</li>
+      </ul>
+      </li>
+
+      <li class="nav-primary nav-about"><a href="#about" class="js-scroll-site">about</a>
+        <ul class="mini-nav">
+          <li class="mini-nav-h4">information</li>
+          <li>&#8226;</li>
+          <li class="mini-nav-h4">&nbsp;skills&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+        </ul>
+      </li>
     </ul>
-  </nav> <!-- TODO: i) add contact info to nav -->
+    <div class="icon-container">
+      <a href="mailto:dcorkett@gmail.com?Subject=Hello" target="_top" class="icon-links icon-mail"></a>
+      <span>&#8226;</span>
+      <a href="" class="icon-links icon-github"></a>
+      <span>&#8226;</span>
+      <a href="" class="icon-links icon-codepen"></a>
+    </div>
+  </nav>
+  <div class="nav-darken"></div>
+  <!-- TODO: i) add contact info to nav -->
+
+
   <div class="wrap">
     <a id="home"></a>
     <header class="header-home">
