@@ -8,24 +8,41 @@ $border-dev-purple: 2px dashed rgb(192, 43, 200);
 ////////FONTS////////
 /////////////////////
 
-$font-family: "freight-sans-pro", Sans-Serif;
+$font-family: "freight-sans-pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 /// FONT SIZES ///
+$h1-home--name-size: 2.5em;
+$h1-home--title-size: 1.2em;
+
 $sidebar-title-fontsize: 1.4em;
+$sidebar-h4-fontsize: 0.6em;
+$sidebar-nav-title-fontsize: 1.4em;
 
 $project-title-size: 1.7em;
 $project-view-size: 0.8em;
 
-$about-title-text: 1.4em;
-
+$about-title-size: 1.4em;
+$h3-about--skills-size: 1.2em;
+$about-p-size: 1em;
+$p-about-skills-size: 0.9em;
 $main-text: 1em;
 
 /// LETTER-SPACING ///
 $sidebar-title-letterspacing: 0.2em;
+$sidebar-h4-letterspacing: 0.1em;
+$sidebar-nav-title-letterspacing: 0.2em;
 $project-title-letterspacing: 0.7em;
 $project-view-letterspacing: 0.5em;
+$h1-home--name-letterspacing: 0.5em;
+$h1-home--title-letterspacing: 0.5em;
+$h2-about--title-letterspacing: 0.2em;
+$h3-about--skills-letterspacing: 0.2em;
+$p-about-letterspacing: 0.15em;
 
 /// LINE-HEIGHT ///
+$h2-about--title-lineheight: 1.2em;
+$p-about-lineheight: 1.7em;
+$p-about-skills-lineheight: 1.5em;
 
 ////////COLOURS////////
 

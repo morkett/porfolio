@@ -21,10 +21,62 @@ body {
   position: relative;
 }
 
+.nav-desktop {
+  position: fixed;
+  height: 100vh;
+  width: 30vw;
+  z-index: 999;
+
+  @include flexbox;
+
+  @include sidebar-gradient;
+
+  transform: translateX(0vw);
+  transition: all 0.2s ease-out;
+
+  ul {
+    width: 100%;
+    text-align: center;
+  }
+
+  ul li a {
+    display: block;
+    margin: 50px 0;
+    width: 100%;
+
+    @include font-properties($font-size: $sidebar-nav-title-fontsize, $letter-spacing: $sidebar-nav-title-letterspacing);
+  }
+}
+
+.nav-desktop:after {
+  @include pseudo;
+
+  height: 100vw;
+  width: 100vw;
+  position: fixed;
+  left: 30vw;
+  background-color: $black;
+  opacity: .4;
+  z-index: 999;
+  display: none;
+}
+
 .wrap {
   min-height: 100vh;
   width: 100vw;
   position: relative;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.blinder:after {
+  @include pseudo;
+
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  background-color: $light-grey;
 }
 
 section {
@@ -35,9 +87,26 @@ section {
   height: 100vh;
   width: 100vw;
 
-  @include flexbox;
+  @include flexbox($direction: row);
 
   z-index: 0;
+
+  h1 {
+    @include font-properties($font-size: $h1-home--name-size, $letter-spacing: $h1-home--name-letterspacing);
+  }
+
+  h2 {
+    @include font-properties($font-size: $h1-home--title-size, $letter-spacing: $h1-home--title-letterspacing);
+  }
+}
+
+.h1-home--container {
+  height: 100vh;
+  width: 70vw;
+
+  @include flexbox;
+
+  background-color: $light-grey;
 }
 
 .container {
@@ -49,10 +118,13 @@ section {
   z-index: 1;
 }
 
+.container--about {
+  height: auto;
+}
+
 .sidebar {
   height: $sidebar-height;
   width: $sidebar-width;
-  border: $border-dev-green;
 
   @include sidebar-gradient;
 
@@ -61,6 +133,43 @@ section {
 
 .sidebar h2 {
   @include font-properties($font-size: $sidebar-title-fontsize, $letter-spacing: $sidebar-title-letterspacing);
+
+  margin: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.sidebar--projects-page h4 {
+  @include font-properties($font-size: $sidebar-h4-fontsize, $letter-spacing: $sidebar-h4-letterspacing);
+
+  margin-top: 10px;
+}
+
+.sidebar--projects-page p {
+  @include font-properties($font-size: 0.8em, $line-height: 1.5em, $letter-spacing: 0.15em);
+
+  text-align: justify;
+  padding: 10%;
+}
+
+.sidebar--home {
+  background: url("../images/header-test.jpeg") center left no-repeat;
+  background-size: cover;
+  background-position: -200px;
+}
+
+.sidebar--home:after {
+  @include pseudo;
+
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 30vw;
+
+  @include sidebar-gradient;
+
+  opacity: 0.6;
+  z-index: 3;
 }
 
 .main {
@@ -73,7 +182,6 @@ section {
 
 .main-projects--heart {
   margin-left: 30vw;
-  border: $border-dev-green;
 }
 
 .main-projects h3, .main-projects h4 {
@@ -99,10 +207,165 @@ section {
   @include font-properties($font-size: $project-view-size, $letter-spacing: $project-view-letterspacing);
 }
 
-.main-projects img {
-  height: 311px;
-  position: absolute;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+.container--about {
+  min-height: 100vh;
+  background-color: $light-grey;
+  border: $border-dev-red;
+}
+
+.main-about-info {
+  height: auto;
+
+  // border: $border-dev-green;
+}
+
+// .sidebar {
+//   display: none;
+// }
+.h2-about--info {
+  padding: 36px 0 30px 0;
+  text-align: center;
+
+  @include font-properties($font-size: $about-title-size, $letter-spacing: $h2-about--title-letterspacing, $line-height: $h2-about--title-lineheight);
+}
+
+.about-p {
+  padding: 0 10%;
+
+  //TODO iii) kill padding on smaller sizes
+  text-align: justify;
+
+  @include font-properties($font-size: $about-p-size, $letter-spacing: $p-about-letterspacing, $line-height: $p-about-lineheight);
+}
+
+.container--about-skills {
+  position: relative;
+  justify-content: flex-end;
+  overflow: hidden;
+  height: auto;
+  background: transparent;
+  border: $border-dev-purple;
+}
+
+.main-about--skills {
+  height: auto;
+  overflow-x: hidden;
+  background-color: $light-grey;
+
+  div p {
+    @include font-properties($font-size: $p-about-skills-size, $letter-spacing: $p-about-letterspacing, $line-height: $p-about-skills-lineheight);
+
+    text-align: justify;
+    padding: 50px 10%;
+    width: 80%;
+  }
+}
+
+.dev-container, .design-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 50vh;
+}
+
+.h3-about--skills {
+  @include font-properties($font-size: $h3-about--skills-size, $letter-spacing: $h3-about--skills-letterspacing);
+
+  text-align: center;
+}
+
+.container-icon-skills {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.icon-skills {
+  border: 1px solid $black;
+  width: 80px;
+  height: 80px;
+  text-align: center;
+  margin: 20px;
+
+  @include flexbox;
+
+  @include font-properties($font-size: 1.2em, $letter-spacing: 0.05em);
 }
 
 @import "js";
+
+.main-projects {
+  border: $border-dev-green;
+}
+
+//beating heart projects page
+
+iframe {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  outline: none;
+  border-width: 10px;
+  border-style: none;
+  border-color: initial;
+  border-image: initial;
+}
+
+.icon-container {
+  @include flexbox;
+
+  h6 {
+    @include font-properties($font-size: 0.6em, $letter-spacing: 0.1em);
+
+    text-align: center;
+  }
+}
+
+.icon-links {
+  display: block;
+  background-repeat: no-repeat;
+  background-image: url(../images/sprite.svg);
+
+  // border: $border-dev-green;
+}
+
+.icon-link {
+  width: 24px;
+  height: 24px;
+  background-position: 0 0;
+}
+
+.icon-arrow-back {
+  width: 24px;
+  height: 24px;
+  background-position: -24px 0;
+}
+
+.icon-mail {
+  width: 24px;
+  height: 24px;
+  background-position: -48px 0;
+}
+
+.icon-github {
+  width: 24px;
+  height: 24px;
+  background-position: 0 -24px;
+}
+
+.icon-codepen {
+  width: 24px;
+  height: 24px;
+  background-position: -24px -24px;
+}
+
+.temp-link {
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  display: block;
+  z-index: 999999;
+  background-color: red;
+}

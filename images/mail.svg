@@ -1,1 +1,13 @@
-<svg id="Arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 149.77 109.83"><defs><style>.cls-1{fill:#292929;}</style></defs><title>mail</title><g id="Mail"><path class="cls-1" d="M74.89,64.07,149.77,9.15A9.22,9.22,0,0,0,140.41,0H9.36A9.22,9.22,0,0,0,0,9.15Zm0,16.44L0,25.59v75.09a9.22,9.22,0,0,0,9.36,9.15h131a9.22,9.22,0,0,0,9.36-9.15V25.59Z"/></g></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Arrow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#292929;}
+</style>
+<title>mail</title>
+<g id="Mail">
+	<path class="st0" d="M16,18L32,6.2c0-1.1-0.9-2-2-2c0,0,0,0,0,0H2c-1.1,0-2,0.9-2,1.9c0,0,0,0,0,0L16,18z M16,21.5L0,9.7v16
+		c0,1.1,0.9,2,2,2c0,0,0,0,0,0h28c1.1,0,2-0.9,2-1.9c0,0,0,0,0,0v-16L16,21.5z"/>
+</g>
+</svg>

@@ -572,6 +572,30 @@ table {
   border-spacing: 0;
 }
 
+/*============*/
 * {
   box-sizing: border-box;
+}
+
+/*============*/
+a:link, a:visited, a:hover, a:active, a:focus {
+  text-decoration: none;
+  color: #292929;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+}
+
+iframe {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  outline: none;
+  border-width: 10px;
+  border-style: none;
+  border-color: initial;
+  border-image: initial;
 }
