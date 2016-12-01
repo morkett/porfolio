@@ -1,5 +1,6 @@
 
     $(document).ready(function() {
+      
       var controller = new ScrollMagic.Controller();
 // TODO: REMOVE INDICATORS FROM JS
 
@@ -54,7 +55,7 @@
 
         //BLINDER
         var scrollfixed2 = new ScrollMagic.Scene({
-        triggerElement: '.container-projects',
+        triggerElement: '.container--about',
         triggerHook:0
         })
         .setClassToggle('.header-home', 'blinder') // ad class to project01
@@ -216,13 +217,13 @@
 
 
 //hover main
-$('.main-projects').mouseover(function(){
-  $(this).children('h3, h4').addClass('js-hover');
-});
-
-$('.main-projects').mouseout(function(){
-  $(this).children('h3, h4').removeClass('js-hover');
-});
-
-
+// $('.main-projects').mouseover(function(){
+//   $(this).children('h3, h4').addClass('js-hover');
+// });
+//
+// $('.main-projects').mouseout(function(){
+//   $(this).children('h3, h4').removeClass('js-hover');
+// });
+//
+//
     });
