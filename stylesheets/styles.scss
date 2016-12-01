@@ -2,6 +2,10 @@
 @import "config";
 @import "mixins";
 
+// * {
+//   transition: all 0.2s ease;
+// }
+
 *::selection {
   background: $dark-grey;
 }
@@ -19,6 +23,39 @@ body {
   overflow-y: auto;
   font-size: 16px;
   position: relative;
+  -webkit-font-smoothing: antialiased;
+  text-shadow: 1px 1px 1px rgba(41, 41, 41, 0.004);
+}
+
+.btn-nav {
+  height: 50px;
+  width: 50px;
+  background: $light-grey;
+  background: rgba(227, 227, 227, 0.8);
+
+  // border: $border-dev-green;
+  position: fixed;
+  top: 0;
+  left: 20px;
+  z-index: 99999;
+  overflow: hidden;
+  cursor: pointer;
+
+  @include flexbox;
+
+  span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: $black;
+    margin: 1.5px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  // span:nth-child(2) {
+  //   transition: all 0s;
+  // }
 }
 
 .nav-desktop {
@@ -31,8 +68,10 @@ body {
 
   @include sidebar-gradient;
 
-  transform: translateX(0vw);
-  transition: all 0.2s ease-out;
+  // background: $light-grey;
+  transform: translateX(-30vw);
+  opacity: 0;
+  transition: opacity 0.5s ease 0s, transform 0s linear 0.5s;
 
   ul {
     width: 100%;
@@ -57,9 +96,11 @@ body {
 
   }
 
-  .nav-projects a, .nav-about a {
-    margin: 50px 0 10px 0;
-    margin: calc(50px-10px) 0 10px 0;
+  // .nav-projects a, .nav-about a {
+  //
+  // }
+  .main-link {
+    margin: 0;
   }
 
   .icon-container {
@@ -85,16 +126,16 @@ body {
 }
 
 .nav-darken {
-  height: 100vw;
-  width: 70vw;
-  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
   left: 30vw;
   background-color: $black;
-  opacity: 0;
   z-index: 999;
   display: block;
   transform: translateX(100vw);
-  transition: opacity 1s ease 0s;
+  opacity: 0;
+  transition: opacity .3s ease 0s, transform 0s linear .3s;
 }
 
 .mini-nav {
@@ -104,12 +145,15 @@ body {
 
   // border: $border-dev-green;
 
-  .mini-nav-h4 {
-    @include font-properties($font-size: $sidebar-h4-fontsize, $letter-spacing: $sidebar-h4-letterspacing, $line-height: 0);
+  .mini-nav-h4 a {
+    @include font-properties($font-size: 0.65em, $letter-spacing: $sidebar-h4-letterspacing, $line-height: 0);
+
+    margin: 10px 0 50px 0;
   }
 
   li:nth-child(2), li:nth-child(4) {
     margin: 0 5px;
+    margin: 10px 5px 50px 5px;
   }
 }
 
@@ -119,6 +163,7 @@ body {
   position: relative;
   overflow-x: hidden;
   overflow-y: auto;
+  transition: filter .3s ease 0s;
 }
 
 .blinder:after {
@@ -135,23 +180,6 @@ section {
   @include flexbox;
 }
 
-.header-home {
-  height: 100vh;
-  width: 100vw;
-
-  @include flexbox($direction: row);
-
-  z-index: 0;
-
-  h1 {
-    @include font-properties($font-size: $h1-home--name-size, $letter-spacing: $h1-home--name-letterspacing);
-  }
-
-  h2 {
-    @include font-properties($font-size: $h1-home--title-size, $letter-spacing: $h1-home--title-letterspacing);
-  }
-}
-
 .h1-home--container {
   height: 100vh;
   width: 70vw;
@@ -159,6 +187,16 @@ section {
   @include flexbox;
 
   background-color: $light-grey;
+  background: url("../images/header-test.jpeg") center left no-repeat;
+  background-size: cover;
+}
+
+.h1-home--container:after {
+  @include pseudo;
+
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba($dark-grey, 0.2);
 }
 
 .container {
@@ -168,6 +206,11 @@ section {
   @include flexbox($direction: row);
 
   z-index: 1;
+}
+
+.container-projects--heart {
+  width: 70vw;
+  margin-left: 30vw;
 }
 
 .container--about {
@@ -181,6 +224,8 @@ section {
   @include sidebar-gradient;
 
   @include flexbox;
+
+  z-index: 900;
 }
 
 .sidebar h2 {
@@ -191,6 +236,37 @@ section {
   text-align: center;
 }
 
+.header-home {
+  height: 100vh;
+  width: 100vw;
+
+  @include flexbox($direction: row);
+
+  z-index: 0;
+  text-align: center;
+
+  h1 {
+    @include font-properties($font-size: $h1-home--name-size, $letter-spacing: $h1-home--name-letterspacing);
+  }
+
+  h2 {
+    @include font-properties($font-size: $h1-home--title-size, $letter-spacing: $h1-home--title-letterspacing);
+  }
+}
+
+.sidebar--projects ul, .sidebar--about ul {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+
+  @include font-properties($font-size: 0.65em, $letter-spacing: $sidebar-h4-letterspacing);
+
+  span {
+    margin: 0px 10px;
+  }
+}
+
 .sidebar--projects-page h4 {
   @include font-properties($font-size: $sidebar-h4-fontsize, $letter-spacing: $sidebar-h4-letterspacing);
 
@@ -198,30 +274,14 @@ section {
 }
 
 .sidebar--projects-page p {
-  @include font-properties($font-size: 0.8em, $line-height: 1.5em, $letter-spacing: 0.15em);
+  @include font-properties($font-size: 0.8em, $line-height: 1.5, $letter-spacing: 0.15em);
 
   text-align: justify;
   padding: 10%;
 }
 
 .sidebar--home {
-  background: url("../images/header-test.jpeg") center left no-repeat;
-  background-size: cover;
-  background-position: -200px;
-}
-
-.sidebar--home:after {
-  @include pseudo;
-
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 30vw;
-
   @include sidebar-gradient;
-
-  opacity: 0.6;
-  z-index: 3;
 }
 
 .main {
@@ -232,29 +292,32 @@ section {
   @include flexbox;
 }
 
-.main-projects--heart {
-  margin-left: 30vw;
-}
-
 .main-projects h3, .main-projects h4 {
   z-index: 5;
 }
 
 .main-projects h3 {
-  background-color: $light-grey;
-  padding: 5px 0;
+  background-color: rgba($light-grey, 1);
+  padding: 10px 0;
   width: 100%;
+
+  // width: 45%;
   text-align: center;
 
-  @include font-properties($font-size: $project-title-size, $letter-spacing: $project-title-letterspacing);
+  @include font-properties($font-size: $project-title-size, $letter-spacing: 0.2em);
+
+  transition: background-color .2s ease, color .2s ease;
 }
 
 .main-projects h4 {
-  background-color: $light-grey;
-  margin-top: 2.5px;
+  background-color: rgba($light-grey, 1);
+  margin-top: -25px;
   padding: 5px 0;
   width: 100%;
+
+  // width: 30vw;
   text-align: center;
+  transition: background-color .2s ease, color .2s ease;
 
   @include font-properties($font-size: $project-view-size, $letter-spacing: $project-view-letterspacing);
 }
@@ -262,7 +325,24 @@ section {
 .container--about {
   min-height: 100vh;
   background-color: $light-grey;
-  border: $border-dev-red;
+
+  // border: $border-dev-red;
+}
+
+.main-projects--heart img {
+  position: absolute;
+  height: 95vh;
+
+  // border: $border-dev-green
+}
+
+.main-projects--d2e img {
+  // background: url(../images/Devices-Mockup.png) center no-repeat;
+  // background-size: 65vw;
+  position: absolute;
+  width: 55vw;
+
+  // border: $border-dev-green;
 }
 
 .main-about-info {
@@ -296,7 +376,9 @@ section {
   overflow: hidden;
   height: auto;
   background: transparent;
-  border: $border-dev-purple;
+  width: 70vw;
+
+  // border: $border-dev-red;
 }
 
 .main-about--skills {
@@ -347,7 +429,7 @@ section {
 @import "js";
 
 .main-projects {
-  border: $border-dev-green;
+  // border: $border-dev-green;
 }
 
 //beating heart projects page
@@ -363,15 +445,15 @@ iframe {
   border-image: initial;
 }
 
-nav {
-  border: $border-dev-green;
-}
+// nav {
+//   border: $border-dev-green;
+// }
 
 .icon-container {
   @include flexbox;
 
   h6 {
-    @include font-properties($font-size: 0.6em, $letter-spacing: 0.1em);
+    @include font-properties($font-size: 0.6em, $letter-spacing: 0.12em);
 
     margin-bottom: 30px;
     margin-top: 10px;
@@ -383,8 +465,14 @@ nav {
   display: block;
   background-repeat: no-repeat;
   background-image: url(../images/sprite.svg);
+  opacity: .6;
+  transition: opacity .2s ease;
 
   // border: $border-dev-green;
+  &:hover {
+    opacity: 1;
+    transition: opacity .2s ease;
+  }
 }
 
 .icon-link {
@@ -416,15 +504,4 @@ nav {
   width: 24px;
   height: 24px;
   background-position: -24px -24px;
-}
-
-.temp-link {
-  height: 100px;
-  width: 100px;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  display: block;
-  z-index: 999999;
-  background-color: red;
 }

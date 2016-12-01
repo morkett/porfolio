@@ -24,231 +24,34 @@
     </script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
-    <script>
-
-        $(document).ready(function() {
-          var controller = new ScrollMagic.Controller();
-
-/////////////////// PIN TO HEADER ////////////////////////
-       	var pinToHeader = new ScrollMagic.Scene({
-        		triggerElement: '.header-home',
-        		triggerHook: 0,
-            // duration: '30%'
-
-        	})
-        	.setPin('.header-home', {pushFollowers: false})
-          .addIndicators({
-            name: 'pin-Header-1',
-            colorTrigger:'black',
-            colorStart: '#75c695',
-            colorEnd: '#75c695'
-          })
-        	.addTo(controller);
-
-          // // pin again
-        	// var pinToHeader2 = new ScrollMagic.Scene({
-        	// 	triggerElement: '.container-projects',
-        	// 	triggerHook: 0.4
-        	// })
-        	// .setPin('.header-home', {pushFollowers: false})
-          // .addIndicators({
-          //   name: 'pin-Header-2',
-          //   colorTrigger:'darkgreen',
-          //   colorStart: '#75c695',
-          //   colorEnd: 'pink',
-          //   indent: -100
-          // })
-        	// .addTo(controller);
-
-
-/////////////////// SCROLL ////////////////////////
-
-          //PROJECTS SIDEBAR  - FIXED
-            var scrollfixed1 = new ScrollMagic.Scene({
-            triggerElement: '.container-projects',
-            triggerHook:0,
-            })
-            .setClassToggle('.sidebar--projects', 'js-sticky') // ad class to project01
-            .addIndicators({
-            name: 'sidebar--projects',
-            colorTrigger:'black',
-            colorStart: 'rgb(31, 143, 207)',
-            colorEnd: 'pink',
-            indent:300
-            })
-            .addTo(controller);
-
-            //BLINDER
-            var scrollfixed2 = new ScrollMagic.Scene({
-            triggerElement: '.container-projects',
-            triggerHook:0
-            })
-            .setClassToggle('.header-home', 'blinder') // ad class to project01
-            .addIndicators({
-            name: 'blinder',
-            colorTrigger:'black',
-            colorStart: 'rgb(163, 44, 44)',
-            colorEnd: 'pink',
-            indent:700,
-            }) //plugin
-            .addTo(controller);
-
-            //PROJECTS MAIN - NO-FIXED
-            var scrollfixed2 = new ScrollMagic.Scene({
-            triggerElement: '.container-projects',
-            triggerHook:0
-            })
-            .setClassToggle('.main-projects--d2e', 'js-no-sticky') // ad class to project01
-            .addIndicators({
-            name: 'd2e no-sticky',
-            colorTrigger:'black',
-            colorStart: 'rgb(163, 44, 44)',
-            colorEnd: 'pink',
-            indent:450,
-            }) //plugin
-            .addTo(controller);
-
-          //PROJECTS MAIN LAST - FIXED
-            var scrollfixed3 = new ScrollMagic.Scene({
-            triggerElement: '.container-projects--last',
-            triggerHook:0
-            })
-            .setClassToggle('.main-projects--last', 'js-sticky-right') // ad class to project01
-            .addIndicators({
-            name: 'last project sticky',
-            colorTrigger:'black',
-            colorStart: 'rgb(163, 44, 44)',
-            colorEnd: 'pink',
-            indent:450,
-            }) //plugin
-            .addTo(controller);
-
-          //ABOUT SIDEBAR  - FIXED
-            var scrollfixed1 = new ScrollMagic.Scene({
-            triggerElement: '.container--about',
-            triggerHook:0,
-            })
-            .setClassToggle('.sidebar--about', 'js-sticky') // ad class to project01
-            .addIndicators({
-            name: 'sidebar--about',
-            colorTrigger:'black',
-            colorStart: 'rgb(31, 143, 207)',
-            colorEnd: 'pink',
-            indent:300
-            })
-            .addTo(controller);
-
-            //ABOUT MAIN  - NO-FIXED
-            var scrollfixed2 = new ScrollMagic.Scene({
-            triggerElement: '.container--about',
-            triggerHook:0
-            })
-            .setClassToggle('.main-about-info', 'js-no-sticky') // ad class to project01
-            .addIndicators({
-            name: 'info no-sticky',
-            colorTrigger:'black',
-            colorStart: 'rgb(163, 44, 44)',
-            colorEnd: 'pink',
-            indent:450,
-            }) //plugin
-            .addTo(controller);
-
-          //NEW ANIMATION
-          // FIXME: ii) change from body + create hamburger
-          $('.sidebar--home').click(function(){
-            $('.nav-desktop').toggleClass("js-nav-hide");
-            $('.nav-darken').toggleClass("js-nav-darken-show");
-
-            $('body, section').addClass("js-nav-click-overflow");
-            $('.wrap').addClass("js-blur");
-        });
-
-
-          // $('.nav-desktop').mouseout(function(){
-          //   $('.nav-desktop').addClass("js-nav-hide");
-          // });
-
-          //TEMP BEHAVIOUR
-          $('.nav-desktop').click(function(){
-            $('.nav-desktop').addClass("js-nav-hide");
-            $('.nav-darken').toggleClass("js-nav-darken-show");
-            $('body, section').removeClass("js-nav-click-overflow");
-            $('.wrap').removeClass("js-blur");
-          });
-          //TEMP BEHAVIOUR
-
-          $('.js-scroll-site').click(function(){
-            $('.nav-desktop').addClass("js-nav-hide");
-          });
-          $('.nav-desktop').mouseover(function(){
-            $('.nav-desktop').removeClass("js-nav-hide");
-          });
-
-
-
-        //NAV
-          $('.js-scroll-site').click(function(event) {
-              event.preventDefault();
-
-            var href = $(this).attr('href');
-            var target = $(href);
-            var position = target.offset().top
-
-            // setTimeout(function() {
-              $('body, html').animate({
-                scrollTop: position
-            }, 700);
-          // },500);
-
-            });
-
-        //ANIMATION
-        $('.js-down-click').click(function() {
-            $('.main--ani-in').addClass('js--main--ani-start');
-            setTimeout(function() {
-                window.location.href = "/project_down-to-earth.html";
-            }, 500);
-        });
-        $('.js-heart-click').click(function() {
-            $('.main--ani-in').addClass('js--main--ani-start');
-            setTimeout(function() {
-                window.location.href = "/project_beating-heart.html";
-            }, 500);
-        });
-        //mobile nav
-        $('.nav-btn').click(function() {
-            $(this).addClass('js-nav-btn-opacity')
-            $('.nav-btn span').toggleClass('ani');
-            $('.nav--mobile').toggleClass('js-display-flex');
-        });
-
-        $('.nav--mobile').click(function() {
-            $('.nav-btn span').toggleClass('ani');
-            $('.nav--mobile').toggleClass('js-display-flex');
-        });
-        });
-    </script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script> -->
+    <script src="js/external.js"></script>
 
 </head>
 
 <body>
-  <nav class="nav nav-desktop js-nav-hide">
+  <div class="btn btn-nav">
+    <span></span>
+    <span></span>
+    <span></span>
+
+  </div>
+  <nav class="nav nav-desktop">
     <ul>
-      <li class="nav-primary nav-home"><a href="#home" class="js-scroll-site">home</a></li>
-      <li class="nav-primary nav-projects"><a href="#projects" class="js-scroll-site">projects</a>
-      <ul class="mini-nav">
-        <li class="mini-nav-h4">down to earth</li>
-        <li>&#8226;</li>
-        <li class="mini-nav-h4">beating heart</li>
-      </ul>
+      <li class="nav-primary nav-home"><a href="#home" class="js-link-site">home</a></li>
+      <li class="nav-primary nav-projects"><a href="#projects" class="js-link-site main-link">projects</a>
+        <ul class="mini-nav">
+          <li class="mini-nav-h4"><a href="#d2e" class="js-link-site">down to earth</a></li>
+          <li>&#8226;</li>
+          <li class="mini-nav-h4"><a href="#heart" class="js-link-site">beating heart</a></li>
+        </ul>
       </li>
 
-      <li class="nav-primary nav-about"><a href="#about" class="js-scroll-site">about</a>
+      <li class="nav-primary nav-about"><a href="#about" class="js-link-site main-link">about</a>
         <ul class="mini-nav">
-          <li class="mini-nav-h4">information</li>
+          <li class="mini-nav-h4"><a href="#info" class="js-link-site">information</a></li>
           <li>&#8226;</li>
-          <li class="mini-nav-h4">&nbsp;skills&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+          <li class="mini-nav-h4"><a href="#skills" class="js-link-site">&nbsp;skills&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
         </ul>
       </li>
     </ul>
@@ -265,23 +68,29 @@
 
 
   <div class="wrap">
+
+
     <a id="home"></a>
     <header class="header-home">
       <article class="sidebar sidebar--home">
+        <h1 class="h1-home--name">david corkett</h1>
+        <h2 class="h1-home--title">front-end web developer</h2>
       </article>
-      <div class="h1-home--container">
-        <a href="heart2.html" class="temp-link"></a>
-      <h1 class="h1-home--name">david corkett</h1>
-      <h2 class="h1-home--title">front-end web developer</h2>
-      </div>
+      <div class="h1-home--container"></div>
     </header>
     <section class="projects" id="projects">
       <div class="container container-projects conatiner-projects-d2e">
         <article class="sidebar sidebar--projects">
           <h2 class="h2--projects">projects</h2>
+          <ul>
+            <li><a href="#d2e" class="js-scroll-site">down to earth</a></li>
+            <span>&#8226;</span>
+            <li><a href="#heart" class="js-scroll-site">beating heart</a></li>
+          </ul>
         </article>
-        <article class="main main-projects main-projects--d2e">
-
+        <article class="main main-projects main-projects--d2e" id="d2e">
+          <a href="d2e.html" class="js-link-to-propage"></a>
+          <img src="/images/Devices-Mockup.png" alt="down to earth website project"/>
           <h3 class="h3--projects">down to earth</h3>
           <h4 class="h4--projects">view projects</h4>
         </article>
@@ -290,8 +99,9 @@
       <div class="container container-projects container-projects--heart container-projects--last">
 
 
-        <article class="main main-projects main-projects--heart  main-projects--last">
-
+        <article class="main main-projects main-projects--heart  main-projects--last" id="heart">
+          <a href="heart2.html" class="js-link-to-propage"></a>
+          <img src="/images/beating-heart.png" alt="beating heart svg animation project"/>
           <h3 class="h3--projects">beating heart</h3>
           <h4 class="h4--projects">view projects</h4>
         </article>
@@ -299,12 +109,17 @@
     </section>
 
     <section class="about" id="about">
-      <div class="container container--about">
+      <div class="container container--about" id="info">
         <article class="sidebar sidebar--about">
           <h2 class="h2--about">about</h2>
+
+          <ul>
+            <li><a href="#info" class="js-scroll-site">information</a></li>
+            <span>&#8226;</span>
+            <li><a href="#skills" class="js-scroll-site">skills&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+          </ul>
         </article>
         <article class="main main-about main-about-info">
-          <a href="" id="information"></a>
           <h2 class="h2-about--info">i am a self-taught <br/>front-end web developer <br/>from london</h2>
           <p class="about-p">
             I have experience of creating responsive interactive websites by hand-coding HTML, CSS, and JQuery. I am passionate about design and alongside my technical ability, I can create innovative interfaces which allow ease of usability. I follow many online
@@ -314,18 +129,10 @@
       </div>
 
 
-      <div class="container container--about container--about-skills">
+      <div class="container container--about container--about-skills js-no-sticky" id="skills">
 
         <article class="main main-about main-about--skills">
-          <a href="" id="skills"></a>
-            <div class="design-container">
-              <h3 class="h3-about--skills">design</h3>
-              <div class="container-icon-skills">
-                <span class="icon-skills icon-skills-ps">ps</span>
-                <span class="icon-skills icon-skills-ai">ai</span>
-            </div>
-              <p>These tools complement the development of websites by allowing image manipulation, creating website layouts and designing online resources such as SVGs.</p>
-            </div>
+
             <div class="dev-container">
               <h3 class="h3-about--skills">development</h3>
               <div class="container-icon-skills">
@@ -336,6 +143,15 @@
                 <span class="icon-skills icon-skills-scss">scss</span>
               </div>
               <p>These languages create the bones of the website, dictate appearance, and manipulate behaviour, bringing the website to life.</p>
+            </div>
+
+            <div class="design-container">
+              <h3 class="h3-about--skills">design</h3>
+              <div class="container-icon-skills">
+                <span class="icon-skills icon-skills-ps">ps</span>
+                <span class="icon-skills icon-skills-ai">ai</span>
+            </div>
+              <p>These tools complement the development of websites by allowing image manipulation, creating website layouts and designing online resources such as SVGs.</p>
             </div>
         </article>
       </div>

@@ -4,42 +4,106 @@
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 900;
   transform: translateZ(0);
   -webkit-transform: translateZ(0);
+  transition: all 0s;
 }
 
 .js-no-sticky {
   margin-left: 30%;
   transform: translateZ(0);
   -webkit-transform: translateZ(0);
+  transition: all 0s;
 }
 
 .js-sticky-right {
   position: fixed;
   top: 0;
   right: 0;
+  margin-left: 30vw;
   height: 100%;
   transform: translateZ(0);
   -webkit-transform: translateZ(0);
+  transition: all 0s;
 }
 
-.js-nav-hide {
-  transform: translateX(-30vw);
-  transition: all .2s ease-in 0s;
+////NAVIGATION
+
+//sidebar
+.js-nav-show {
+  transform: translateX(0);
+  opacity: 1;
+  transition: opacity 0.3s ease 0s, transform 0s linear 0s;
 }
 
+// @keyframes translate-nav-show {
+//   to {
+//     transform: translateX(0vw);
+//   }
+// }
+//
+// @keyframes translate-nav-hide {
+//   to {
+//     transform: translateX(-30vw);
+//   }
+// }
+
+//darken
 .js-nav-darken-show {
-  display: block;
+  // display: block;
   transform: translateX(0vw);
   opacity: .5;
-  transition: opacity .5s ease 0s;
+  transition: opacity 0.3s ease 0s, transform 0s linear 0s;
+}
+
+//blur
+.js-blur {
+  -webkit-filter: blur(0.2em);
+  filter: blur(0.5em);
+  transition: filter 0.3s ease 0s;
 }
 
 .js-nav-click-overflow {
   overflow-y: hidden;
+  transition: all 0s;
 }
 
-.js-blur {
-  -webkit-filter: blur(0.2em);
-  filter: blur(0.5em);
+//button btn
+.js-btn-nav-close {
+  span {
+    margin: 0;
+    position: absolute;
+    transition: all 0.2s ease 0s;
+  }
+
+  span:nth-child(1) {
+    transform: rotate(45deg);
+  }
+
+  span:nth-child(2) {
+    position: absolute;
+    transform: translateX(40px);
+    transition: all 0s ease 0s;
+  }
+
+  span:nth-child(3) {
+    transform: rotate(-45deg);
+  }
+}
+
+//hover
+
+.js-hover {
+  color: $black !important;
+  background-color: $dark-grey !important;
+  transition: background-color .5s ease, color .2s ease;
+}
+
+.js-link-to-propage {
+  height: 100vh;
+  width: 70vw;
+  position: absolute;
+  z-index: 10;
+  cursor: pointer;
 }
