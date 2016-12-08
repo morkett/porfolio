@@ -37,3 +37,17 @@
   background: -webkit-radial-gradient(center ellipse, #e3e3e3 0%, #bdbdbd 100%);
   background: radial-gradient(ellipse at center, #e3e3e3 0%, #bdbdbd 100%);
 }
+
+//////// MIXINS ////////
+
+@mixin tablet-portrait-query {
+  @media only screen and (min-width: #{$tablet-width-portrait}) and (orientation: portrait) {
+    @content;
+  }
+}
+
+// @mixin tablet-portrait {
+//   @media only screen and (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+//     @content;
+//   }
+// }

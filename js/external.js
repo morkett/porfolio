@@ -1,6 +1,8 @@
 
     $(document).ready(function() {
-      
+
+
+
       var controller = new ScrollMagic.Controller();
 // TODO: REMOVE INDICATORS FROM JS
 
@@ -172,7 +174,20 @@
       //   $('.nav-desktop').removeClass("js-nav-hide");
       // });
 
-
+      // //TABLET PROJECT H2  - Opacity
+      // var opacity1 = new ScrollMagic.Scene({
+      // triggerElement: '.h2--projects',
+      // triggerHook:0
+      // })
+      // .setClassToggle('.h3--projects', 'js-opacity') // ad class to project01
+      // // .addIndicators({
+      // // name: 'info no-sticky',
+      // // colorTrigger:'black',
+      // // colorStart: 'rgb(163, 44, 44)',
+      // // colorEnd: 'pink',
+      // // indent:450,
+      // // }) //plugin
+      // .addTo(controller);
 
     //NAV SCROLL DISABLED 29/11
       $('.js-scroll-site').click(function(event) {
@@ -225,5 +240,6 @@
 //   $(this).children('h3, h4').removeClass('js-hover');
 // });
 //
+
 //
     });

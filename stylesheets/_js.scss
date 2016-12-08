@@ -1,33 +1,33 @@
-/* JS */
-
-.js-sticky {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 900;
-  transform: translateZ(0);
-  -webkit-transform: translateZ(0);
-  transition: all 0s;
-}
-
-.js-no-sticky {
-  margin-left: 30%;
-  transform: translateZ(0);
-  -webkit-transform: translateZ(0);
-  transition: all 0s;
-}
-
-.js-sticky-right {
-  position: fixed;
-  top: 0;
-  right: 0;
-  margin-left: 30vw;
-  height: 100%;
-  transform: translateZ(0);
-  -webkit-transform: translateZ(0);
-  transition: all 0s;
-}
-
+// /* JS
+//
+// .js-sticky {
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   z-index: 900;
+//   transform: translateZ(0);
+//   -webkit-transform: translateZ(0);
+//   transition: all 0s;
+// }
+//
+// .js-no-sticky {
+//   margin-left: 30%;
+//   transform: translateZ(0);
+//   -webkit-transform: translateZ(0);
+//   transition: all 0s;
+// }
+//
+// .js-sticky-right {
+//   position: fixed;
+//   top: 0;
+//   right: 0;
+//   margin-left: 30vw;
+//   height: 100%;
+//   transform: translateZ(0);
+//   -webkit-transform: translateZ(0);
+//   transition: all 0s;
+// }
+//
 ////NAVIGATION
 
 //sidebar
@@ -35,6 +35,14 @@
   transform: translateX(0);
   opacity: 1;
   transition: opacity 0.3s ease 0s, transform 0s linear 0s;
+
+  @include tablet-portrait-query {
+    height: 50px;
+    width: 100vw;
+    z-index: 9999;
+    top: auto;
+    bottom: 0;
+  }
 }
 
 // @keyframes translate-nav-show {
@@ -55,6 +63,12 @@
   transform: translateX(0vw);
   opacity: .5;
   transition: opacity 0.3s ease 0s, transform 0s linear 0s;
+
+  @include tablet-portrait-query {
+    width: 100vw;
+    left: 0;
+    display: none;
+  }
 }
 
 //blur
@@ -62,6 +76,10 @@
   -webkit-filter: blur(0.2em);
   filter: blur(0.5em);
   transition: filter 0.3s ease 0s;
+
+  @include tablet-portrait-query {
+    filter: blur(0);
+  }
 }
 
 .js-nav-click-overflow {
@@ -96,14 +114,15 @@
   }
 }
 
-//hover
-
-.js-hover {
-  color: $black !important;
-  background-color: $dark-grey !important;
-  transition: background-color .5s ease, color .2s ease;
-}
-
+//
+// //hover
+//
+// .js-hover {
+//   color: $black !important;
+//   background-color: $dark-grey !important;
+//   transition: background-color .5s ease, color .2s ease;
+// }
+//
 .js-link-to-propage {
   height: 100vh;
   width: 70vw;
@@ -112,4 +131,13 @@
   position: absolute;
   z-index: 10;
   cursor: pointer;
+
+  @include tablet-portrait-query {
+    width: 100vw;
+  }
+}
+
+.js-opacity {
+  opacity: 1 !important;
+  transition: opacity .2s ease 0s !important;
 }
