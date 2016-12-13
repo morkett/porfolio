@@ -56,6 +56,11 @@ body {
   }
 
 
+  @include tablet-landscape-query {
+    display: none;
+  }
+
+
   span {
     display: block;
     width: 20px;
@@ -98,6 +103,12 @@ body {
     top: auto;
     bottom: 0;
     transform: translateX(-100vw);
+  }
+
+
+  @include tablet-landscape-query {
+    transform: translateX(0vw);
+    opacity: 1;
   }
 
 
@@ -158,6 +169,47 @@ body {
     .icon-links:hover {
       opacity: 1;
       transition: all 0.2s ease;
+    }
+  }
+}
+
+.nav-projects-page {
+  @include tablet-landscape-query {
+    display: none;
+  }
+}
+
+.tablet-titles {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  @include tablet-landscape-query {
+    @include flexbox;
+
+    width: 30vw;
+    text-align: center;
+
+    h1 {
+      @include font-properties($font-size: 1em, $letter-spacing: $h1-home--name-letterspacing);
+
+      margin-bottom: 0px;
+
+      @include tablet-landscape-query {
+        font-size: 1.2em;
+        letter-spacing: 0.2em;
+      }
+    }
+
+    h2, h3 {
+      @include font-properties($font-size: $h1-home--title-size, $letter-spacing: 0.2em);
+
+      margin-bottom: 0px;
+
+      @include tablet-landscape-query {
+        font-size: .6em;
+      }
     }
   }
 }
@@ -240,6 +292,14 @@ section {
     position: absolute;
     top: 0;
     left: 0;
+  }
+
+
+  @include tablet-landscape-query {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 30vw;
 
     // position: fixed;
   }
@@ -317,6 +377,17 @@ section {
   @include tablet-portrait-query {
     height: 50vh;
   }
+
+
+  @include tablet-landscape-query {
+    opacity: 1;
+  }
+}
+
+.sidebar--projects-page--heart {
+  @include tablet-portrait-query {
+    height: 53vh;
+  }
 }
 
 .sidebar h2 {
@@ -325,6 +396,10 @@ section {
   margin: 0;
   width: 100%;
   text-align: center;
+
+  @include tablet-portrait-query {
+    font-size: $project-title-mobile;
+  }
 }
 
 .header-home {
@@ -348,6 +423,12 @@ section {
     position: relative !important;
     margin: 0 !important;
   }
+
+
+  // @include tablet-landscape-query {
+  //   position: relative !important;
+  //   margin-left: 0vw !important;
+  // }
 }
 
 .sidebar--projects ul, .sidebar--about ul {
@@ -358,6 +439,11 @@ section {
 
   @include font-properties($font-size: 0.65em, $letter-spacing: $sidebar-h4-letterspacing);
 
+  @include tablet-portrait-query {
+    font-size: .8em;
+  }
+
+
   span {
     margin: 0px 10px;
   }
@@ -367,6 +453,18 @@ section {
   @include tablet-portrait-query {
     position: relative !important;
     padding-top: 10px;
+  }
+
+
+  @include tablet-landscape-query {
+    opacity: 1;
+  }
+
+
+  h2 {
+    @include tablet-portrait-query {
+      font-size: $project-title-size;
+    }
   }
 }
 
@@ -389,6 +487,18 @@ section {
   @include tablet-portrait-query {
     background: transparent;
     background-color: rgba(227, 227, 227, 0.7);
+  }
+}
+
+.sidebar--home, .sidebar--projects, .sidebar--about {
+  @include tablet-landscape-query {
+    opacity: 0;
+  }
+}
+
+.sidebar--projects-page {
+  @include tablet-landscape-query {
+    opacity: 1;
   }
 }
 
@@ -428,21 +538,6 @@ section {
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
   margin: 0;
-
-  @include tablet-portrait-query {
-    margin: 0;
-    margin-top: 10px;
-    top: 0;
-    background-color: rgba(25, 25, 25, 0.2);
-    color: $black;
-
-    // @include sidebar-gradient;
-
-    transform: translateX(-50%) translateY(0%);
-    height: 50px;
-    padding: 12.5px 0;
-    opacity: 1;
-  }
 }
 
 .main-projects h4 {
@@ -464,16 +559,12 @@ section {
   transform: translateX(-50%) translateY(-50%);
 
   @include tablet-portrait-query {
-    margin: 0;
-    margin-top: 5px;
-    top: 60px;
-    background-color: rgba(25, 25, 25, 0.2);
-    color: $black;
+    margin-top: 34px;
+  }
 
-    // @include sidebar-gradient;
 
-    transform: translateX(-50%) translateY(0%);
-    opacity: 1;
+  @include tablet-landscape-query {
+    margin-top: 34px;
   }
 }
 
@@ -518,6 +609,13 @@ section {
 
 .projects-page--heart {
   @include tablet-portrait-query {
+    height: 47vh;
+  }
+}
+
+.projects-page--d2e img {
+  @include tablet-portrait-query {
+    width: 50vh;
     height: 50vh;
   }
 }
@@ -560,7 +658,9 @@ section {
   }
 
 
-  // border: $border-dev-red;
+  @include tablet-landscape-query {
+    margin-left: 30vw;
+  }
 }
 
 .main-about--skills {
@@ -701,6 +801,15 @@ iframe {
   width: 24px;
   height: 24px;
   background-position: -24px 0;
+
+  @include tablet-portrait-query {
+    margin-bottom: 15px;
+  }
+
+
+  @include tablet-landscape-query {
+    margin-bottom: 15px;
+  }
 }
 
 .icon-mail {
@@ -715,18 +824,18 @@ iframe {
   background-position: 0 -24px;
 }
 
-.enlarge-container {
-  width: 50px;
-  height: 50px;
-  background-color: rgba(25, 25, 25, 0.5);
-  position: absolute;
+// .enlarge-container {
+//   width: 50px;
+//   height: 50px;
+//   background-color: rgba(25, 25, 25, 0.5);
+//   position: absolute;
 
-  // TODO: ADD BEHAVIOUR TO ENLARGE BUTTON + GET SHRINK BUTTON ADDED TO SVG
-  @include flexbox;
-
-  left: auto;
-  right: 0;
-}
+//   // TODO: ADD BEHAVIOUR TO ENLARGE BUTTON + GET SHRINK BUTTON ADDED TO SVG
+//   @include flexbox;
+//
+//   left: auto;
+//   right: 0;
+// }
 
 .icon-github {
   width: 24px;

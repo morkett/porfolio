@@ -69,6 +69,11 @@
     left: 0;
     display: none;
   }
+
+
+  @include tablet-landscape-query {
+    display: none;
+  }
 }
 
 //blur
@@ -78,6 +83,11 @@
   transition: filter 0.3s ease 0s;
 
   @include tablet-portrait-query {
+    filter: blur(0);
+  }
+
+
+  @include tablet-landscape-query {
     filter: blur(0);
   }
 }

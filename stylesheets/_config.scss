@@ -19,6 +19,8 @@ $sidebar-h4-fontsize: 0.6em;
 $sidebar-nav-title-fontsize: 1.4em;
 
 $project-title-size: 1.7em;
+$project-title-mobile: 2.8em;
+
 $project-view-size: 0.8em;
 
 $about-title-size: 1.4em;
@@ -66,4 +68,6 @@ $main-project-width: 70vw;
 
 ////////LAYOUT - MOBILE ////////
 /// media queriers
-$tablet-width-portrait: 768px;
+$tablet-width-portrait: 320px;
+$tablet-width-landscape: 768px;
+$tablet-max-width-landscape: 1024px;
