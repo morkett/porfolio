@@ -9,7 +9,7 @@
   -webkit-transform: translateZ(0);
   transition: all 0s;
 
-  @include tablet-portrait-query {
+  @include mobile-portrait-query {
     position: relative;
   }
 
@@ -26,7 +26,7 @@
   -webkit-transform: translateZ(0);
   transition: all 0s;
 
-  @include tablet-portrait-query {
+  @include mobile-portrait-query {
     margin-left: 0;
   }
 
@@ -47,7 +47,7 @@
   -webkit-transform: translateZ(0);
   transition: all 0s;
 
-  @include tablet-portrait-query {
+  @include mobile-portrait-query {
     position: relative;
     height: 100vh;
     margin: 0;
@@ -69,9 +69,9 @@
 .js-nav-show {
   transform: translateX(0);
   opacity: 1;
-  transition: opacity 0.3s ease 0s, transform 0s linear 0s;
+  transition: opacity 0.3s ease 0s, transform .5s linear 0s;
 
-  @include tablet-portrait-query {
+  @include mobile-portrait-query {
     height: 50px;
     width: 100vw;
     z-index: 9999;
@@ -99,7 +99,7 @@
   opacity: .5;
   transition: opacity 0.3s ease 0s, transform 0s linear 0s;
 
-  @include tablet-portrait-query {
+  @include mobile-portrait-query {
     width: 100vw;
     left: 0;
     display: none;
@@ -117,7 +117,7 @@
   filter: blur(0.5em);
   transition: filter 0.3s ease 0s;
 
-  @include tablet-portrait-query {
+  @include mobile-portrait-query {
     filter: blur(0);
   }
 
@@ -182,7 +182,7 @@
   z-index: 10;
   cursor: pointer;
 
-  @include tablet-portrait-query {
+  @include mobile-portrait-query {
     width: 100vw;
   }
 }
@@ -190,4 +190,8 @@
 .js-opacity {
   opacity: 1 !important;
   transition: opacity .2s ease 0s !important;
+}
+
+.js-last-position {
+  position: relative !important;
 }

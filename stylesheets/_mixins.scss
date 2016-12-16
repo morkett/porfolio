@@ -40,8 +40,8 @@
 
 //////// MIXINS ////////
 
-@mixin tablet-portrait-query {
-  @media only screen and (min-width: #{$tablet-width-portrait}) and (orientation: portrait) {
+@mixin mobile-portrait-query {
+  @media only screen and (min-width: #{$mobile-width-portrait}) and (max-width: 1024px) {
     @content;
   }
 }
@@ -52,11 +52,11 @@
   }
 }
 
-@mixin mobile-portrait-query {
-  @media only screen and (min-width: #{320px}) and (max-device-width: 568px) and (orientation: portrait) {
-    @content;
-  }
-}
+// @mixin mobile-portrait-query {
+//   @media only screen and (min-width: #{320px}) and (max-device-width: 568px) and (orientation: portrait) {
+//     @content;
+//   }
+// }
 
 @mixin desktop-query {
   @media only screen and (max-width: 880px) {
