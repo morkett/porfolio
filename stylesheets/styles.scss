@@ -562,12 +562,14 @@ section {
 
 .main-projects h3, .main-projects h4 {
   z-index: 5;
+  cursor: pointer;
 }
 
 .main-projects h3 {
   background-color: rgba($light-grey, 1);
   padding: 5px 0;
   width: 100%;
+  opacity: 1;
 
   // border: $border-dev-green;
 
@@ -576,7 +578,7 @@ section {
 
   @include font-properties($font-size: $project-title-size, $letter-spacing: 0.2em);
 
-  transition: background-color .2s ease, color .2s ease;
+  transition: background-color .2s ease, color .2s ease, opacity .5s ease;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -589,11 +591,12 @@ section {
   padding: 5px 0;
   width: 100%;
   margin: 0;
-  margin-top: 30px;
+  margin-top: 32px;
+  opacity: 1;
 
   // width: 30vw;
   text-align: center;
-  transition: background-color .2s ease, color .2s ease;
+  transition: background-color .2s ease, color .2s ease, opacity .5s ease;
 
   @include font-properties($font-size: $project-view-size, $letter-spacing: $project-view-letterspacing);
 
@@ -808,6 +811,11 @@ iframe {
   border-style: none;
   border-color: initial;
   border-image: initial;
+  position: absolute;
+  opacity: 0;
+  transform: translateX(100vw);
+  transition: opacity .5s ease, transform 0s linear .6s;
+  display: block;
 }
 
 // nav {
@@ -833,7 +841,7 @@ iframe {
     @include font-properties($font-size: 0.6em, $letter-spacing: 0.12em);
 
     margin-bottom: 30px;
-    margin-top: 10px;
+    margin-top: -10px;
     text-align: center;
 
     @include mobile-portrait-query {

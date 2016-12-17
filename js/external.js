@@ -155,14 +155,19 @@
         $('.main-projects--d2e img, .main-projects--d2e .h3--projects, .main-projects--d2e .h4--projects').click(function(){
           $('body, html').animate({
             scrollTop: $('.main-projects').offset().top
-        }, 700);
-          $('.sidebar--projects-page').addClass('js-nav-show');
+        }, 250);
           $('body, section').addClass("js-nav-click-overflow");
+          $('.main-projects--d2e .h3--projects, .main-projects--d2e .h4--projects').addClass('js-no-opacity');
+
+          setTimeout(function() {
+              $('.sidebar--projects-page-d2e').addClass('js-nav-show');
+          }, 250);
         });
 
         $('.icon-arrow-back-d2e').click(function(){
           $('.sidebar--projects-page').removeClass('js-nav-show');
           $('body, section').removeClass("js-nav-click-overflow");
+          $('.main-projects--d2e .h3--projects, .main-projects--d2e .h4--projects').removeClass('js-no-opacity');
         });
 
         // heart
@@ -170,16 +175,40 @@
           $('.main-projects--heart').removeClass('js-sticky-right');
           $('body, html').animate({
             scrollTop: $('.main-projects--heart').offset().top
-        }, 700);
-          $('.sidebar--projects-page--heart').addClass('js-nav-show');
+        }, 250);
+
           $('body, section').addClass("js-nav-click-overflow");
+          $('.main-projects--heart .h3--projects, .main-projects--heart .h4--projects').addClass('js-no-opacity');
+          $('.heart-frame').addClass('js-block');
+
+            $(".heart-frame").contents().find("section").css("display", "block");
+
+
+          setTimeout(function() {
+              $('.sidebar--projects-page--heart').addClass('js-nav-show');
+
+              $('.heart-frame').addClass('js-iFrame-show');
+
+          }, 250);
         });
 
-        $('.icon-arrow-back').click(function(){
+
+
+        $('.icon-arrow-back-heart').click(function(){
           $('.sidebar--projects-page--heart').removeClass('js-nav-show');
           $('body, section').removeClass("js-nav-click-overflow");
           $('.main-projects--heart').addClass('js-sticky-right');
+          $('.main-projects--heart .h3--projects, .main-projects--heart .h4--projects').removeClass('js-no-opacity');
+
+          $('.heart-frame').removeClass('js-iFrame-show');
+
+          setTimeout(function() {
+            $(".heart-frame").contents().find("section").css("display", "none");
+
+          }, 610);
         });
+
+
 
       // $('.nav-desktop').mouseout(function(){
       //   $('.nav-desktop').addClass("js-nav-hide");

@@ -195,3 +195,18 @@
 .js-last-position {
   position: relative !important;
 }
+
+.js-no-opacity {
+  opacity: 0 !important;
+  transition: opacity 1s ease;
+}
+
+.js-block {
+  display: block !important;
+}
+
+.js-iFrame-show {
+  transform: translateX(0);
+  opacity: 1;
+  transition: opacity .5s ease .25s;
+}

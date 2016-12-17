@@ -1,147 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <title>David Corkett Portfolio</title>
-    <meta charset="UTF-8">
-    <meta name="description" content="David Corkett Portfolio">
-    <meta name="keywords" content="david, corkett, porfolio, projects, beating heart, down to earth">
-    <meta http-equiv="author" content="David Corkett">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  
-    <link rel="stylesheet" href="fonts/font-awesome-4.5.0/css/font-awesome.min.css">
-    <link href="css/test2.css" type="text/css" rel="stylesheet" >
+    <title>David Corkett - Front-end Web Developer</title>
 
-  
-   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"> </script>
-  
-  <script src="https://use.typekit.net/mzu2yvf.js"></script>
-<script>try{Typekit.load({ async: true });}catch(e){}</script>
-<script>
-  $(document).ready(function () {
-    
-$('.ani-click').click(function(event){
-    event.preventDefault();
-    $('.projects--ani').addClass('js--main--ani-start');
-    setTimeout(function() {
-  window.location.href = "/index.html#down_to_earth"
-}, 500);
-  });
-    
-$('.link-to-site').click(function(event){
-    event.preventDefault();
-    $('.projects--ani').addClass('js--main--ani-start');
-    setTimeout(function() {
-  window.location.href = "/down-to-earth_the-team.html"
-}, 500);
-  });
+    <!-- META DATA -->
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="description" content="I am a self-taught front-end web developer from london" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0" />
+    <!-- FAVICON -->
+    <link type="text/css" rel="stylesheet" href="stylesheets/styles.css" />
 
-$('.to-website').click(function(event){
-    event.preventDefault();
-    $('.projects--ani').addClass('js--main--ani-start');
-    setTimeout(function() {
-  window.location.href = "/down-to-earth_the-team.html"
-}, 500);
-  });
-    
-       $('.button').click(function(){
-    $(this).toggleClass('btn-move');
-    $('.btn-container').toggleClass('btn-container-in');
-    $('.ham').toggleClass('ani');
-    });
-  
-  $('.mobile-scroll, .btn-container').click(function(){
-    setTimeout(function() {
-    $('.btn-container').removeClass('btn-container-in');
-    $('.button').removeClass('btn-move');  
-    $('.ham').removeClass('ani')
-}, 0);
-    
-  });
-    
-  $('.nav-port-home').click(function(event){
-    event.preventDefault();
-    $('.ani-in').addClass('start-ani');
-    setTimeout(function() {
-  window.location.href = "/index.html#home"
-}, 500);
-  });
-    
-  $('.nav-port-projects').click(function(event){
-    event.preventDefault();
-    $('.ani-in').addClass('start-ani');
-    setTimeout(function() {
-  window.location.href = "/index.html#projects"
-}, 500);
-  });
-    
-  $('.nav-port-about').click(function(event){
-    event.preventDefault();
-    $('.ani-in').addClass('start-ani');
-    setTimeout(function() {
-  window.location.href = "/index.html#about"
-}, 500);
-  });
-  
-  });
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">
+    </script>
 
-</script>
+    <script src="https://use.typekit.net/mzu2yvf.js"></script>
+    <script>
+        try {
+            Typekit.load({
+                async: true
+            });
+        } catch (e) {}
+    </script>
 
-  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script> -->
+      <script src="js/external.js"></script>
+
 </head>
 
 <body>
-  
- <div class='button btn-por'>
-    <span class="ham "></span>
-    <span class='ham '></span>
-     <span class='ham '></span>
+  <div class="btn btn-nav">
+    <span></span>
+    <span></span>
+    <span></span>
+
   </div>
-  <div class='btn-container'>
-    
-    <nav class='nav-main nav-mobile'>
-          <ul>
-            <li><a href='index.html#home' class='scroll mobile-scroll'>HOME</a></li>
-            <li id='line'>&#8226;</li>
-            <li><a href='index.html#projects' class='scroll mobile-scroll'>PROJECTS</a></li>
-            <li id='line'>&#8226;</li>
-            <li><a href='index.html#about' class='scroll mobile-scroll'>ABOUT</a></li>
-          </ul>
-        </nav>
-    
-  </div>
-    
- <div class='main--ani'></div>
-<div class='projects--ani'></div>
-  <div class="wrap wrap-port">
-    
-    <section class='sideBar'>
-      <div class='pro-left pro-left-port'>
-        <div class="back-container ani-click">
-          <div class='arrow'></div>
-        </div>
-          <h2>Down to EARTH</h2>
-          <h3 class="h3-port">responsive &#8226; website </h3>
-          <p><!--the down to earth website was designed to brief in adobe photoshop to reflect the cafes atmosphere. <br><br>this site was hand coded to create a responsive website that is enhanced with the implementation of css animations and behviours via <span>j</span>Query.-->
-          Designed to brief in Adobe Photoshop, this website reflects the cafes atmosphere and ethos. This website was hand-coded to create a responsive interface, enhanced with the inclusion of CSS animations and creating behaviours through <span>j</span>Query.
-        </p>
-            
-          <a class="to-website">
-            <div class="link-to-site-container">
-              <div class='codrops link-to-site'></div>
-              <span class='link-to-site' >To down to earth website</span>
+  <nav class="nav nav-desktop nav-projects-page js-nav-hide">
+    <ul>
+      <li class="nav-primary nav-home"><a href="index.html#home" class="js-link-site">home</a></li>
+      <li class="nav-primary nav-projects"><a href="index.html#projects" class="js-link-site main-link">projects</a>
+      <ul class="mini-nav">
+        <li class="mini-nav-h4"><a href="index.html#d2e" class="js-link-site">down to earth</a></li>
+        <li>&#8226;</li>
+        <li class="mini-nav-h4"><a href="index.html#heart" class="js-link-site">beating heart</a></li>
+      </ul>
+      </li>
+
+      <li class="nav-primary nav-about"><a href="index.html#about" class="js-link-site main-link">about</a>
+        <ul class="mini-nav">
+          <li class="mini-nav-h4"><a href="index.html#info" class="js-link-site">information</a></li>
+          <li>&#8226;</li>
+          <li class="mini-nav-h4"><a href="index.html#skills" class="js-link-site">&nbsp;skills&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+        </ul>
+      </li>
+
+    </ul>
+    <div class="icon-container">
+      <a href="mailto:dcorkett@gmail.com?Subject=Hello" target="_top" class="icon-links icon-mail"></a>
+      <span>&#8226;</span>
+      <a href="" class="icon-links icon-github"></a>
+      <span>&#8226;</span>
+      <a href="http://codepen.io/morkett/" target="_blank" class="icon-links icon-codepen"></a>
+    </div>
+  </nav>
+  <div class="nav-darken"></div>
+  <div class="wrap">
+    <section class="projects" id="projects">
+      <div class="container container-projects conatiner-projects-d2e">
+        <article class="sidebar sidebar--projects sidebar--projects-page">
+          <a class="icon-links icon-arrow-back" href="index.html#d2e"></a>
+
+          <h2 class="h2--projects">down to earth</h2>
+          <h4 class="h4--projects">responsive &#8226; website</h4>
+          <p>
+            designed to brief in adobe photoshop, this website reflects the cafes atmosphere and ethos. this website was hand-coded to create a responsive interface, enhanced with the inclusion of css animations and creating behaviours through jquery.
+          </p>
+
+          <div class="icon-container">
+            <div class="inner-box">
+            <a class="icon-links icon-link"></a>
+            <h6>to down to earth website</h6>
             </div>
-          </a>
+            <div class="inner-box">
+            <a class="icon-links icon-github"></a>
+            <h6>view on github</h6>
+            </div>
+          </div>
+          </article>
+          <article class="main main-projects main-projects--d2e projects-page--d2e">
+              <img src="/images/Devices-Mockup.png" alt="down to earth website project"/>
+
+          </article>
         </div>
     </section>
-    <section class='main'>
-      <a class='port-page-desktop link-to-site'><div class='desktop'></div></a>
-      
-    </section>
-    
-     
-    
-      
+
+
   </div>
+
 </body>
-  
+
 </html>
+
+<!-- TODO: ---CHANGE FILE NAME TO OTHER HEART NAME + ADD ANIMATION TO OPEN/CLOSE PAGE -->

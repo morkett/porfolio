@@ -183,6 +183,7 @@ body
 section
 {
     display: block;
+    display: none;
     overflow: hidden;
 
     width: 100%;
@@ -2138,7 +2139,7 @@ svg
 {
     to
     {
-        -webkit-transform: scaleX(1.1)                                                                                                                ;transform: scaleX(1.1);
+        -webkit-transform: scaleX(1.1)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ;transform: scaleX(1.1);
     }
 }
 
@@ -2146,7 +2147,7 @@ svg
 {
     to
     {
-        -webkit-transform: scaleX(1.1)                                                                                                                ;transform: scaleX(1.1);
+        -webkit-transform: scaleX(1.1)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ;transform: scaleX(1.1);
     }
 }
 
