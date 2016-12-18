@@ -6,6 +6,10 @@
 //   transition: all 0.2s ease;
 // }
 
+-webkit-scrollbar {
+  width: 0 !important;
+}
+
 *::selection {
   background: $dark-grey;
 }
@@ -97,7 +101,7 @@ body {
   // background: $light-grey;
   transform: translateX(-30vw);
   opacity: 0;
-  transition: opacity 0.5s ease 0s, transform 0s linear 0.5s;
+  transition: opacity 0.3s ease 0s, transform .5s linear 0s;
 
   @include mobile-portrait-query {
     transition: opacity 0.5s ease 0s;
