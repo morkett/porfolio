@@ -41,7 +41,19 @@
 //////// MIXINS ////////
 
 @mixin mobile-portrait-query {
-  @media only screen and (min-width: #{$mobile-width-portrait}) and (max-width: 1024px) {
+  @media only screen and (min-device-width: #{$mobile-width-portrait}) and (max-device-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin mobile-landscape-query {
+  @media only screen and (min-device-width: #{$mobile-width-portrait}) and (max-device-width: 736px) and (orientation: landscape) {
+    @content;
+  }
+}
+
+@mixin tablet-portrait-query {
+  @media only screen and (min-width: #{$tablet-width-portrait}) and (max-device-width: 1024px) and (orientation: portrait) {
     @content;
   }
 }
