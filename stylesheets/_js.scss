@@ -78,6 +78,18 @@
     top: auto;
     bottom: 0;
   }
+
+
+  @include tablet-landscape-query {
+    width: 30vw;
+    bottom: auto;
+  }
+
+
+  @include tablet-portrait-query {
+    height: 100vh;
+    transition: opacity 0.3s ease 0s;
+  }
 }
 
 // @keyframes translate-nav-show {
@@ -107,7 +119,7 @@
 
 
   @include tablet-landscape-query {
-    display: none;
+    display: block;
   }
 }
 
@@ -123,18 +135,34 @@
 
 
   @include tablet-landscape-query {
-    filter: blur(0);
+    filter: blur(0.5em);
+  }
+
+
+  @include tablet-portrait-query {
+    filter: blur(0.5em);
   }
 }
 
 .js-nav-click-overflow {
   overflow-y: hidden;
+  overflow-x: hidden;
 }
 
 //button btn
 .js-btn-nav-close {
   @include mobile-portrait-query {
     transform: translateY(-50px);
+  }
+
+
+  @include tablet-landscape-query {
+    transform: translateY(0);
+  }
+
+
+  @include tablet-portrait-query {
+    transform: translateY(0);
   }
 
 
@@ -200,6 +228,11 @@
   opacity: 0 !important;
   transform: translateX(100vw) !important;
   transition: opacity 1s ease, transform 0s linear 1s;
+
+  @include tablet-landscape-query {
+    opacity: 1;
+    transform: translateX(0vw);
+  }
 }
 
 .js-block {
@@ -213,10 +246,19 @@
   @include mobile-landscape-query {
     display: none !important;
   }
+
+
+  @include tablet-landscape-query {
+    display: none !important;
+  }
 }
 
 .js-iFrame-show {
   transform: translateX(0);
   opacity: 1;
   transition: opacity .5s ease .25s;
+
+  @include tablet-landscape-query {
+    display: none;
+  }
 }

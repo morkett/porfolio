@@ -130,6 +130,8 @@
         // }) //plugin
         .addTo(controller);
 
+
+
       //NEW ANIMATION
       // FIXME: ii) change from body + create hamburger
       $('.btn').click(function(){
@@ -208,6 +210,14 @@
           }, 610);
         });
 
+        //heart animation replay
+        $('.icon-replay').click(function(){
+          $(".heart-frame").contents().find("section").css("display", "none");
+
+          setTimeout(function() {
+            $('.heart-frame').contents().find("section").css("display", "block");
+          }, 01);
+        });
 
 
       // $('.nav-desktop').mouseout(function(){
@@ -251,7 +261,7 @@
       // .addTo(controller);
 
     //NAV SCROLL DISABLED 29/11
-      $('.js-scroll-site').click(function(event) {
+      $('.js-scroll-site, .js-link-site').click(function(event) {
           // event.preventDefault();
 
         var href = $(this).attr('href');
@@ -266,41 +276,6 @@
 
         });
 
-    //ANIMATION
-    $('.js-down-click').click(function() {
-        $('.main--ani-in').addClass('js--main--ani-start');
-        setTimeout(function() {
-            window.location.href = "/project_down-to-earth.html";
-        }, 500);
-    });
-    $('.js-heart-click').click(function() {
-        $('.main--ani-in').addClass('js--main--ani-start');
-        setTimeout(function() {
-            window.location.href = "/project_beating-heart.html";
-        }, 500);
-    });
-    //mobile nav
-    $('.nav-btn').click(function() {
-        $(this).addClass('js-nav-btn-opacity')
-        $('.nav-btn span').toggleClass('ani');
-        $('.nav--mobile').toggleClass('js-display-flex');
-    });
-
-    $('.nav--mobile').click(function() {
-        $('.nav-btn span').toggleClass('ani');
-        $('.nav--mobile').toggleClass('js-display-flex');
-    });
 
 
-//hover main
-// $('.main-projects').mouseover(function(){
-//   $(this).children('h3, h4').addClass('js-hover');
-// });
-//
-// $('.main-projects').mouseout(function(){
-//   $(this).children('h3, h4').removeClass('js-hover');
-// });
-//
-
-//
     });

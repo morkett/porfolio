@@ -61,7 +61,7 @@ body {
 
 
   @include tablet-landscape-query {
-    display: none;
+    // display: none;
   }
 
 
@@ -111,10 +111,17 @@ body {
 
 
   @include tablet-landscape-query {
-    transform: translateX(0vw);
-    opacity: 1;
     height: 100vh;
     width: 30vw;
+    transform: translateX(-30vw);
+    opacity: 0;
+    transition: opacity 0.5s ease 0s, transform .5s linear 0s;
+  }
+
+
+  @include tablet-portrait-query {
+    background: rgba($black, 0.7);
+    transition: color 0.5s ease 0s;
   }
 
 
@@ -135,6 +142,11 @@ body {
       justify-content: center;
       align-items: center;
     }
+
+
+    @include tablet-portrait-query {
+      flex-direction: column;
+    }
   }
 
   ul li a {
@@ -149,6 +161,12 @@ body {
     @include mobile-portrait-query {
       font-size: 1em;
     }
+
+
+    @include tablet-portrait-query {
+      color: $light-grey;
+      font-size: 2em;
+    }
   }
 
   ul li ul {
@@ -160,12 +178,28 @@ body {
     }
 
 
+    @include tablet-landscape-query {
+      display: flex;
+      flex-direction: row;
+      margin-top: -50px;
+    }
+
+
     // border: $border-dev-green;
 
   }
 
   .main-link {
     margin: 0;
+
+    @include tablet-landscape-query {
+      margin: 50px 0;
+    }
+
+
+    @include tablet-portrait-query {
+      margin: 50px 0;
+    }
   }
 
   .icon-container {
@@ -176,6 +210,16 @@ body {
 
     position: absolute;
     top: 95vh;
+
+    @include tablet-landscape-query {
+      margin-top: -60px;
+    }
+
+
+    @include tablet-portrait-query {
+      display: none;
+    }
+
 
     .icon-links {
       margin: 10px;
@@ -306,13 +350,6 @@ section {
   background: url("../images/header-test.jpeg") center left no-repeat;
   background-size: cover;
 
-  // @include desktop-query {
-  //   width: 100vw;
-  //   position: absolute;
-  //   top: 0;
-  //   left: 0;
-  // }
-
   @include mobile-portrait-query {
     width: 100vw;
     position: fixed;
@@ -327,7 +364,6 @@ section {
 
 
   @include tablet-landscape-query {
-    position: absolute;
     top: 0;
     left: 0;
     margin-left: 30vw;
@@ -352,6 +388,13 @@ section {
 
     // position: fixed;
   }
+
+
+  @include tablet-landscape-query {
+    display: block;
+    height: 100vh;
+    width: 70vw;
+  }
 }
 
 .container {
@@ -371,10 +414,11 @@ section {
   }
 
 
-  // @include desktop-query {
-  //   flex-direction: column;
-  //   height: auto;
-  // }
+  @include tablet-landscape-query {
+    flex-direction: row;
+    height: 100vh;
+  }
+
 
   z-index: 1;
 }
@@ -389,6 +433,11 @@ section {
 
   @include mobile-portrait-query {
     margin: 0;
+  }
+
+
+  @include tablet-landscape-query {
+    margin-left: 30vw;
   }
 }
 
@@ -410,11 +459,21 @@ section {
     width: 100vw;
     opacity: 1;
   }
+
+
+  @include tablet-landscape-query {
+    width: 30vw;
+  }
 }
 
 .sidebar--projects, .sidebar--about {
   @include mobile-portrait-query {
     height: 100vh;
+  }
+
+
+  @include tablet-portrait-query {
+    height: 50vh;
   }
 }
 
@@ -464,6 +523,11 @@ section {
   @include mobile-portrait-query {
     font-size: 2em;
   }
+
+
+  @include tablet-landscape-query {
+    font-size: 1.4em;
+  }
 }
 
 .header-home {
@@ -502,6 +566,11 @@ section {
   }
 
 
+  @include tablet-landscape-query {
+    font-size: .65em;
+  }
+
+
   span {
     margin: 0px 10px;
   }
@@ -511,6 +580,11 @@ section {
   h2 {
     @include mobile-portrait-query {
       font-size: $project-title-size;
+    }
+
+
+    @include tablet-landscape-query {
+      font-size: 1.4em;
     }
   }
 }
@@ -549,7 +623,7 @@ section {
 
 .sidebar--home, .sidebar--projects, .sidebar--about {
   @include tablet-landscape-query {
-    opacity: 0;
+    opacity: 1;
   }
 }
 
@@ -573,6 +647,11 @@ section {
 
   @include mobile-portrait-query {
     width: 100vw;
+  }
+
+
+  @include tablet-landscape-query {
+    width: 70vw;
   }
 }
 
@@ -631,9 +710,10 @@ section {
   }
 
 
-  @include tablet-landscape-query {
-    margin-top: 34px;
-  }
+  // @include tablet-landscape-query {
+  //   display: block;
+  //   margin-top: 34px;
+  // }
 }
 
 .container--about {
@@ -659,6 +739,11 @@ section {
   @include tablet-portrait-query {
     height: 60vh;
   }
+
+
+  @include tablet-landscape-query {
+    height: 100vh;
+  }
 }
 
 .main-projects--heart {
@@ -675,6 +760,11 @@ section {
   @include tablet-portrait-query {
     height: 60vh;
   }
+
+
+  @include tablet-landscape-query {
+    height: 100vh;
+  }
 }
 
 .main-projects--heart img {
@@ -688,8 +778,13 @@ section {
   }
 
 
-  @include mobile-landscape-query {
-    height: 70vh;
+  @include tablet-landscape-query {
+    height: 90vh;
+  }
+
+
+  @include tablet-portrait-query {
+    pointer-events: none;
   }
 }
 
@@ -708,6 +803,16 @@ section {
 
   @include mobile-landscape-query {
     width: 70vw;
+  }
+
+
+  @include tablet-landscape-query {
+    width: 65vw;
+  }
+
+
+  @include tablet-portrait-query {
+    pointer-events: none;
   }
 }
 
@@ -777,7 +882,9 @@ section {
 
 
   @include tablet-landscape-query {
-    margin-left: 30vw;
+    // margin-left: 30vw;
+    width: 100vw;
+    padding-left: 30vw;
   }
 }
 
@@ -837,14 +944,14 @@ section {
 
 .icon-skills {
   border: 1px solid $black;
-  width: 80px;
-  height: 80px;
+  width: 70px;
+  height: 70px;
   text-align: center;
   margin: 20px;
 
   @include flexbox;
 
-  @include font-properties($font-size: 1.2em, $letter-spacing: 0.05em);
+  @include font-properties($font-size: 1em, $letter-spacing: 0.05em);
 }
 
 .main-projects {
@@ -880,6 +987,11 @@ iframe {
 
   @include mobile-portrait-query {
     flex-direction: row;
+  }
+
+
+  @include tablet-landscape-query {
+    flex-direction: column;
   }
 
 
@@ -969,6 +1081,24 @@ iframe {
   background-position: 0 -24px;
 }
 
+.icon-replay {
+  width: 24px;
+  height: 24px;
+  background-position: -72px 0;
+
+  @include mobile-portrait-query {
+    display: none;
+  }
+}
+
+.replay {
+  h6 {
+    @include mobile-portrait-query {
+      display: none;
+    }
+  }
+}
+
 // .enlarge-container {
 //   width: 50px;
 //   height: 50px;
@@ -1018,6 +1148,12 @@ iframe {
   @include tablet-portrait-query {
     height: 40vh;
   }
+
+
+  @include tablet-landscape-query {
+    position: absolute !important;
+    transform: translateX(0vw);
+  }
 }
 
 .sidebar--projects-page--heart {
@@ -1031,12 +1167,34 @@ iframe {
   @include mobile-portrait-query {
     top: 0;
     transform: translateX(0);
-    border-bottom: 25px solid $light-grey;
+    border-bottom: 15px solid $light-grey;
+    height: calc(40vh + 15px);
   }
 
 
   @include mobile-landscape-query {
     height: 150vh;
+  }
+
+
+  @include tablet-landscape-query {
+    top: 200vh;
+    height: 100vh;
+    border: none;
+  }
+}
+
+.sidebar-blank {
+  display: none;
+
+  @include tablet-landscape-query {
+    display: flex;
+    justify-content: flex-start;
+    position: absolute !important;
+    bottom: 0;
+    height: 200vh;
+
+    // left: -30vw;
   }
 }
 
