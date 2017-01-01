@@ -26,8 +26,17 @@
   -webkit-transform: translateZ(0);
   transition: all 0s;
 
+  @include desktop-query {
+    position: relative;
+    margin-top: 100vh;
+    z-index: 999;
+    margin-left: 0;
+  }
+
+
   @include mobile-portrait-query {
     margin-left: 0;
+    margin-top: 0;
   }
 
 
@@ -36,32 +45,41 @@
   }
 }
 
-//
-// .js-sticky-right {
-//   position: fixed;
-//   top: 0;
-//   left: -0px;
-//   margin-left: 30vw;
-//   height: 100%;
-//   transform: translateZ(0);
-//   -webkit-transform: translateZ(0);
-//   transition: all 0s;
-//
-//
-//   @include mobile-portrait-query {
-//     position: relative;
-//     height: 100vh;
-//     margin: 0;
-//   }
-//
-//
-//   @include tablet-landscape-query {
-//     position: relative;
-//     position: relative;
-//     height: 100vh;
-//     margin: 0;
-//   }
-// }
+.js-sticky-right {
+  position: fixed;
+  top: 0;
+  left: -0px;
+  margin-left: 30vw;
+  height: 100%;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  transition: all 0s;
+
+  @include desktop-query {
+    margin-left: 0;
+    width: 100vw;
+  }
+
+
+  @include mobile-portrait-query {
+    position: relative;
+    height: 100vh;
+    margin: 0;
+  }
+
+
+  @include tablet-portrait-query {
+    height: 60vh;
+  }
+
+
+  @include tablet-landscape-query {
+    position: relative;
+    position: relative;
+    height: 100vh;
+    margin: 0;
+  }
+}
 
 //
 ////NAVIGATION
@@ -72,11 +90,17 @@
   opacity: 1;
   transition: opacity 0.3s ease 0s, transform .5s linear 0s;
 
+  @include desktop-query {
+    transition: opacity 0.3s ease 0s, transform 0.5s linear 0s;
+  }
+
+
   @include mobile-portrait-query {
     width: 100vw;
     z-index: 9999;
     top: auto;
     bottom: 0;
+    transition: opacity 0.3s ease 0s;
   }
 
 
@@ -111,9 +135,16 @@
   opacity: .5;
   transition: opacity 0.3s ease 0s, transform 0s linear 0s;
 
+  @include desktop-query {
+    width: 100vw;
+    left: 0;
+  }
+
+
   @include mobile-portrait-query {
     width: 100vw;
     left: 0;
+    transition: opacity 0.3s ease 1s;
     display: none;
   }
 
@@ -130,7 +161,7 @@
   transition: filter 0.3s ease 0s;
 
   @include mobile-portrait-query {
-    filter: blur(0);
+    // filter: blur(0);
   }
 
 
@@ -152,7 +183,7 @@
 //button btn
 .js-btn-nav-close {
   @include mobile-portrait-query {
-    transform: translateY(-50px);
+    // transform: translateY(-50px);
   }
 
 
@@ -185,6 +216,10 @@
   span:nth-child(2) {
     transform: translateX(40px);
     transition: all 0s ease 0s;
+
+    @include mobile-portrait-query {
+      transform: translateX(100vw);
+    }
   }
 
   span:nth-child(3) {
