@@ -68,10 +68,9 @@
   }
 
 
-  @include tablet-portrait-query {
-    height: 60vh;
-  }
-
+  // @include tablet-portrait-query {
+  //   height: 60vh;
+  // }
 
   @include tablet-landscape-query {
     position: relative;
@@ -264,9 +263,15 @@
   transform: translateX(100vw) !important;
   transition: opacity 1s ease, transform 0s linear 1s;
 
+  @include tablet-portrait-query {
+    opacity: 1 !important;
+    transform: translateX(-50%) translateY(-50%) !important;
+  }
+
+
   @include tablet-landscape-query {
-    opacity: 1;
-    transform: translateX(0vw);
+    opacity: 1 !important;
+    transform: translateX(-50%) translateY(-50%) !important;
   }
 }
 
