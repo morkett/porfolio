@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>File Not Found</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" >
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">
+</script>
+
+<script src="https://use.typekit.net/mzu2yvf.js"></script>
+<script>
+    try {
+        Typekit.load({
+            async: true
+        });
+    } catch (e) {}
+</script>
+
+<script src="js/external.js"></script>
+<style type="text/css">
+body {
+  background-color: #e3e3e3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+body:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top:0;
+  height: 100vh;
+  width: 100vw;
+  background: url(images/beating-heart.png) center center fixed;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: -1;
+  opacity: .5;
+}
+
+
+body, h1, p {
+  font-family: "freight-sans-pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-size: .9em;
+  letter-spacing: .2em;
+  color: #292929;
+  text-transform: uppercase;
+}
+
+
+.container {
+  margin-left:  auto;
+  margin-right:  auto;
+  margin-top: 177px;
+  max-width: 1170px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.row:before, .row:after {
+  display: table;
+  content: " ";
+}
+
+.col-md-6 {
+  width: 50%;
+}
+
+.col-md-push-3 {
+  margin-left: 25%;
+}
+
+h1 {
+  font-size: 48px;
+  font-weight: 300;
+  margin: 0 0 20px 0;
+}
+
+.lead {
+  font-size: 21px;
+  font-weight: 200;
+  margin-bottom: 20px;
+}
+
+p {
+  margin: 0 0 10px;
+}
+
+a {
+  color: #3282e6;
+  text-decoration: none;
+}
+
+
+.link-box {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.img {
+  height: 24px;
+  width: 24px;
+    overflow: hidden;
+    display: block;
+    cursor: pointer;
+    margin: 10px;
+}
+.icon-links {
+  position: relative;
+  top: -48px;
+  display: block;
+
+  opacity: 1;
+  -webkit-transition: opacity .2s ease;
+  transition: opacity .2s ease;
+}
+
+.codepen {
+  top: -48px;
+  left: -24px;
+}
+</style>
+</head>
+
+<body>
+<div class="container text-center" id="error">
+ <div class="row">
+    <div class="col-md-12">
+      <div class="main-icon text-warning"><span class="uxicon uxicon-alert"></span></div>
+        <h1>Whoops, Couldn't Find Your Page</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6 col-md-push-3">
+      <p class="lead">If You Want To See More Work From Me Check Out:</p>
+
+        <div class="link-box">
+          <a class="img" href="https://github.com/morkett">
+          <img class="icon-links" src="images/sprite.svg" />
+        </a>
+        <a class="img" href="http://codepen.io/morkett/">
+          <img class="icon-links codepen" src="images/sprite.svg" />
+        </a>
+  </div>
+
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

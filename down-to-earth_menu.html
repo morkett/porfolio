@@ -36,16 +36,16 @@
      $('.hamburgerContainer').click(function(){
          $('.navPhone').addClass('navIN');
     });
-     
+
       $('.closeContainer').click(function(){
          $('.navPhone').removeClass('navIN');
     });
-     
+
        $('.hamburgerContainer').click(function(){
          $('.wrap').addClass('mainOUT');
          $('.hamburgerContainer').addClass('mainOUT');
     });
-     
+
       $('.closeContainer').click(function(){
          $('.wrap').removeClass('mainOUT');
         $('.hamburgerContainer').removeClass('mainOUT');
@@ -60,32 +60,32 @@
        $(this).addClass('menu-active');
         $('.lunch, .juice, .tea').removeClass('menu-active');
       });
-      
+
       $('.lunch').click(function(){
        $(this).addClass('menu-active');
         $('.breakfast, .juice, .tea').removeClass('menu-active');
       });
-      
+
         $('.juice').click(function(){
        $(this).addClass('menu-active');
         $('.breakfast, .lunch, .tea').removeClass('menu-active');
       });
-      
+
       $('.tea').click(function(){
        $(this).addClass('menu-active');
         $('.breakfast, .lunch, .juice').removeClass('menu-active');
       });
-      
-      
-      
+
+
+
       $('.scroll-top').click(function (event) {
         event.preventDefault();
-        
+
         var href = $(this).attr('href');
         var target = $(href);
         var position = target.position().top
     console.log('scroll to ' + position);
-        
+
         $('.scroll').animate({
           scrollTop: position
         }, 700)
@@ -93,16 +93,16 @@
 
          $('.scroll-top-phone').click(function (event) {
         event.preventDefault();
-        
+
         var href = $(this).attr('href');
         var target = $(href);
         var position = target.position().top
     console.log('scroll to ' + position);
-        
+
         $('.wrap-menu').animate({
           scrollTop: position
         }, 700)
-      }); 
+      });
 
 
     });
@@ -112,14 +112,14 @@
 </head>
 
 <body>
-    <div class="navPhoneBlur"></div>
+    <div class="navPhoneBlur navPhoneBlur-menu"></div>
   <div class='navPhone'>
 <div class='logo'></div>
  <div class="navPhone-border"></div>
 
     <ul>
       <div class="closeContainer"><span class='navClose'></span></div>
-      <li class='wider'> <a href="#">HOME</a></li>
+      <!-- <li class='wider'> <a href="#">HOME</a></li> -->
       <li class='wider'> <a href="down-to-earth_about.html">ABOUT</a></li>
       <li><a href="down-to-earth_the-team.html">THE TEAM</a></li>
       <li class='wider active'><a href='#'>MENU</a></li>
@@ -129,27 +129,27 @@
     </ul>
 
   </div>
-  
+
   <div class='social-icons-one'>
          <a href="https://www.facebook.com/downtoearthhighstreetkensington/" target="_blank"><span class=' fa fa-facebook fa-1x navOp'></span></a>
          <a href="https://twitter.com/DownToEarthW8" target="_blank"><span class=' fa fa-twitter fa-1x '></span></a>
          <a href="https://plus.google.com/102080728433944558337/posts" target="_blank"><span class=' fa fa-google-plus fa-1x '></span></a>
     <a href="https://instagram.com/downtoearthw8/" target="_blank"><span class=' fa fa-instagram fa-1x '></span></a>
       </div>
-  
+
   <div class='hamburgerContainer'>
       <span class="hamburger"></span>
       <span class="menuHam">menu</span>
     </div>
-  
+
   <div class="wrap wrap-menu">
 
-    
+
     <div class='header menu-header'>
       <h1>MENU</h1>
     </div>
     <div class='sectionCont sectionMenu'>
-      
+
 
 <div class='phone-menu-nav'>
         <ul>
@@ -162,17 +162,17 @@
 
 
       <div class='bio menu-bio'>
-        
-       
-        <a name='breakfast-phone' id='breakfast-phone' class='anchor-phone'></a>
-        
-        <br><br>
-        
-          <h2 class="menuH2" id='menuH2one'> BREAKFAST </h2>
-          
-            
 
-            
+
+        <a name='breakfast-phone' id='breakfast-phone' class='anchor-phone'></a>
+
+        <br><br>
+
+          <h2 class="menuH2" id='menuH2one'> BREAKFAST </h2>
+
+
+
+
               <h3 class='menuH3'>LIGHT</h3>
 
 
@@ -215,7 +215,7 @@
               <h4 class='menuH4'>MUFFIN<span>V </span></h4>
               <p class='menuP'> Individual cup-shaped quick bread made with spelt flour, oatmeal and blueberries</p>
               <span class='price'>£3</span>
- 
+
               <h4 class='menuH4'>TOAST/RAW CRACKERS<span>GFO-VO  </span></h4>
               <p class='menuP'>Ask server for choice of bread, crackers and accompaniments</p>
               <span class='price'>£3</span>
@@ -225,14 +225,14 @@
               <span class='price'>£1.50</span>
 
               <p class='menuKey'>* GF = GLUTEN FREE | V = VEGAN | O = Optional | N = Contains Nuts *</p>
-            
-         
-            
 
-            <br><br> 
+
+
+
+            <br><br>
                 <a name='lunch-phone' id='lunch-phone' class='anchor'></a>
           <h2 class="menuH2"> LUNCH &amp; DINNER </h2>
-          
+
           <h3 class='menuH3'>SALADS</h3>
 
 
@@ -255,8 +255,8 @@
 
 <h3 class='menuH3'>RAW MAINS</h3>
 
-<h4 class='menuH4'>SPROUTED CHICKPEA FALAFEL TABOULEH <span>GF-V  </span> </h4> 
-<p class='menuP'>            
+<h4 class='menuH4'>SPROUTED CHICKPEA FALAFEL TABOULEH <span>GF-V  </span> </h4>
+<p class='menuP'>
 Crunchy and soft sprouted chickpea falafel served with raw cauliflower and parsley tabouleh, topped with tahini sauce and za’atar tomato cubes</p>
 <span class='price'>£6 / £12</span>
 
@@ -314,7 +314,7 @@ COOKED MAINS</p>
 <h4 class='menuH4'>RAW TASTING TAPAS <span>GF-V-N </span></h4>
 <p class='menuP'>A selection of dishes from our raw food menu to try - perfect for the uninitiated, the curious or the undecided!</p>
 <span class='price'>£15</span>
-            
+
 <h4 class='menuH4'>VEGAN MEZZE <span>GF-V-N </span></h4>
 <p class='menuP'>A generous platter of rice-stuffed vine leaves, marinated olives, sun-dried tomatoes, hummus, guacamole, mixed leaf salad and buckwheat crackers</p>
 <span class='price'>£15</span>
@@ -325,27 +325,27 @@ COOKED MAINS</p>
 <p class='menuP'>Ask server for choice of bread or crackers</p>
 <span class='price'>£3</span>
 
-      <a name='juices-phone' class='anchor'></a>        
-              
+      <a name='juices-phone' class='anchor'></a>
+
 <h4 class='menuH4'>MARINATED OLIVES <span>V </span></h4>
 <p class='menuP'>A choice of green or black olives marinated with Mediterranean herbs and fresh lemon juice.</p>
 <span class='price'>£3</span>
 
-              
+
 <h4 class='menuH4'>HUMMUS/GUACAMOLE</h4>
 <p class='menuP'>Individual portion of home made classic dips</p>
 <span class='price'>£3</span>
-            
-             <p class='menuKey'>* GF = GLUTEN FREE  | V = VEGAN | O = Optional | N = Contains Nuts *</p>
-          
-          
-            
 
-            
-         <br><br>       
+             <p class='menuKey'>* GF = GLUTEN FREE  | V = VEGAN | O = Optional | N = Contains Nuts *</p>
+
+
+
+
+
+         <br><br>
      <a id='juices-phone'></a>
           <h2 class="menuH2"> Juices</h2>
-          
+
           <h3 class='menuH3'> PURE BLENDS</h3>
 
 
@@ -430,12 +430,12 @@ COOKED MAINS</p>
 
 <h4 class='menuH4'>LEMON &amp; GINGER</h4>
 <span class='price'>£2</span>
-           
-          
-            
 
-           
-           <br><br>     
+
+
+
+
+           <br><br>
           <a id='tea-phone'></a>
           <h2 class="menuH2"> Tea &amp; Coffee</h2>
           <h3 class='menuH3'> TEA &amp; INFUSIONS</h3>
@@ -458,7 +458,7 @@ COOKED MAINS</p>
 <span class='price'>£2.50</span>
 
 <h3 class='menuH3'>COFFEE</h3>
-            
+
 <h4 class='menuH4'>ESPRESSO/MACHIATO</h4>
 <span class='price'>£2</span>
 
@@ -486,18 +486,18 @@ COOKED MAINS</p>
 <h4 class='menuH4'>CHAI LATTE</h4>
 <span class='price'>£2.50</span>
 
-            
-         
 
 
-       
 
 
-       
 
-        
 
-        
+
+
+
+
+
+
 
       </div>
       <!-- bio -->
@@ -513,9 +513,9 @@ COOKED MAINS</p>
           <li><a class='tea scroll-top' id="tea" href="#tea-anchor" >Tea &amp; Coffee</a></li>
         </ul>
       </div>
-      
+
       <div class='inner-main inner-main-menu'>
-      
+
         <div class='scroll'>
 		<article class="ac-menu">
           <a name="breakfast" class='anchor' id='breakfast' ></a>
@@ -542,7 +542,7 @@ COOKED MAINS</p>
 <h4 class='menuH4'>RAW CHOCOLATE HAZELNUT AND BANANA CREPE <span>GF-V-N </span></h4>
 <p class='menuP'>Banana and flax pancake smothered in raw ‘Nutella’ spread, fresh fruits and maple syrup</p>
 <span class='price'>£6</span>
-        
+
         <h3 class='menuH3' > OPEN SANDWICH <span class='small'>&amp;</span> ENGLISH BREAKFAST</h3>
 
 
@@ -571,13 +571,13 @@ COOKED MAINS</p>
 <h4 class='menuH4'>TOAST/RAW CRACKERS <span>V </span></h4>
 <p class='menuP lunchAnchor'>Ask server for choice of fruits</p>
 <span class='price '>£1.50</span>
-          
+
            <p class='menuKey'>* GF = GLUTEN FREE  | V = VEGAN | O = Optional | N = Contains Nuts *</p>
           <br><br>
           <a name='lunch-anchor' class='anchor' id='lunch-anchor'></a>
-          
+
           <h2 class="menuH2"> LUNCH &amp; DINNER </h2>
-          
+
           <h3 class='menuH3'>SALADS</h3>
 
 
@@ -600,8 +600,8 @@ COOKED MAINS</p>
 
 <h3 class='menuH3'>RAW MAINS</h3>
 
-<h4 class='menuH4'>SPROUTED CHICKPEA FALAFEL TABOULEH <span>GF-V  </span> </h4> 
-<p class='menuP'>            
+<h4 class='menuH4'>SPROUTED CHICKPEA FALAFEL TABOULEH <span>GF-V  </span> </h4>
+<p class='menuP'>
 Crunchy and soft sprouted chickpea falafel served with raw cauliflower and parsley tabouleh, topped with tahini sauce and za’atar tomato cubes</p>
 <span class='price'>£6 / £12</span>
 
@@ -659,7 +659,7 @@ COOKED MAINS</p>
 <h4 class='menuH4'>RAW TASTING TAPAS <span>GF-V-N </span></h4>
 <p class='menuP'>A selection of dishes from our raw food menu to try - perfect for the uninitiated, the curious or the undecided!</p>
 <span class='price'>£15</span>
-            
+
 <h4 class='menuH4'>VEGAN MEZZE <span>GF-V-N </span></h4>
 <p class='menuP'>A generous platter of rice-stuffed vine leaves, marinated olives, sun-dried tomatoes, hummus, guacamole, mixed leaf salad and buckwheat crackers</p>
 <span class='price'>£15</span>
@@ -677,12 +677,12 @@ COOKED MAINS</p>
 <h4 class='menuH4'>HUMMUS/GUACAMOLE</h4>
 <p class='menuP'>Individual portion of home made classic dips</p>
 <span class='price'>£3</span>
-            
+
              <p class='menuKey'>* GF = GLUTEN FREE  | V = VEGAN | O = Optional | N = Contains Nuts *</p>
           <br><br>
             <a name='juices-anchor' class='anchor' id='juices-anchor'></a>
           <h2 class="menuH2"> Juices</h2>
-          
+
           <h3 class='menuH3'> PURE BLENDS</h3>
 
 
@@ -766,7 +766,7 @@ COOKED MAINS</p>
 
 <h4 class='menuH4'>LEMON &amp; GINGER</h4>
 <span class='price'>£2</span>
-          
+
            <br><br>
            <a name='tea' class='anchor' id='tea-anchor'></a>
           <h2 class="menuH2"> Tea &amp; Coffee</h2>
@@ -790,7 +790,7 @@ COOKED MAINS</p>
 <span class='price'>£2.50</span>
 
 <h3 class='menuH3'>COFFEE</h3>
-            
+
 <h4 class='menuH4'>ESPRESSO/MACHIATO</h4>
 <span class='price'>£2</span>
 
@@ -820,7 +820,7 @@ COOKED MAINS</p>
 
          </article>
 	</div>
-        
+
        </div>
       <div class='h1Container'>
       <h1>MENU</h1></div>

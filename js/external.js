@@ -180,6 +180,7 @@
           }, 250);
             $('body, section').addClass("js-nav-click-overflow");
             $('.main-projects--clocks .h3--projects, .main-projects--clocks .h4--projects').addClass('js-no-opacity');
+            $(".container-projects-clock").css("z-index","5");
 
             setTimeout(function() {
                 $('.sidebar--projects-page-clocks').addClass('js-nav-show');
@@ -196,6 +197,7 @@
 
             setTimeout(function() {
               $(".clocks-frame").contents().find("section").css("display", "none");
+              $(".container-projects-clock").css("z-index","0");
 
             }, 610);
           });
