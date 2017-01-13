@@ -27,6 +27,16 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script> -->
     <script src="js/external.js"></script>
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-90322558-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
 
 </head>
 
@@ -44,6 +54,8 @@
       <li class="nav-primary nav-projects"><a href="#projects" class="js-link-site main-link">projects</a>
         <ul class="mini-nav">
           <li class="mini-nav-h4"><a href="#d2e" class="js-link-site">down to earth</a></li>
+          <li>&#8226;</li>
+          <li class="mini-nav-h4"><a href="#heart" class="js-link-site">realtime clock</a></li>
           <li>&#8226;</li>
           <li class="mini-nav-h4"><a href="#heart" class="js-link-site">beating heart</a></li>
         </ul>
@@ -153,9 +165,10 @@
           <a class="icon-links icon-arrow-back icon-arrow-back-clocks"></a>
 
           <h2 class="h2--projects">realtime clock</h2>
-          <h4 class="h4--projects">responsive &#8226; website</h4>
+          <h4 class="h4--projects">realtime clock &#8226; js &#8226; animation</h4>
           <p>
-            designed to brief in adobe photoshop, this website reflects the cafes atmosphere and ethos. this website was hand-coded to create a responsive interface, enhanced with the inclusion of css animations and creating behaviours through jquery.
+
+            This project was created using HTML, CSS, JS and jquery. CSS animations were used to transition any movements, it utilises JS, jquery to create a working clock based on the users local time. THis project has been used as a tutorial tool for teaching new students.
           </p>
 
           <div class="icon-container">
@@ -224,7 +237,7 @@
     </section>
 
     <section class="about" id="about">
-      <div class="container container--about" id="info">
+      <div class="container container--about">
         <article class="sidebar sidebar--about">
           <h2 class="h2--about">about</h2>
 
@@ -234,7 +247,7 @@
             <li><a href="#skills" class="js-scroll-site">skills</a></li>
           </ul>
         </article>
-        <article class="main main-about main-about-info">
+        <article class="main main-about main-about-info" id="info">
           <h2 class="h2-about--info">i am a self-taught <br/>front-end web developer <br/>from london</h2>
           <p class="about-p">
             I have experience of creating responsive interactive websites by hand-coding HTML, CSS, and JQuery. I am passionate about design and alongside my technical ability, I can create innovative interfaces which allow ease of usability. I follow many online
@@ -272,7 +285,7 @@
                 <span class="icon-skills icon-skills-jquery">jQuery</span>
                 <span class="icon-skills icon-skills-scss">scss</span>
               </div>
-              <p>These languages create the bones of the website, dictate appearance, and manipulate behaviour, bringing the website to life.</p>
+              <p>These languages create the bones of the website, dictate appearance, and manipulate behaviour, bringing the website to life. Coupled with version contorl this allows consistancy in user experience.</p>
             </div>
 
             <div class="design-container">
