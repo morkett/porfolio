@@ -1404,6 +1404,14 @@ iframe {
   background-position: -24px -48px;
 }
 
+.icon-cv {
+  background-image: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 24px 50px;
+}
+
 /*TEST SCSS*/
 
 .sidebar--projects-page {
