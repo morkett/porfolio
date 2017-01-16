@@ -103,11 +103,10 @@
   }
 
 
-  @include tablet-landscape-query {
-    width: 30vw;
-    bottom: auto;
-  }
-
+  // @include tablet-landscape-query {
+  //   width: 30vw;
+  //   bottom: auto;
+  // }
 
   @include tablet-portrait-query {
     height: 100vh;
@@ -148,9 +147,9 @@
   }
 
 
-  @include tablet-landscape-query {
-    display: block;
-  }
+  // @include tablet-landscape-query {
+  //   display: block;
+  // }
 }
 
 //blur
