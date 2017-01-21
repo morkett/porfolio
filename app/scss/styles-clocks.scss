@@ -1,0 +1,329 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video
+{
+    font: inherit;
+    font-size: 100%;
+
+    margin: 0;
+    padding: 0;
+
+    vertical-align: baseline;
+
+    border: 0;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section
+{
+    display: block;
+}
+
+body
+{
+    line-height: 1;
+}
+
+ol,
+ul
+{
+    list-style: none;
+}
+
+blockquote,
+q
+{
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after
+{
+    content: '';
+    content: none;
+}
+
+table
+{
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+*
+{
+    box-sizing: border-box;
+}
+
+*
+{
+    box-sizing: border-box;
+}
+
+body
+{
+    overflow: hidden;
+
+    width: 100vw;
+    height: 100vh;
+
+    background: url(../images/deskAndBg.png) center bottom no-repeat;
+    background-size: cover;
+}
+
+.wrap
+{
+    position: relative;
+
+    display: flex;
+    overflow: hidden;
+
+    width: 100vw;
+    height: 100vh;
+
+    justify-content: center;
+    align-items: center;
+}
+@media only screen and (max-width: 500px)
+{
+    .wrap
+    {
+        overflow-x: hidden;
+        overflow-y: scroll;
+    }
+}
+
+.clock
+{
+    z-index: 100;
+
+    width: 500px;
+    height: 500px;
+
+    transform: translateY(70px);
+
+    background: url(../images/clock-no-shadow-min.png) center center no-repeat;
+    background-size: contain;
+}
+
+.shadow-clock
+{
+    top: 0;
+    left: 0;
+
+    width: 600px;
+    height: 500px;
+
+    transform: translateY(10px) translateX(-50px);
+
+    background: url(../images/shadow.png) center bottom no-repeat;
+    background-size: contain;
+}
+
+.hour-hand,
+.min-hand,
+.sec-hand
+{
+    position: absolute;
+    top: 0;
+    top: 20px;
+    left: 0;
+
+    display: flex;
+
+    width: 500px;
+    height: 500px;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.hour-hand
+{
+    display: flex;
+
+    margin-top: -20px;
+
+    transform-origin: center;
+}
+.hour-hand img
+{
+    position: absolute;
+    top: 234px;
+    left: 241px;
+
+    width: 11px;
+    height: 80px;
+
+    transform-origin: bottom center;
+}
+
+.min-hand
+{
+    display: flex;
+
+    margin-top: -20px;
+}
+.min-hand img
+{
+    position: absolute;
+    top: 215px;
+    left: 241px;
+
+    width: 11px;
+    height: 100px;
+
+    transform-origin: bottom center;
+}
+
+.sec-hand
+{
+    z-index: 0;
+
+    display: flex;
+
+    margin-top: -20px;
+
+    transform-origin: center;
+}
+.sec-hand img
+{
+    position: absolute;
+    top: 195px;
+    left: 245px;
+
+    width: 5px;
+    height: 120px;
+
+    transform-origin: bottom center;
+}
+
+.icon
+{
+    position: absolute;
+    z-index: 999;
+    right: 0;
+    bottom: 0;
+
+    display: block;
+
+    width: 34px;
+    height: 32px;
+    padding: 20px;
+
+    cursor: pointer;
+
+    background-image: url(../images/sprite-clocks.svg);
+    background-repeat: no-repeat;
+}
+
+.icon-volume-high
+{
+    width: 34px;
+    height: 32px;
+
+    cursor: pointer;
+
+    background-position: 0 0;
+}
+
+.icon-volume-mute
+{
+    display: none;
+
+    width: 32px;
+    height: 32px;
+
+    background-position: -48px 0;
+}
+
+/*# sourceMappingURL=styles.css.map */

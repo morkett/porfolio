@@ -17,7 +17,9 @@
     } catch (e) {}
 </script>
 
+<!-- build:js js/external.min.js-->
 <script src="js/external.js"></script>
+<!-- endbuild -->
 <style type="text/css">
 body {
   background-color: #e3e3e3;

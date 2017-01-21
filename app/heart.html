@@ -9,36 +9,10 @@
   <meta http-equiv="author" content="Mork Designs">
   <meta name="viewport" content="width=device-width,initial-scale=1">
 
-<link rel="stylesheet" href="fonts/font-awesome-4.5.0/css/font-awesome.min.css">
-  <link href="stylesheets/styles-heart.css" type="text/css" rel="stylesheet">
+  <!--build:css css/styles.min.css-->
+  <link type="text/css" rel="stylesheet" href="css/styles-heart.css" />
+  <!--endbuild-->
 
-
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">
-
-  </script>
-
-
-
-
-  <script>
-  $(document).ready(function(){
-    $('.replay').click(function(){
-      $('section').addClass('js-reset-op');
-
-    setTimeout(function() {
-  $('section').addClass('js-display-none');
-
-}, 500);
-
-      setTimeout(function() {
-  $('section').removeClass('js-display-none');
-    $('section').removeClass('js-reset-op');
-
-}, 550);
-
-    });
-  });
-  </script>
 
 
 </head>
@@ -670,6 +644,34 @@
 -->
 
 </section>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">
+
+</script>
+
+
+
+
+<script>
+$(document).ready(function(){
+  $('.replay').click(function(){
+    $('section').addClass('js-reset-op');
+
+  setTimeout(function() {
+$('section').addClass('js-display-none');
+
+}, 500);
+
+    setTimeout(function() {
+$('section').removeClass('js-display-none');
+  $('section').removeClass('js-reset-op');
+
+}, 550);
+
+  });
+});
+</script>
+
 </body>
 <!---- /BODY ---->
 
