@@ -2,9 +2,12 @@ var gulp = require('gulp');
 
 var sass = require('gulp-sass');
 
+var autoprefixer = require('gulp-autoprefixer');
+
 gulp.task('sass', function() {
   return gulp.src('app/scss/**/*.scss') // Gets all files ending with .scss in app/scss
     .pipe(sass())
+    .pipe(autoprefixer({browsers: ['last 3 versions']}))
     .pipe(gulp.dest('app/css'))
     .pipe(browserSync.reload({
       stream: true

@@ -137,12 +137,15 @@ body {
 
 .wrap {
   position: relative;
+  display: -ms-flexbox;
   display: flex;
   overflow: hidden;
   width: 100vw;
   height: 100vh;
-  justify-content: center;
-  align-items: center; }
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center; }
 
 @media only screen and (max-width: 500px) {
   .wrap {
@@ -153,7 +156,8 @@ body {
   z-index: 100;
   width: 500px;
   height: 500px;
-  transform: translateY(70px);
+  -ms-transform: translateY(70px);
+      transform: translateY(70px);
   background: url(../images/clock-no-shadow-min.png) center center no-repeat;
   background-size: contain; }
 
@@ -162,7 +166,8 @@ body {
   left: 0;
   width: 600px;
   height: 500px;
-  transform: translateY(10px) translateX(-50px);
+  -ms-transform: translateY(10px) translateX(-50px);
+      transform: translateY(10px) translateX(-50px);
   background: url(../images/shadow.png) center bottom no-repeat;
   background-size: contain; }
 
@@ -173,16 +178,21 @@ body {
   top: 0;
   top: 20px;
   left: 0;
+  display: -ms-flexbox;
   display: flex;
   width: 500px;
   height: 500px;
-  justify-content: center;
-  align-items: center; }
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center; }
 
 .hour-hand {
+  display: -ms-flexbox;
   display: flex;
   margin-top: -20px;
-  transform-origin: center; }
+  -ms-transform-origin: center;
+      transform-origin: center; }
 
 .hour-hand img {
   position: absolute;
@@ -190,9 +200,11 @@ body {
   left: 241px;
   width: 11px;
   height: 80px;
-  transform-origin: bottom center; }
+  -ms-transform-origin: bottom center;
+      transform-origin: bottom center; }
 
 .min-hand {
+  display: -ms-flexbox;
   display: flex;
   margin-top: -20px; }
 
@@ -202,13 +214,16 @@ body {
   left: 241px;
   width: 11px;
   height: 100px;
-  transform-origin: bottom center; }
+  -ms-transform-origin: bottom center;
+      transform-origin: bottom center; }
 
 .sec-hand {
   z-index: 0;
+  display: -ms-flexbox;
   display: flex;
   margin-top: -20px;
-  transform-origin: center; }
+  -ms-transform-origin: center;
+      transform-origin: center; }
 
 .sec-hand img {
   position: absolute;
@@ -216,7 +231,8 @@ body {
   left: 245px;
   width: 5px;
   height: 120px;
-  transform-origin: bottom center; }
+  -ms-transform-origin: bottom center;
+      transform-origin: bottom center; }
 
 .icon {
   position: absolute;
@@ -242,5 +258,3 @@ body {
   width: 32px;
   height: 32px;
   background-position: -48px 0; }
-
-/*# sourceMappingURL=styles.css.map */

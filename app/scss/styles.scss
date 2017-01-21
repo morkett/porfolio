@@ -2,10 +2,6 @@
 @import "config";
 @import "mixins";
 
-/* * {*/
-/*   transition: all 0.2s ease;*/
-/* }*/
-
 *::-moz-selection {
   background: $dark-grey;
 }

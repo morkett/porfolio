@@ -131,7 +131,6 @@ a:visited {
   color: #fff; }
 
 body {
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   overflow: hidden;
@@ -142,10 +141,8 @@ body {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
-  -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center; }
 
@@ -171,9 +168,7 @@ svg {
   width: 100%;
   height: 100%;
   cursor: pointer;
-  -webkit-transition: opacity .5s ease .5s;
   transition: opacity .5s ease .5s;
-  -webkit-animation: replay-in .5s linear 25s forwards;
   animation: replay-in .5s linear 25s forwards;
   opacity: 0;
   background: url(../images/replay.svg) center center no-repeat;
@@ -186,20 +181,13 @@ svg {
   transition: opacity 0.5s ease 0s;
 }
 */
-@-webkit-keyframes replay-in {
-  to {
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
-    opacity: 1; } }
 
 @keyframes replay-in {
   to {
-    -webkit-transform: scale(1.1);
     transform: scale(1.1);
     opacity: 1; } }
 
 .js-reset-op {
-  -webkit-transition: opacity .3s ease 0s;
   transition: opacity .3s ease 0s;
   opacity: 0; }
 
@@ -1281,28 +1269,19 @@ svg {
 
 .low-poly {
   z-index: 200;
-  -webkit-transform-origin: center;
-  transform-origin: center;
-  -webkit-animation: pulse-grow-main 0s ease-in-out 4s infinite alternate;
+  -ms-transform-origin: center;
+      transform-origin: center;
   animation: pulse-grow-main 0s ease-in-out 4s infinite alternate;
   /* 0.8*/
   opacity: 1; }
 
 .low-poly * {
-  -webkit-animation: fill-ani 2s ease-in 3s backwards, pulse-grow-main 2.5s ease-out 4s infinite alternate;
   animation: fill-ani 2s ease-in 3s backwards, pulse-grow-main 2.5s ease-out 4s infinite alternate;
   stroke: transparent;
   stroke-width: 1px;
   fill-opacity: 1;
   stroke-dasharray: 2000;
   stroke-dashoffset: 0; }
-
-@-webkit-keyframes fill-ani {
-  from {
-    fill-opacity: 0;
-    stroke: #931f15;
-    stroke-width: 1px;
-    stroke-dashoffset: 2000; } }
 
 @keyframes fill-ani {
   from {
@@ -1342,13 +1321,11 @@ svg {
 .st344,
 .st345 {
   display: block;
-  -webkit-transform-origin: center;
-  transform-origin: center;
-  -webkit-animation: fill-ani 2s ease-in 2.5s backwards, pulse-grow-top .5s ease-in-out 3.5s infinite alternate;
+  -ms-transform-origin: center;
+      transform-origin: center;
   animation: fill-ani 2s ease-in 2.5s backwards, pulse-grow-top .5s ease-in-out 3.5s infinite alternate; }
 
 .st190 {
-  -webkit-animation: fill-ani 2s ease-in 2.5s backwards, pulse-grow-top-192 .5s ease-in-out 3.5s infinite alternate;
   animation: fill-ani 2s ease-in 2.5s backwards, pulse-grow-top-192 .5s ease-in-out 3.5s infinite alternate; }
 
 /* TOP RIGHT */
@@ -1386,9 +1363,8 @@ svg {
 .st331,
 .st335 {
   display: block;
-  -webkit-transform-origin: center;
-  transform-origin: center;
-  -webkit-animation: fill-ani 2s ease-in 2s backwards, pulse-grow-top .5s ease-in-out 3s infinite alternate;
+  -ms-transform-origin: center;
+      transform-origin: center;
   animation: fill-ani 2s ease-in 2s backwards, pulse-grow-top .5s ease-in-out 3s infinite alternate; }
 
 /* TOP LEFT */
@@ -1485,60 +1461,28 @@ svg {
 .st352,
 .st353 {
   display: block;
-  -webkit-transform-origin: center;
-  transform-origin: center;
-  -webkit-animation: fill-ani 2s ease-in 3s backwards, pulse-grow-bottom .5s ease-in-out 3s infinite alternate;
+  -ms-transform-origin: center;
+      transform-origin: center;
   animation: fill-ani 2s ease-in 3s backwards, pulse-grow-bottom .5s ease-in-out 3s infinite alternate; }
 
 /* BOTTOM */
 /* Pulse Grow */
-@-webkit-keyframes pulse-grow-main {
-  to {
-    -webkit-transform: scale(0.996);
-    transform: scale(0.996); } }
 
 @keyframes pulse-grow-main {
   to {
-    -webkit-transform: scale(0.996);
     transform: scale(0.996); } }
-
-@-webkit-keyframes pulse-grow-top-192 {
-  to {
-    -webkit-transform: scale(1.04);
-    transform: scale(1.04); } }
 
 @keyframes pulse-grow-top-192 {
   to {
-    -webkit-transform: scale(1.04);
     transform: scale(1.04); } }
-
-@-webkit-keyframes pulse-grow-top {
-  to {
-    -webkit-transform: scale(1.09);
-    transform: scale(1.09); } }
 
 @keyframes pulse-grow-top {
   to {
-    -webkit-transform: scale(1.09);
-    transform: scale(1.09); } }
-
-@-webkit-keyframes pulse-grow-bottom {
-  to {
-    -webkit-transform: scale(1.09);
     transform: scale(1.09); } }
 
 @keyframes pulse-grow-bottom {
   to {
-    -webkit-transform: scale(1.09);
     transform: scale(1.09); } }
-
-@-webkit-keyframes opacity {
-  from {
-    stroke: transparent;
-    stroke-width: 1px;
-    fill-opacity: 0;
-    stroke-dasharray: 2000;
-    stroke-dashoffset: 0; } }
 
 @keyframes opacity {
   from {
@@ -1549,7 +1493,6 @@ svg {
     stroke-dashoffset: 0; } }
 
 .st211 {
-  -webkit-animation: opacity 2s ease-in 3s backwards;
   animation: opacity 2s ease-in 3s backwards;
   stroke: transparent;
   stroke-width: 1px;
@@ -1558,7 +1501,6 @@ svg {
   stroke-dashoffset: 0; }
 
 .st328 {
-  -webkit-animation: opacity 2s ease-in 3s backwards;
   animation: opacity 2s ease-in 3s backwards;
   stroke: transparent;
   stroke-width: 1px;
@@ -1568,35 +1510,31 @@ svg {
 
 .st146,
 .st167 {
-  -webkit-transform: scale(1.1);
-  transform: scale(1.1);
-  -webkit-transform-origin: center;
-  transform-origin: center;
-  -webkit-animation: fill-ani 2s ease-in 3s backwards;
+  -ms-transform: scale(1.1);
+      transform: scale(1.1);
+  -ms-transform-origin: center;
+      transform-origin: center;
   animation: fill-ani 2s ease-in 3s backwards; }
 
 .st256 {
-  -webkit-transform: scale(1.1);
-  transform: scale(1.1);
-  -webkit-transform-origin: center;
-  transform-origin: center;
-  -webkit-animation: fill-ani 2s ease-in 3s backwards;
+  -ms-transform: scale(1.1);
+      transform: scale(1.1);
+  -ms-transform-origin: center;
+      transform-origin: center;
   animation: fill-ani 2s ease-in 3s backwards; }
 
 .st149 {
-  -webkit-transform: scale(1.3);
-  transform: scale(1.3);
-  -webkit-transform-origin: bottom;
-  transform-origin: bottom;
-  -webkit-animation: fill-ani 2s ease-in 3s backwards;
+  -ms-transform: scale(1.3);
+      transform: scale(1.3);
+  -ms-transform-origin: bottom;
+      transform-origin: bottom;
   animation: fill-ani 2s ease-in 3s backwards; }
 
 .st347 {
-  -webkit-transform: scale(1.1);
-  transform: scale(1.1);
-  -webkit-transform-origin: center;
-  transform-origin: center;
-  -webkit-animation: fill-ani 2s ease-in 3s backwards;
+  -ms-transform: scale(1.1);
+      transform: scale(1.1);
+  -ms-transform-origin: center;
+      transform-origin: center;
   animation: fill-ani 2s ease-in 3s backwards; }
 
 .shadow {
@@ -1605,24 +1543,16 @@ svg {
   left: 50%;
   width: 100px;
   height: 10px;
-  -webkit-transform-origin: center;
-  transform-origin: center;
-  -webkit-animation: shadow .5s ease-out 4s infinite alternate;
+  -ms-transform-origin: center;
+      transform-origin: center;
   animation: shadow .5s ease-out 4s infinite alternate;
   opacity: .1;
   border-radius: 50%;
   background-color: #000; }
 
-@-webkit-keyframes shadow {
-  to {
-    -webkit-transform: scaleX(1.1);
-    transform: scaleX(1.1); } }
-
 @keyframes shadow {
   to {
-    -webkit-transform: scaleX(1.1);
     transform: scaleX(1.1); } }
 
 .ani-stop {
-  -webkit-animation: none !important;
   animation: none !important; }
