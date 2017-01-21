@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <title>Ticking Realtime Clock</title>
+
+      <!-- META DATA -->
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+      <meta name="description" content="Realtime Clock, utilising JS to detect users current time and display live.
+" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0" />
+      <!--build:css css/styles.min.css-->
+      <link type="text/css" rel="stylesheet" href="css/styles-clocks.css" />
+      <!--endbuild-->
+
+
+
+  </head>
+
+  <body>
+    <div class="wrap">
+      <div class="clock">
+        <div class="hour-hand" >
+          <img src="images/hour-hand.png" id="js-hours" />
+        </div>
+        <div class="min-hand" >
+          <img src="images/min-hand.png" id="js-minutes"/>
+        </div>
+        <div class="sec-hand">
+          <img src="images/second-hand.png" id="js-seconds"/>
+        </div>
+
+        <div class="shadow-clock"></div>
+
+
+    </div>
+
+  </div>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">
+  </script>
+
+  <script>
+
+  function moveHands() {
+      with(new Date()) {
+          h = 30 * (getHours() % 12 + getMinutes() / 60);
+          m = 6 * getMinutes();
+          s = 6 * getSeconds();
+
+          document.getElementById('js-seconds').style.cssText = "transform:rotate(" + s + "deg);";
+          document.getElementById('js-minutes').style.cssText = "transform:rotate(" + m + "deg);";
+          document.getElementById('js-hours').style.cssText = "transform:rotate(" + h + "deg);";
+
+          setTimeout(moveHands, 1000);
+
+      }
+  }
+
+
+
+  window.onload = moveHands;
+
+
+  $(document).ready(function() {
+    $(".icon-volume-high").click(function(){
+      $(this).css("display", "none");
+      $(audio).muted = true;
+      $(".icon-volume-mute").css("display", "block");
+  });
+
+  $(".icon-volume-mute").click(function(){
+    $(this).css("display", "none");
+    $(".icon-volume-high").css("display", "block");
+  });
+  });
+
+  </script>
+  </body>
+</html>

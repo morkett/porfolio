@@ -180,7 +180,7 @@
           }, 250);
             $('body, section').addClass("js-nav-click-overflow");
             $('.main-projects--clocks .h3--projects, .main-projects--clocks .h4--projects').addClass('js-no-opacity');
-          
+
 
             setTimeout(function() {
                 $('.sidebar--projects-page-clocks').addClass('js-nav-show');
@@ -212,6 +212,7 @@
           $('body, section').addClass("js-nav-click-overflow");
           $('.main-projects--heart .h3--projects, .main-projects--heart .h4--projects').addClass('js-no-opacity');
           $('.heart-frame').addClass('js-block');
+
 
             $(".heart-frame").contents().find("section").css("display", "block");
 
