@@ -54,17 +54,6 @@ body {
 
   @include flexbox;
 
-  @include mobile-portrait-query {
-    top: auto;
-
-    /* bottom: 0;*/
-    margin: auto;
-    left: auto;
-    background: rgba($black, 0.5);
-    width: 100vw;
-  }
-
-
   @include tablet-portrait-query {
     height: 50px;
     width: 50px;
